@@ -14,11 +14,11 @@ Currently, this repository hosts the initial working progress version of the Cli
 
 ClimOO materials can be found here:
 
-- ClimOO materials-total.
+- [ClimOO materials-total](https://github.com/ClimOO/ClimOO-Ontology/tree/main/ClimOO%20material).
 - ClimOO V1.0.0 current release.
-- ClimOO V1.0.0 final draft version prior to release.
-- ClimOO V1.0.0 imports from external ontologies.
-- Materials for implementation.
+- [ClimOO V1.0.0 final draft version prior to release](https://github.com/ClimOO/ClimOO-Ontology/tree/main/ClimOO%20material/src/ontology).
+- [ClimOO V1.0.0 imports from external ontologies](https://github.com/ClimOO/ClimOO-Ontology/tree/main/ClimOO%20material/src/ontology/imports).
+- [The design protocol](https://github.com/ClimOO/ClimOO-Ontology/tree/main/ClimOO%20material/ClimOO%20development%20protocol).
 
 
 The most recent version of ClimOO can be always found here.
