@@ -9,15 +9,148 @@
 <https://www.w3id.org/climoo> rdf:type owl:Ontology ;
                                owl:versionIRI :V1.0.0 ;
                                owl:imports <http://ClimOO/climoo/import/sumso-imports#2025-06-16> ,
+                                           <http://ClimOO/climoo/imports/cco-imports#2025-06-17> ,
+                                           <https://ClimOO/climoo/imports/iao-imports#2025-06-18> ,
                                            <https://www.w3id.org/sco/sco-b#v1.1.0/sco-b> ;
                                <http://purl.org/dc/terms/creator> "Giorgio A. Ubbiali" ;
                                <http://purl.org/dc/terms/description> "ClimOO is a domain ontology, modeling (micro-)plastic pollution, climate change and their interrelation, with a primary focus on local South Tyrolean (Italy) agricultural production."@en ;
                                <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0/" ;
                                <http://purl.org/dc/terms/title> "ClimOO Ontology"@en ;
+                               rdfs:comment """Two new releases of CCO, CCO 1.7 and CCO 2.0, have been made available in November 2024. CCO 2.0 provides a new IRI schema. SCO, ClimOO upper-level ontology, imports from a former release. CCO 1.5. Similarly, SuMSO, another ontology extending SCO from which ClimOO reuses several backbone classes as backbone, imports from CCO 1.6. Aiming to conform with established sustainability ontologies, ClimOO currently reuses CCO imports from SCO and SuMSO. As soon as updates will been made available for those resources, ClimOO will align accordingly. 
+ClimOO also reuse some classes from CCO that are not imported by SCO and SuMSO. Those imports have been fletched from CCO 2.0 and imports’ harmonization has been performed manually to ensure ontology structure and IRIs accuracy and correspondence as needed.  
+
+https://github.com/CommonCoreOntology/CommonCoreOntologies/releases
+https://github.com/gioUbbiali/Sustainability-Core-Ontology 
+https://github.com/gioUbbiali/Sustainable-Meat-Systems-Ontology"""@en ;
                                owl:versionInfo "2025-06-07"@en ,
                                                "V1.0.0." ;
                                <http://www.w3.org/2004/02/skos/core#note> """Repository: https://github.com/ClimOO/ClimOO-Ontology
 Documentation webpage: https://www.w3id.org/climoo/docs"""@en ,
                                                                           "The most recent version of this file is available on GitHub at the following link: https://www.w3id.org/climoo"@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/IAO_0000235
+<http://purl.obolibrary.org/obo/IAO_0000235> rdfs:subPropertyOf <http://www.ontologyrepository.com/CommonCoreOntologies/is_subject_of> .
+
+
+###  https://www.commoncoreontologies.org/ont00001803
+<https://www.commoncoreontologies.org/ont00001803> rdfs:subPropertyOf <http://purl.obolibrary.org/obo/RO_0002501> .
+
+
+###  https://www.commoncoreontologies.org/ont00001805
+<https://www.commoncoreontologies.org/ont00001805> rdfs:subPropertyOf <http://purl.obolibrary.org/obo/RO_0002501> .
+
+
+###  https://www.commoncoreontologies.org/ont00001819
+<https://www.commoncoreontologies.org/ont00001819> rdfs:subPropertyOf <http://purl.obolibrary.org/obo/RO_0002501> .
+
+
+###  https://www.commoncoreontologies.org/ont00001888
+<https://www.commoncoreontologies.org/ont00001888> rdfs:subPropertyOf <http://purl.obolibrary.org/obo/RO_0002501> .
+
+
+###  https://www.commoncoreontologies.org/ont00001917
+<https://www.commoncoreontologies.org/ont00001917> rdfs:subPropertyOf <http://www.ontologyrepository.com/CommonCoreOntologies/is_subject_of> .
+
+
+###  https://www.commoncoreontologies.org/ont00001982
+<https://www.commoncoreontologies.org/ont00001982> rdfs:subPropertyOf <http://www.ontologyrepository.com/CommonCoreOntologies/is_about> .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.obolibrary.org/obo/IAO_0000003
+<http://purl.obolibrary.org/obo/IAO_0000003> rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000219> ;
+                                                               owl:someValuesFrom <https://www.commoncoreontologies.org/ont00000120>
+                                                             ] .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000030
+<http://purl.obolibrary.org/obo/IAO_0000030> owl:equivalentClass <http://www.ontologyrepository.com/CommonCoreOntologies/InformationContentEntity> .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000104
+<http://purl.obolibrary.org/obo/IAO_0000104> rdfs:comment """ClimOO developer comment:
+Work to align representations of plans and plan specifications between IAO and CCO is required. We envision discussions with subject matter experts.
+See https://www.commoncoreontologies.org/ont00000974
+https://www.commoncoreontologies.org/ont00000476"""@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000109
+<http://purl.obolibrary.org/obo/IAO_0000109> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001163> .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000140
+<http://purl.obolibrary.org/obo/IAO_0000140> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001163> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.obolibrary.org/obo/IAO_0000140> ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget <https://www.commoncoreontologies.org/ont00001163> ;
+   rdfs:comment "We currently set this class as a subclass of Descriptive ICE. Nevertheless, we envision discussions with subject matter experts to confirm its hierarchy position."@en ;
+   <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional>
+ ] .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000011
+<http://purl.obolibrary.org/obo/OBI_0000011> rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000055> ;
+                                                               owl:someValuesFrom <http://purl.obolibrary.org/obo/OBI_0000260>
+                                                             ] ;
+                                             rdfs:comment """ClimOO developer comment:
+Work to align representations of plans and plan specifications between IAO and CCO is required. We envision discussions with subject matter experts.
+See https://www.commoncoreontologies.org/ont00000974
+https://www.commoncoreontologies.org/ont00000476"""@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000260
+<http://purl.obolibrary.org/obo/OBI_0000260> rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000059> ;
+                                                               owl:someValuesFrom <http://purl.obolibrary.org/obo/IAO_0000104>
+                                                             ] ;
+                                             rdfs:comment """ClimOO developer comment:
+Work to align representations of plans and plan specifications between IAO and CCO is required. We envision discussions with subject matter experts.
+See https://www.commoncoreontologies.org/ont00000974 
+https://www.commoncoreontologies.org/ont00000476"""@en .
+
+
+###  https://www.commoncoreontologies.org/ont00000120
+<https://www.commoncoreontologies.org/ont00000120> rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000235> ;
+                                                                     owl:someValuesFrom <http://purl.obolibrary.org/obo/IAO_0000003>
+                                                                   ] ;
+                                                   rdfs:comment """ClimOO developer comment:
+We constructed an initial alignment between IAO a CCO representation of ICE and measurements. It is tentative. We envision discussions with subject matter experts to revise and implement the work done so far."""@en .
+
+
+###  https://www.commoncoreontologies.org/ont00000853
+<https://www.commoncoreontologies.org/ont00000853> rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/InformationContentEntity> .
+
+
+###  https://www.commoncoreontologies.org/ont00001163
+<https://www.commoncoreontologies.org/ont00001163> rdfs:comment """ClimOO developer comment:
+We constructed an initial alignment between IAO a CCO representation of ICE and measurements. It is tentative. We envision discussions with subject matter experts to revise and implement the work done so far."""@en .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://purl.obolibrary.org/obo/IAO_0000009> rdfs:comment """ClimOO developer comment:
+We constructed an initial alignment between IAO a CCO representation of ICE and measurements. It is tentative. We envision discussions with subject matter experts to revise and implement the work done so far."""@en ;
+                                             rdfs:seeAlso """http://purl.obolibrary.org/obo/IAO_0000583 
+http://purl.obolibrary.org/obo/IAO_0000039
+http://purl.obolibrary.org/obo/IAO_0000221""" .
+
+
+<http://purl.obolibrary.org/obo/IAO_0000027> rdfs:comment """ClimOO developer comment:
+We constructed an initial alignment between IAO a CCO representation of ICE and measurements. It is tentative. We envision discussions with subject matter experts to revise and implement the work done so far."""@en .
+
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

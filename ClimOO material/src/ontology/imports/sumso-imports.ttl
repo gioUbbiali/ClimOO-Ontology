@@ -12,7 +12,17 @@
 
 This aims to capitalize on  SuMSO  extensions of these imports, benefiting from implementations such as, for instance, preliminary work in aligning CCO and IAO/OBI models of information and related entities, and revisions of SDGIO representation of complex system properties.
 
-Imports have been manually collected and revised.""" ;
+Imports have been manually collected and revised.
+
+
+Ontology source: SuMSO V1.0.1.
+https://raw.githubusercontent.com/gioUbbiali/Sustainable-Meat-Systems-Ontology/refs/heads/main/sumso.ttl""" ;
+                                              rdfs:comment """Two new releases of CCO, CCO 1.7 and CCO 2.0, have been made available in November 2024. CCO 2.0 provides a new IRI schema. SCO, ClimOO upper-level ontology, imports from a former release. CCO 1.5. Similarly, SuMSO, another ontology extending SCO from which ClimOO reuses several backbone classes as backbone, imports from CCO 1.6. Aiming to conform with established sustainability ontologies, ClimOO currently reuses CCO imports from SCO and SuMSO. As soon as updates will been made available for those resources, ClimOO will align accordingly. 
+ClimOO also reuse some classes from CCO that are not imported by SCO and SuMSO. Those imports have been fletched from CCO 2.0 and imports’ harmonization has been performed manually to ensure ontology structure and IRIs accuracy and correspondence.  
+
+https://github.com/CommonCoreOntology/CommonCoreOntologies/releases
+https://github.com/gioUbbiali/Sustainability-Core-Ontology 
+https://github.com/gioUbbiali/Sustainable-Meat-Systems-Ontology"""@en ;
                                               rdfs:seeAlso """https://w3id.org/sumso/repo 
 https://github.com/CommonCoreOntology/CommonCoreOntologies 
 https://obi-ontology.org/ 
@@ -390,22 +400,63 @@ rdf:type rdf:type owl:AnnotationProperty .
 
 ###  http://purl.obolibrary.org/obo/OBI_0000293
 <http://purl.obolibrary.org/obo/OBI_0000293> rdf:type owl:ObjectProperty ;
-                                             rdfs:domain <http://purl.obolibrary.org/obo/OBI_0000011> .
+                                             rdfs:subPropertyOf <http://purl.obolibrary.org/obo/RO_0000057> ;
+                                             owl:inverseOf <http://purl.obolibrary.org/obo/OBI_0000295> ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/OBI_0000011> ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000111> "has_specified_input" ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000112> "see is_input_of example_of_usage"@en ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000122> ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000115> "The inverse property of is_specified_input_of"@en ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000116> "8/17/09: specified inputs of one process are not necessarily specified inputs of a larger process that it is part of. This is in contrast to how 'has participant' works." ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: Alan Ruttenberg"@en ,
+                                                                                          "PERSON: Bjoern Peters" ,
+                                                                                          "PERSON: Larry Hunter" ,
+                                                                                          "PERSON: Melanie Coutot" ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/obi.owl> ;
+                                             rdfs:label "has_specified_input"@en .
 
 
 ###  http://purl.obolibrary.org/obo/OBI_0000295
 <http://purl.obolibrary.org/obo/OBI_0000295> rdf:type owl:ObjectProperty ;
-                                             rdfs:range <http://purl.obolibrary.org/obo/OBI_0000011> .
+                                             rdfs:subPropertyOf <http://purl.obolibrary.org/obo/RO_0000056> ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/OBI_0000011> ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000111> "is_specified_input_of" ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000112> "some Autologous EBV(Epstein-Barr virus)-transformed B-LCL (B lymphocyte cell line) is_input_for instance of Chromum Release Assay described at https://wiki.cbil.upenn.edu/obiwiki/index.php/Chromium_Release_assay"@en ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000122> ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a planned process and a continuant participating in that process that is not created during  the process. The presence of the continuant during the process is explicitly specified in the plan specification which the process realizes the concretization of."@en ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000117> "Alan Ruttenberg"@en ,
+                                                                                          "PERSON:Bjoern Peters" ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/obi.owl> ;
+                                             rdfs:label "is_specified_input_of"@en .
 
 
 ###  http://purl.obolibrary.org/obo/OBI_0000299
 <http://purl.obolibrary.org/obo/OBI_0000299> rdf:type owl:ObjectProperty ;
-                                             rdfs:domain <http://purl.obolibrary.org/obo/OBI_0000011> .
+                                             rdfs:subPropertyOf <http://purl.obolibrary.org/obo/RO_0000057> ;
+                                             owl:inverseOf <http://purl.obolibrary.org/obo/OBI_0000312> ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/OBI_0000011> ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000111> "has_specified_output" ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000122> ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000115> "The inverse property of is_specified_output_of"@en ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: Alan Ruttenberg"@en ,
+                                                                                          "PERSON: Bjoern Peters" ,
+                                                                                          "PERSON: Larry Hunter" ,
+                                                                                          "PERSON: Melanie Courtot" ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/obi.owl> ;
+                                             rdfs:label "has_specified_output"@en .
 
 
 ###  http://purl.obolibrary.org/obo/OBI_0000312
 <http://purl.obolibrary.org/obo/OBI_0000312> rdf:type owl:ObjectProperty ;
-                                             rdfs:range <http://purl.obolibrary.org/obo/OBI_0000011> .
+                                             rdfs:subPropertyOf <http://purl.obolibrary.org/obo/RO_0000056> ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/OBI_0000011> ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000111> "is_specified_output_of" ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000122> ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A relation between a planned process and a continuant participating in that process. The presence of the continuant at the end of the process is explicitly specified in the objective specification which the process realizes the concretization of."@en ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000117> "Alan Ruttenberg"@en ,
+                                                                                          "PERSON:Bjoern Peters" ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000412> <http://purl.obolibrary.org/obo/obi.owl> ;
+                                             rdfs:label "is_specified_output_of"@en .
 
 
 ###  http://purl.obolibrary.org/obo/OBI_0000417
@@ -425,7 +476,8 @@ rdf:type rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.obolibrary.org/obo/OBI_0000833
-<http://purl.obolibrary.org/obo/OBI_0000833> rdf:type owl:ObjectProperty .
+<http://purl.obolibrary.org/obo/OBI_0000833> rdf:type owl:ObjectProperty ;
+                                             rdfs:label "objective_achieved_by" .
 
 
 ###  http://purl.obolibrary.org/obo/RO_0000056
@@ -2566,9 +2618,6 @@ http://purl.obolibrary.org/obo/RO_0019000"""@en
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/is_about
 <http://www.ontologyrepository.com/CommonCoreOntologies/is_about> rdf:type owl:ObjectProperty ;
-                                                                  owl:inverseOf <http://www.ontologyrepository.com/CommonCoreOntologies/is_subject_of> ;
-                                                                  rdfs:domain <http://www.ontologyrepository.com/CommonCoreOntologies/InformationContentEntity> ;
-                                                                  rdfs:range <http://purl.obolibrary.org/obo/BFO_0000001> ;
                                                                   <http://www.ontologyrepository.com/CommonCoreOntologies/definition> "A primitive relationship between an Information Content Entity and some Entity."@en ;
                                                                   <http://www.ontologyrepository.com/CommonCoreOntologies/definition_source> "http://purl.obolibrary.org/obo/IAO_0000136" ;
                                                                   <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/InformationEntityOntology"^^xsd:anyURI ;
