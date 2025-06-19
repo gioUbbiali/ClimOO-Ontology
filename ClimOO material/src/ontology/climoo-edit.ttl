@@ -10,6 +10,7 @@
                                owl:versionIRI :V1.0.0 ;
                                owl:imports <http://ClimOO/climoo/import/sumso-imports#2025-06-16> ,
                                            <http://ClimOO/climoo/imports/cco-imports#2025-06-17> ,
+                                           <http://purl.obolibrary.org/obo/climoo/imports/chebi_imports#2025-06-19> ,
                                            <https://ClimOO/climoo/imports/iao-imports#2025-06-18> ,
                                            <https://www.w3id.org/sco/sco-b#v1.1.0/sco-b> ;
                                <http://purl.org/dc/terms/creator> "Giorgio A. Ubbiali" ;
@@ -63,6 +64,18 @@ Documentation webpage: https://www.w3id.org/climoo/docs"""@en ,
 #################################################################
 #    Classes
 #################################################################
+
+###  http://purl.obolibrary.org/obo/BFO_0000023
+<http://purl.obolibrary.org/obo/BFO_0000023> owl:equivalentClass <http://purl.obolibrary.org/obo/CHEBI_50906> .
+
+
+###  http://purl.obolibrary.org/obo/CHEBI_24431
+<http://purl.obolibrary.org/obo/CHEBI_24431> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> .
+
+
+###  http://purl.obolibrary.org/obo/CHEBI_50906
+<http://purl.obolibrary.org/obo/CHEBI_50906> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000017> .
+
 
 ###  http://purl.obolibrary.org/obo/IAO_0000003
 <http://purl.obolibrary.org/obo/IAO_0000003> rdfs:subClassOf [ rdf:type owl:Restriction ;
