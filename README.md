@@ -42,7 +42,7 @@ The most recent version of ClimOO can be always found here.
 
 ## Contact
 
-Giorgio A. Ubbiali - Giorgio.Ubbiali@unimi.it
+Giorgio A. Ubbiali - ga.ubbiali@gmail.com
 
 
 ## Publications and Documentation
