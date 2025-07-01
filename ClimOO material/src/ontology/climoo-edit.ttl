@@ -11,6 +11,7 @@
                                owl:imports <http://ClimOO/climoo/import/sumso-imports#2025-06-16> ,
                                            <http://ClimOO/climoo/imports/cco-imports#2025-06-17> ,
                                            <http://purl.obolibrary.org/obo/climoo/imports/chebi_imports#2025-06-19> ,
+                                           <http://purl.obolibrary.org/obo/climoo/imports/pato_imports#2025-06-19> ,
                                            <https://ClimOO/climoo/imports/iao-imports#2025-06-18> ,
                                            <https://www.w3id.org/sco/sco-b#v1.1.0/sco-b> ;
                                <http://purl.org/dc/terms/creator> "Giorgio A. Ubbiali" ;
@@ -131,6 +132,10 @@ https://www.commoncoreontologies.org/ont00000476"""@en .
 Work to align representations of plans and plan specifications between IAO and CCO is required. We envision discussions with subject matter experts.
 See https://www.commoncoreontologies.org/ont00000974 
 https://www.commoncoreontologies.org/ont00000476"""@en .
+
+
+###  http://purl.obolibrary.org/obo/PATO_0103000
+<http://purl.obolibrary.org/obo/PATO_0103000> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019> .
 
 
 ###  https://www.commoncoreontologies.org/ont00000120
