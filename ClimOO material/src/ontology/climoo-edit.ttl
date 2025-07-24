@@ -96,7 +96,7 @@ Currently, we included only main classes from ChEBI relevant for ClimOO purposes
 ###  http://purl.obolibrary.org/obo/ENVO_00000077
 <http://purl.obolibrary.org/obo/ENVO_00000077> rdfs:subClassOf _:genid1 .
 
-_:genid1 owl:intersectionOf ( <http://purl.obolibrary.org/obo/ENVO_01001110>
+_:genid1 owl:intersectionOf ( <http://purl.obolibrary.org/obo/ENVO_01001828>
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000056> ;
                                  owl:someValuesFrom <http://purl.obolibrary.org/obo/AGRO_00002071>
@@ -242,6 +242,518 @@ We constructed an initial alignment between IAO a CCO representation of ICE and 
 ###  https://www.commoncoreontologies.org/ont00001163
 <https://www.commoncoreontologies.org/ont00001163> rdfs:comment """ClimOO developer comment:
 We constructed an initial alignment between IAO a CCO representation of ICE and measurements. It is tentative. We envision discussions with subject matter experts to revise and implement the work done so far."""@en .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000001
+:ClimOO_0000001 rdf:type owl:Class ;
+                rdfs:subClassOf <https://www.w3id.org/sco#SCO_0000034> ;
+                rdfs:label "environmental system agent"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An environmental system component that is an agent in an interaction among environmental system components or in an interaction between environmental system components and environmental system environment components."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000002
+:ClimOO_0000002 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000001 ;
+                rdfs:label "ecosystem agent"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An ecosystem component that is an agent in an interaction among ecosystem components or in an interaction between ecosystem components and ecosystem system environment components."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000003
+:ClimOO_0000003 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000002 ;
+                rdfs:label "anthropised ecosystem agent"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An anthropised ecosystem agent that is an agent in an interaction among anthropised ecosystem components or in an interaction between anthropised ecosystem components and anthropised ecosystem environment components."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000004
+:ClimOO_0000004 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000003 ;
+                rdfs:label "agricultural ecosystem agent"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An agricultural ecosystem agent that is an agent in an interaction among agricultural ecosystem components or in an interaction between agricultural ecosystem components and agricultural ecosystem environment components."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000005
+:ClimOO_0000005 rdf:type owl:Class ;
+                rdfs:subClassOf <https://www.w3id.org/sco#SCO_0000036> ;
+                rdfs:label "environmental system stakeholder"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An environmental system component with a stakeholder role."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000006
+:ClimOO_0000006 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000005 ;
+                rdfs:label "ecosystem stakeholder"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An ecosystem component with a stakeholder role."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000007
+:ClimOO_0000007 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000006 ;
+                rdfs:label "anthropised ecosystem stakeholder"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An anthropised ecosystem component with a stakeholder role."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000008
+:ClimOO_0000008 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000007 ;
+                rdfs:label "agricultural ecosystem stakeholder"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An agricultural ecosystem component with a stakeholder role."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000009
+:ClimOO_0000009 rdf:type owl:Class ;
+                rdfs:subClassOf <https://www.w3id.org/sco#SCO_0000031> ;
+                rdfs:label "environmental system boundary"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A complex system boundary of an environmental system."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000010
+:ClimOO_0000010 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000009 ;
+                rdfs:label "ecosystem boundary"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An environmental system boundary of an ecosystem "@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000011
+:ClimOO_0000011 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000010 ;
+                rdfs:label "anthropised ecosystem boundary"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A ecosystem boundary of an anthropised ecosystem."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000012
+:ClimOO_0000012 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000011 ;
+                rdfs:label "agricultural ecosystem boundary"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An anthropised ecosystem boundary of an agricultural ecosystem."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000013
+:ClimOO_0000013 rdf:type owl:Class ;
+                rdfs:subClassOf <https://www.w3id.org/sco#SCO_0000032> ;
+                rdfs:label "environmental system spatial region"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A complex system spatial region of an environmental system."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000014
+:ClimOO_0000014 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000013 ;
+                rdfs:label "ecosystem spatial region"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An environmental system spatial region of an ecosystem."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000015
+:ClimOO_0000015 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000014 ;
+                rdfs:label "anthropised ecosystem spatial region"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An ecosystem spatial region of an anthropized ecosystem."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000016
+:ClimOO_0000016 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000015 ;
+                rdfs:label "agricultural ecosystem spatial region"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An anthropised ecosystem spatial region of an agricultural ecosystem."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000017
+:ClimOO_0000017 rdf:type owl:Class ;
+                rdfs:subClassOf <https://www.w3id.org/sco#SCO_0000026> ;
+                rdfs:label "environmental system environment component"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A complex system environment component that belongs to the complex system environment of an environmental system."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000018
+:ClimOO_0000018 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000017 ;
+                rdfs:label "ecosystem environment component"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An environmental system environment component that belongs to the environmental system environment of an ecosystem."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000019
+:ClimOO_0000019 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000018 ;
+                rdfs:label "anthropised ecosystem environment component"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A ecosystem environment component that belongs to the ecosystem environment of an anthropised ecosystem."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000020
+:ClimOO_0000020 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000019 ;
+                rdfs:label "agricultural ecosystem environment component"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An anthropised ecosystemsy environment component that belongs to the anthropised ecosystem environment of an agricultural ecosystem."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000021
+:ClimOO_0000021 rdf:type owl:Class ;
+                rdfs:subClassOf <https://www.w3id.org/sco#SCO_0000012> ;
+                rdfs:label "environmental system environment"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A complex system environment that surrounds and is distinct and disjoint from an environmental system."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000022
+:ClimOO_0000022 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000021 ;
+                rdfs:label "ecosystem environment"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An environmental system environment that surrounds and is distinct and disjoint from an ecosystem environment."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000023
+:ClimOO_0000023 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000022 ;
+                rdfs:label "anthropised ecosystem environment"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An ecosystem environment that surrounds and is distinct and disjoint from an anthropised ecosystem."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000024
+:ClimOO_0000024 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000023 ;
+                rdfs:label "agricultural ecosystem environment"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An anthropized ecosystem environment that surrounds and is distinct and disjoint from an agricultural ecosystem."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000025
+:ClimOO_0000025 rdf:type owl:Class ;
+                rdfs:subClassOf <https://www.w3id.org/sco#SCO_0000028> ;
+                rdfs:label "environmental system component"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A complex system component that belongs to an environmental system."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000026
+:ClimOO_0000026 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000025 ;
+                rdfs:label "ecosystem component"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An environmental system component that belongs to an ecosystem."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000027
+:ClimOO_0000027 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000026 ;
+                rdfs:label "anthropised ecosystem component"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An ecosystem component that belongs to an anthropised ecosystem."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000028
+:ClimOO_0000028 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000027 ;
+                rdfs:label "agricultural ecosystem component"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An anthropised ecosystem component that belongs to an agricultural ecosystem."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000029
+:ClimOO_0000029 rdf:type owl:Class ;
+                rdfs:subClassOf <https://www.w3id.org/sco#SCO_0000033> ;
+                rdfs:label "environmental system environnement agent"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An environmental system environment component that is an agent in an interaction among environmental system environment components or in an interaction between environmental system components and environmental system environment components."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000030
+:ClimOO_0000030 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000029 ;
+                rdfs:label "ecosystem environnement agent"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An ecosystem environment component that is an agent in an interaction among ecosystem environment components or in an interaction between ecosystem components and ecosystem system environment components."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000031
+:ClimOO_0000031 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000030 ;
+                rdfs:label "anthropised ecosystem environnement agent"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An anthropised ecosystem environment agent that is an agent in an interaction among anthropised ecosystem environment components or in an interaction between anthropised ecosystem components and anthropised ecosystem environment components."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000032
+:ClimOO_0000032 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000031 ;
+                rdfs:label "agricultural ecosystem environnement agent"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An agricultural ecosystem environment agent that is an agent in an interaction among agricultural ecosystem environment components or in an interaction between agricultural ecosystem components and agricultural ecosystem environment components."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000033
+:ClimOO_0000033 rdf:type owl:Class ;
+                rdfs:subClassOf <https://www.w3id.org/sco#SCO_0000023> ;
+                rdfs:label "environmental system history"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> " The complex system history of an environmental system."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000034
+:ClimOO_0000034 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000033 ;
+                rdfs:label "ecosystem history"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> " The environmental system history of an ecosystem."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000035
+:ClimOO_0000035 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000034 ;
+                rdfs:label "anthropised ecosystem history"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> " The ecosystem history of an anthropised ecosystem."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000036
+:ClimOO_0000036 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000035 ;
+                rdfs:label "agricultural ecosystem history"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> " The anthropised ecosystem history of an agricultural ecosystem."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000037
+:ClimOO_0000037 rdf:type owl:Class ;
+                rdfs:subClassOf <https://www.w3id.org/sco#SCO_0000022> ;
+                rdfs:label "interaction among environmental system components"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An interaction among complex system components that occurs among at least two environmental system components of an environmental system."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000038
+:ClimOO_0000038 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000037 ;
+                rdfs:label "interaction among ecosystem components"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An interaction among environmental system components that occurs among at least two ecosystem components of an ecosystem."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000039
+:ClimOO_0000039 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000038 ;
+                rdfs:label "interaction among anthropised ecosystem components"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An interaction among ecosystem components that occurs among at least two anthropised ecosystem components of an anthropised ecosystem."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000040
+:ClimOO_0000040 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000039 ;
+                rdfs:label "interaction among agricultural ecosystem components"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An interaction among anthropised ecosystem components that occurs among at least two agricultural ecosystem components of an agricultural ecosystem."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000041
+:ClimOO_0000041 rdf:type owl:Class ;
+                rdfs:subClassOf <https://www.w3id.org/sco#SCO_0000021> ;
+                rdfs:label "interaction among environmental system environment components"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An interaction among complex system environment components that occurs among at least two environmental system environment components of an environmental system."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000042
+:ClimOO_0000042 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000041 ;
+                rdfs:label "interaction among ecosystem environment components"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An interaction among environmental system environment components that occurs among at least two ecosystem environment components of an ecosystem."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000043
+:ClimOO_0000043 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000042 ;
+                rdfs:label "interaction among anthropised ecosystem environment components"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An interaction among ecosystem environment components that occurs among at least two anthropised ecosystem environment components of an anthropised ecosystem."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000044
+:ClimOO_0000044 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000043 ;
+                rdfs:label "interaction among agricultural ecosystem environment components"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An interaction among anthropised ecosystem environment components that occurs among at least two agricultural ecosystem environment components of an agricultural ecosystem."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000045
+:ClimOO_0000045 rdf:type owl:Class ;
+                rdfs:subClassOf <https://www.w3id.org/sco#SCO_0000020> ;
+                rdfs:label "interaction between environmental system components and environmental system environment components"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An interaction between complex system components and complex system environment components that occurs between at least one environmental system component and one environmental system environment component where the latter belongs to the system environment of the environmental system to which the environmental system component belongs."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000046
+:ClimOO_0000046 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000045 ;
+                rdfs:label "interaction between ecosystem components and ecosystem environment components"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An interaction between environmental system components and environmental system environment components that occurs between at least one ecosystem component and one ecosystem environment component where the latter belongs to the environment of the ecosystem to which the ecosystem component belongs."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000047
+:ClimOO_0000047 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000046 ;
+                rdfs:label "interaction between anthropised ecosystem components and anthropised ecosystem environment components"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An interaction between ecosystem components and ecosystem environment components that occurs between at least one anthropised ecosystem component and one anthropised ecosystem environment component where the latter belongs to the environment of the anthropised ecosystem to which the anthropised ecosystem component belongs."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000048
+:ClimOO_0000048 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000047 ;
+                rdfs:label "interaction between agricultural ecosystem components and agricultural ecosystem environment components"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An interaction between anthropised ecosystem components and anthropised ecosystem environment components that occurs between at least one agricultural ecosystem component and one agricultural ecosystem environment component where the latter belongs to the environment of the agricultural ecosystem to which the agricultural ecosystem component belongs."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000049
+:ClimOO_0000049 rdf:type owl:Class ;
+                rdfs:subClassOf <https://www.w3id.org/sco#SCO_0000010> ;
+                rdfs:label "environmental system development"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> " The complex system development of an environmental system."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000050
+:ClimOO_0000050 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000049 ;
+                rdfs:label "ecosystem development"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> " The environmental system development of an ecosystem."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000051
+:ClimOO_0000051 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000050 ;
+                rdfs:label "anthropised ecosystem development"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> " The ecosystem development of an anthropised ecosystem."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000052
+:ClimOO_0000052 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000051 ;
+                rdfs:label "agricultural ecosystem development"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> " The anthropised ecosystem development of an agricultural ecosystem."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000053
+:ClimOO_0000053 rdf:type owl:Class ;
+                rdfs:subClassOf <https://www.w3id.org/sco#SCO_0000016> ;
+                rdfs:label "environmental system environment component perspective"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A complex system environment component perspective that is bearered by an environmental system environment component."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000054
+:ClimOO_0000054 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000053 ;
+                rdfs:label "ecosystem environment component perspective"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An environmental system environment component perspective that is bearered by an ecosystem environment component."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000055
+:ClimOO_0000055 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000054 ;
+                rdfs:label "anthropised ecosystem environment component perspective"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An ecosystem environment component perspective that is bearered by an anthropised ecosystem environment component."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000056
+:ClimOO_0000056 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000055 ;
+                rdfs:label "agricultural ecosystem environment component perspective"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An anthropised ecosystem environment component perspective that is bearered by an agricultural ecosystem environment component."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000057
+:ClimOO_0000057 rdf:type owl:Class ;
+                rdfs:subClassOf <https://www.w3id.org/sco#SCO_0000030> ;
+                rdfs:label "environmental system stakeholder perspective"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A stakeholder perspective that is bearered by an environmental system stakeholder."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000058
+:ClimOO_0000058 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000057 ;
+                rdfs:label "ecosystem stakeholder perspective"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An environmental system stakeholder perspective that is bearered by an ecosystem stakeholder."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000059
+:ClimOO_0000059 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000058 ;
+                rdfs:label "anthropised ecosystem stakeholder perspective"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An ecosystem stakeholder perspective that is bearered by an anthropised ecosystem stakeholder."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000060
+:ClimOO_0000060 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000059 ;
+                rdfs:label "agricultural ecosystem stakeholder perspective"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An anthropised ecosystem stakeholder perspective that is bearered by an agricultural ecosystem stakeholder."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000061
+:ClimOO_0000061 rdf:type owl:Class ;
+                rdfs:subClassOf <https://www.w3id.org/sco#SCO_0000016> ;
+                rdfs:label "environmental system component perspective"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A complex system component perspective that is bearered by an environmental system component."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000062
+:ClimOO_0000062 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000061 ;
+                rdfs:label "ecosystem component perspective"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An environmental system component perspective that is bearered by an ecosystem component."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000063
+:ClimOO_0000063 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000062 ;
+                rdfs:label "anthropised ecosystem component perspective"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An ecosystem component perspective that is bearered by an anthropised ecosystem component."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000064
+:ClimOO_0000064 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000063 ;
+                rdfs:label "agricultural ecosystem component perspective"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An anthropised ecosystem component perspective that is bearered by an agricultural ecosystem component."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
 #################################################################
