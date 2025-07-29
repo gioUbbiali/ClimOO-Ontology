@@ -183,6 +183,10 @@ A continuant cannot have an occurrent as part: use 'participates in'. An occurre
 <http://purl.obolibrary.org/obo/BFO_0000067> rdf:type owl:ObjectProperty .
 
 
+###  http://purl.obolibrary.org/obo/BFO_0000176
+<http://purl.obolibrary.org/obo/BFO_0000176> rdf:type owl:ObjectProperty .
+
+
 ###  http://purl.obolibrary.org/obo/ENVO_01001307
 <http://purl.obolibrary.org/obo/ENVO_01001307> rdf:type owl:ObjectProperty .
 
@@ -1052,6 +1056,10 @@ _:genid4 rdf:type rdf:List ;
  ] .
 
 
+###  http://purl.obolibrary.org/obo/ENVO_00000114
+<http://purl.obolibrary.org/obo/ENVO_00000114> rdf:type owl:Class .
+
+
 ###  http://purl.obolibrary.org/obo/ENVO_00001998
 <http://purl.obolibrary.org/obo/ENVO_00001998> rdf:type owl:Class ;
                                                rdfs:subClassOf <http://purl.obolibrary.org/obo/ENVO_00010483> ,
@@ -1189,9 +1197,16 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
 ###  http://purl.obolibrary.org/obo/ENVO_00002259
 <http://purl.obolibrary.org/obo/ENVO_00002259> rdf:type owl:Class ;
                                                rdfs:subClassOf <http://purl.obolibrary.org/obo/ENVO_00001998> ,
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000050> ;
-                                                                 owl:someValuesFrom <http://purl.obolibrary.org/obo/ENVO_00000077>
+                                                               [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                        owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000176> ;
+                                                                                        owl:someValuesFrom <http://purl.obolibrary.org/obo/ENVO_00000077>
+                                                                                      ]
+                                                                                      [ rdf:type owl:Restriction ;
+                                                                                        owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000176> ;
+                                                                                        owl:someValuesFrom <http://purl.obolibrary.org/obo/ENVO_00000114>
+                                                                                      ]
+                                                                                    ) ;
+                                                                 rdf:type owl:Class
                                                                ] ;
                                                <http://purl.obolibrary.org/obo/IAO_0000115> "Soil which is part of an ecosystem used for agricultural activities."@en ;
                                                <http://www.geneontology.org/formats/oboInOwl#inSubset> <http://purl.obolibrary.org/obo/ENVO_03605015> ;
@@ -1225,7 +1240,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
 
 ###  http://purl.obolibrary.org/obo/ENVO_00003074
 <http://purl.obolibrary.org/obo/ENVO_00003074> rdf:type owl:Class ;
-                                               owl:equivalentClass _:genid62 ;
+                                               owl:equivalentClass _:genid66 ;
                                                rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> ,
                                                                [ rdf:type owl:Restriction ;
                                                                  owl:onProperty <http://purl.obolibrary.org/obo/RO_0002353> ;
@@ -1235,7 +1250,7 @@ The lower boundary that separates soil from the nonsoil underneath is most diffi
                                                <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "manufactured good" ;
                                                rdfs:label "manufactured product" .
 
-_:genid62 owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000040>
+_:genid66 owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000040>
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty <http://purl.obolibrary.org/obo/RO_0000087> ;
                                   owl:someValuesFrom <https://w3id.org/sumso#SuMSO_0000053>
@@ -1250,7 +1265,7 @@ _:genid62 owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000040>
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.obolibrary.org/obo/ENVO_00003074> ;
    owl:annotatedProperty owl:equivalentClass ;
-   owl:annotatedTarget _:genid62 ;
+   owl:annotatedTarget _:genid66 ;
    rdfs:comment """ClimOO developer comment:
 We revised this axiom to make reference to the related role."""@en
  ] .
@@ -1460,6 +1475,34 @@ We revised this axiom to make reference to the related role."""@en
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.obolibrary.org/obo/ENVO_01000311> ;
+   owl:annotatedProperty <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> ;
+   owl:annotatedTarget "market garden" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "USGS:SDTS"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.obolibrary.org/obo/ENVO_01000311> ;
+   owl:annotatedProperty <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> ;
+   owl:annotatedTarget "range" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ADL:FTT"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.obolibrary.org/obo/ENVO_01000311> ;
+   owl:annotatedProperty <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> ;
+   owl:annotatedTarget "truck farm" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "USGS:SDTS"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.obolibrary.org/obo/ENVO_01000311> ;
+   owl:annotatedProperty <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> ;
+   owl:annotatedTarget "truck garden" ;
+   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "USGS:SDTS"
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.obolibrary.org/obo/ENVO_01000311> ;
    owl:annotatedProperty <http://purl.obolibrary.org/obo/IAO_0000115> ;
    owl:annotatedTarget "A cultivated environment is an environment that has been modified by humans by the preparation of the land, usually for the purposes of growing crops." ;
    <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "MA:ma"
@@ -1491,34 +1534,6 @@ We revised this axiom to make reference to the related role."""@en
    owl:annotatedProperty <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> ;
    owl:annotatedTarget "cultivated cropland" ;
    <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ADL:FTT"
- ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.obolibrary.org/obo/ENVO_01000311> ;
-   owl:annotatedProperty <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> ;
-   owl:annotatedTarget "market garden" ;
-   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "USGS:SDTS"
- ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.obolibrary.org/obo/ENVO_01000311> ;
-   owl:annotatedProperty <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> ;
-   owl:annotatedTarget "range" ;
-   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "ADL:FTT"
- ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.obolibrary.org/obo/ENVO_01000311> ;
-   owl:annotatedProperty <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> ;
-   owl:annotatedTarget "truck farm" ;
-   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "USGS:SDTS"
- ] .
-
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource <http://purl.obolibrary.org/obo/ENVO_01000311> ;
-   owl:annotatedProperty <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> ;
-   owl:annotatedTarget "truck garden" ;
-   <http://www.geneontology.org/formats/oboInOwl#hasDbXref> "USGS:SDTS"
  ] .
 
 
@@ -2322,16 +2337,8 @@ We revised this axiom to make reference to the related role."""@en
 
 ###  http://purl.obolibrary.org/obo/ENVO_01000993
 <http://purl.obolibrary.org/obo/ENVO_01000993> rdf:type owl:Class ;
-                                               owl:equivalentClass [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/OBI_0000011>
-                                                                                          [ rdf:type owl:Restriction ;
-                                                                                            owl:onProperty <http://purl.obolibrary.org/obo/RO_0002234> ;
-                                                                                            owl:someValuesFrom <http://purl.obolibrary.org/obo/ENVO_00003074>
-                                                                                          ]
-                                                                                        ) ;
-                                                                     rdf:type owl:Class
-                                                                   ] ;
-                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/ENVO_02500027> ,
-                                                               <http://purl.obolibrary.org/obo/OBI_0000011> ,
+                                               owl:equivalentClass _:genid235 ;
+                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000094> ,
                                                                [ rdf:type owl:Restriction ;
                                                                  owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000051> ;
                                                                  owl:someValuesFrom <http://purl.obolibrary.org/obo/ENVO_01000952>
@@ -2343,6 +2350,22 @@ We revised this axiom to make reference to the related role."""@en
                                                <http://purl.obolibrary.org/obo/IAO_0000115> "A planned process during which raw or recycled materials are transformed into products for use or sale using labour and machines, tools, chemical and biological processing, or formulation." ;
                                                rdfs:comment "The term may refer to a range of human activity, from handicraft to high tech, but is most commonly applied to industrial production, in which raw materials are transformed into finished goods on a large scale." ;
                                                rdfs:label "manufacturing process"@en .
+
+_:genid235 owl:intersectionOf ( <http://purl.obolibrary.org/obo/OBI_0000094>
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <http://purl.obolibrary.org/obo/RO_0002234> ;
+                                   owl:someValuesFrom <http://purl.obolibrary.org/obo/ENVO_00003074>
+                                 ]
+                               ) ;
+            rdf:type owl:Class .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.obolibrary.org/obo/ENVO_01000993> ;
+   owl:annotatedProperty owl:equivalentClass ;
+   owl:annotatedTarget _:genid235 ;
+   rdfs:comment """ClimOO developer comment:
+We revised this axiom according to the new class hierarchy position."""@en
+ ] .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource <http://purl.obolibrary.org/obo/ENVO_01000993> ;
@@ -2903,23 +2926,41 @@ We revised this axiom to make reference to the related role."""@en
 
 ###  http://purl.obolibrary.org/obo/ENVO_01001795
 <http://purl.obolibrary.org/obo/ENVO_01001795> rdf:type owl:Class ;
-                                               owl:equivalentClass [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/ENVO_02500000>
-                                                                                          [ rdf:type owl:Restriction ;
-                                                                                            owl:onProperty <http://purl.obolibrary.org/obo/RO_0002608> ;
-                                                                                            owl:someValuesFrom <http://purl.obolibrary.org/obo/ENVO_01001110>
-                                                                                          ]
-                                                                                        ) ;
-                                                                     rdf:type owl:Class
-                                                                   ] ;
+                                               owl:equivalentClass _:genid351 ;
                                                rdfs:subClassOf <http://purl.obolibrary.org/obo/ENVO_02500000> ,
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty <http://purl.obolibrary.org/obo/RO_0002608> ;
-                                                                 owl:someValuesFrom <http://purl.obolibrary.org/obo/ENVO_01001110>
-                                                               ] ;
+                                                               _:genid356 ;
                                                <http://purl.obolibrary.org/obo/IAO_0000115> "An environmental process either driven by or primarily impacting the parts or emergent properties of an ecosystem." ;
                                                <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-4366-3088> ;
                                                <http://purl.org/dc/elements/1.1/date> "2019-10-21T11:52:55Z"^^xsd:dateTime ;
                                                rdfs:label "ecosystem process"@en .
+
+_:genid351 owl:intersectionOf ( <http://purl.obolibrary.org/obo/ENVO_02500000>
+                                 [ rdf:type owl:Restriction ;
+                                   owl:onProperty <http://purl.obolibrary.org/obo/RO_0002608> ;
+                                   owl:someValuesFrom <http://purl.obolibrary.org/obo/ENVO_01001110>
+                                 ]
+                               ) ;
+            rdf:type owl:Class .
+
+_:genid356 rdf:type owl:Restriction ;
+            owl:onProperty <http://purl.obolibrary.org/obo/RO_0002608> ;
+            owl:someValuesFrom <http://purl.obolibrary.org/obo/ENVO_01001110> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.obolibrary.org/obo/ENVO_01001795> ;
+   owl:annotatedProperty owl:equivalentClass ;
+   owl:annotatedTarget _:genid351 ;
+   rdfs:comment """ClimOO developer comment:
+It seems that this axiom should be revised, at least, adding reference to concrete ecosystem agents. We currently, maintain this axiom as such; if needed, we will revise it."""@en
+ ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.obolibrary.org/obo/ENVO_01001795> ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget _:genid356 ;
+   rdfs:comment """ClimOO developer comment:
+It seems that this axiom should be revised, at least, adding reference to concrete ecosystem agents. We currently, maintain this axiom as such; if needed, we will revise it."""@en
+ ] .
 
 
 ###  http://purl.obolibrary.org/obo/ENVO_01001828
@@ -2986,7 +3027,7 @@ We revised this axiom to make reference to the related role."""@en
 
 ###  http://purl.obolibrary.org/obo/ENVO_02000187
 <http://purl.obolibrary.org/obo/ENVO_02000187> rdf:type owl:Class ;
-                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000011> ;
+                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/OBI_0000094> ;
                                                <http://purl.obolibrary.org/obo/IAO_0000115> "A planned process involving the deliberate use of biological agents, such as microbes or enzymes, to chemically modify substances in a controlled setting. This process is typically utilized to enhance the value or reduce the environmental impact of various materials." ;
                                                <http://purl.org/dc/terms/contributor> <https://orcid.org/0000-0002-6601-2165> ;
                                                <http://purl.org/dc/terms/created> "2024-08-05T22:07:41Z"^^xsd:dateTime ;
@@ -2996,36 +3037,31 @@ We revised this axiom to make reference to the related role."""@en
 
 ###  http://purl.obolibrary.org/obo/ENVO_02500000
 <http://purl.obolibrary.org/obo/ENVO_02500000> rdf:type owl:Class ;
-                                               owl:equivalentClass [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000015>
-                                                                                          [ rdf:type owl:Restriction ;
-                                                                                            owl:onProperty <http://purl.obolibrary.org/obo/RO_0000057> ;
-                                                                                            owl:someValuesFrom [ rdf:type owl:Class ;
-                                                                                                                 owl:unionOf ( <http://purl.obolibrary.org/obo/ENVO_00010483>
-                                                                                                                               <http://purl.obolibrary.org/obo/ENVO_01000254>
-                                                                                                                               <http://purl.obolibrary.org/obo/ENVO_01000799>
-                                                                                                                               <http://purl.obolibrary.org/obo/ENVO_01000804>
-                                                                                                                               <http://purl.obolibrary.org/obo/ENVO_01000813>
-                                                                                                                             )
-                                                                                                               ]
-                                                                                          ]
-                                                                                        ) ;
-                                                                     rdf:type owl:Class
-                                                                   ] ;
                                                rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> ,
-                                                               [ rdf:type owl:Restriction ;
-                                                                 owl:onProperty <http://purl.obolibrary.org/obo/RO_0000057> ;
-                                                                 owl:someValuesFrom [ rdf:type owl:Class ;
-                                                                                      owl:unionOf ( <http://purl.obolibrary.org/obo/ENVO_00010483>
-                                                                                                    <http://purl.obolibrary.org/obo/ENVO_01000254>
-                                                                                                    <http://purl.obolibrary.org/obo/ENVO_01000799>
-                                                                                                    <http://purl.obolibrary.org/obo/ENVO_01000804>
-                                                                                                    <http://purl.obolibrary.org/obo/ENVO_01000813>
-                                                                                                  )
-                                                                                    ]
-                                                               ] ;
+                                                               _:genid368 ;
                                                <http://purl.obolibrary.org/obo/IAO_0000115> "A process in which includes the components of an environmental system as participants." ;
                                                rdfs:comment "This is a convenience class for organisation and should not be used for annotation." ;
                                                rdfs:label "environmental system process"@en .
+
+_:genid368 rdf:type owl:Restriction ;
+            owl:onProperty <http://purl.obolibrary.org/obo/RO_0000057> ;
+            owl:someValuesFrom [ rdf:type owl:Class ;
+                                 owl:unionOf ( <http://purl.obolibrary.org/obo/ENVO_00010483>
+                                               <http://purl.obolibrary.org/obo/ENVO_01000254>
+                                               <http://purl.obolibrary.org/obo/ENVO_01000799>
+                                               <http://purl.obolibrary.org/obo/ENVO_01000804>
+                                               <http://purl.obolibrary.org/obo/ENVO_01000813>
+                                             )
+                               ] .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource <http://purl.obolibrary.org/obo/ENVO_02500000> ;
+   owl:annotatedProperty rdfs:subClassOf ;
+   owl:annotatedTarget _:genid368 ;
+   rdfs:comment """ClimOO developer comment:
+We omitted the corresponding equivalent class axiom to avoid incorrect automatic reclassifications of “system development” classes. We judged this an adequate compromise as, on one hand, this EnvO class has been created for grouping purposes (see comments to the class), and on the other, the SCO representation of system development requires further implementations.
+https://github.com/gioUbbiali/Sustainability-Core-Ontology/issues/2"""@en
+ ] .
 
 
 ###  http://purl.obolibrary.org/obo/ENVO_02500003
@@ -4085,6 +4121,10 @@ Definitions of Cryosphere come from several glossaries including:
                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> ;
                                              <http://purl.obolibrary.org/obo/IAO_0000115> "A process that realizes a plan which is the concretization of a plan specification."@en ;
                                              rdfs:label "planned process"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000094
+<http://purl.obolibrary.org/obo/OBI_0000094> rdf:type owl:Class .
 
 
 ###  http://purl.obolibrary.org/obo/PATO_0000001
