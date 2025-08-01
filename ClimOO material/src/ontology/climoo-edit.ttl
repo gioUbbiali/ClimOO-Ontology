@@ -402,7 +402,11 @@ For ClimOO Ontology purposes, we restricted this class to processes having as oc
 <http://purl.obolibrary.org/obo/ENVO_02500026> rdfs:subClassOf <http://purl.obolibrary.org/obo/ENVO_02500000> ;
                                                <http://www.ontologyrepository.com/CommonCoreOntologies/definition> """ClimOO Ontology revised definition:
 A process during which human, pertaining to an environmental system or its environment, apply technology to alter the magnitude, duration, rate, or impact of an environmental process."""@en ;
-                                               rdfs:comment """ClimOO developer comment: 
+                                               rdfs:comment """ClimOO developer comment:
+We consider this entire ontology branch identifying planned processes. Discussions are required whether only some should be considered as such."""@en ,
+                                                            """ClimOO developer comment:
+We currently leave open the discussion whether some of these processes should be considered complex system activities."""@en ,
+                                                            """ClimOO developer comment: 
 For ClimOO purposes, we revised this class definition and its hierarchy position, focusing its application to environmental systems and related process.
 See comments to https://www.w3id.org/climoo#ClimOO_0000065 and http://purl.obolibrary.org/obo/ENVO_02500027"""@en .
 
@@ -418,7 +422,9 @@ http://purl.obolibrary.org/obo/ENVO_02500000"""@en ,
                                                             """ClimOO developer comment:
 We created a class specific for processes pertaining to anthopised ecosystem, considering this class as referring to those generally driven by human action. This is our understanding from the definition and related subclasses. We made some revision to related hierarchies. We revised the definition to specify that we are refering to human part of the system or part of its environmental (this also applies to subclasses).
 
-See https://www.w3id.org/climoo#ClimOO_0000065"""@en .
+See https://www.w3id.org/climoo#ClimOO_0000065"""@en ,
+                                                            """ClimOO developer comment:
+We currently leave open the discussion whether some of these processes should be considered complex system activities."""@en .
 
 
 ###  http://purl.obolibrary.org/obo/ENVO_03000043
