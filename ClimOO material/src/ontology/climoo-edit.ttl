@@ -11,6 +11,7 @@
                                owl:imports <http://ClimOO/climoo/import/sumso-imports#2025-06-16> ,
                                            <http://ClimOO/climoo/imports/cco-imports#2025-06-17> ,
                                            <http://ClimOO/climoo/imports/envo-imports#2025-06-25> ,
+                                           <http://ClimOO/climoo/imports/pato-imports2#2025-08-12> ,
                                            <http://ClimOO/climoo/imports/sdgio-imports#2025-06-26> ,
                                            <http://purl.obolibrary.org/obo/climoo/imports/chebi_imports#2025-06-19> ,
                                            <http://purl.obolibrary.org/obo/climoo/imports/pato_imports#2025-06-19> ,
@@ -2785,7 +2786,8 @@ We envision discussions with subject matter experts."""@en ;
 #################################################################
 
 ###  https://www.w3id.org/climoo#ClimOO_0000072
-:ClimOO_0000072 rdf:type owl:NamedIndividual ;
+:ClimOO_0000072 rdf:type owl:NamedIndividual ,
+                         :ClimOO_0000093 ;
                 <http://purl.org/dc/terms/description> "This owl:NamedIndividual tracks the perspectives of ClimOO project participants according to which this ontology has been built."@en ;
                 <http://www.ontologyrepository.com/CommonCoreOntologies/definition> "The perspective of the ClimOO project participants."@en ;
                 rdfs:label "ClimOO project perspective"@en ;
