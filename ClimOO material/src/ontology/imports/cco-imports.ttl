@@ -1,0 +1,495 @@
+@prefix : <http://www.semanticweb.org/f.u./ontologies/2025/5/untitled-ontology-44/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/f.u./ontologies/2025/5/untitled-ontology-44/> .
+
+<http://ClimOO/climoo/imports/cco-imports> rdf:type owl:Ontology ;
+                                            owl:versionIRI <http://ClimOO/climoo/imports/cco-imports#2025-06-17> ;
+                                            <http://purl.org/dc/terms/description> """This file contains ClimOO Ontology imports from the Common Core Ontology suite (CCO). Imports were manually collected and revised.
+
+Ontology source: CCO 2.0.
+https://github.com/CommonCoreOntology/CommonCoreOntologies/releases/tag/v2.0-2024-11-06
+
+Additional imports from CCO can be found here.
+https://github.com/ClimOO/ClimOO-Ontology/tree/main/ClimOO%20material/src/ontology/imports/sumso-imports.ttl"""@en ;
+                                            rdfs:comment """Two new releases of CCO, CCO 1.7 and CCO 2.0, have been made available in November 2024. CCO 2.0 provides a new IRI schema. SCO, ClimOO upper-level ontology, imports from a former release. CCO 1.5. Similarly, SuMSO, another ontology extending SCO from which ClimOO reuses several backbone classes as backbone, imports from CCO 1.6. Aiming to conform with established sustainability ontologies, ClimOO currently reuses CCO imports from SCO and SuMSO. As soon as updates will been made available for those resources, ClimOO will align accordingly. 
+ClimOO also reuse some classes from CCO that are not imported by SCO and SuMSO. Those imports have been fletched from CCO 2.0 and imports’ harmonization has been performed manually to ensure ontology structure and IRIs accuracy and correspondence as needed.  
+
+https://github.com/CommonCoreOntology/CommonCoreOntologies/releases
+https://github.com/gioUbbiali/Sustainability-Core-Ontology 
+https://github.com/gioUbbiali/Sustainable-Meat-Systems-Ontology"""@en ;
+                                            rdfs:seeAlso "https://github.com/CommonCoreOntology/CommonCoreOntologies" ;
+                                            owl:versionInfo "2025-06-17" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#editorialNote
+<http://www.w3.org/2004/02/skos/core#editorialNote> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+<http://www.w3.org/2004/02/skos/core#scopeNote> rdf:type owl:AnnotationProperty .
+
+
+###  https://www.commoncoreontologies.org/ont00001754
+<https://www.commoncoreontologies.org/ont00001754> rdf:type owl:AnnotationProperty .
+
+
+###  https://www.commoncoreontologies.org/ont00001760
+<https://www.commoncoreontologies.org/ont00001760> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/BFO_0000176
+<http://purl.obolibrary.org/obo/BFO_0000176> rdf:type owl:ObjectProperty .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000178
+<http://purl.obolibrary.org/obo/BFO_0000178> rdf:type owl:ObjectProperty .
+
+
+###  https://www.commoncoreontologies.org/ont00001803
+<https://www.commoncoreontologies.org/ont00001803> rdf:type owl:ObjectProperty ;
+                                                   owl:inverseOf <https://www.commoncoreontologies.org/ont00001819> ;
+                                                   rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000003> ;
+                                                   rdfs:range <http://purl.obolibrary.org/obo/BFO_0000003> ;
+                                                   rdfs:label "is cause of"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "x is_cause_of y iff x and y are instances of Occurrent, and y is a consequence of x."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/ExtendedRelationOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001805
+<https://www.commoncoreontologies.org/ont00001805> rdf:type owl:ObjectProperty ;
+                                                   owl:inverseOf <https://www.commoncoreontologies.org/ont00001888> ;
+                                                   rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                                   rdfs:range <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                                   <http://purl.org/dc/terms/created> "2022-12-30T21:32:27-05:00"^^xsd:dateTime ;
+                                                   <http://purl.org/dc/terms/creator> "https://cubrc.org"^^xsd:anyURI ;
+                                                   rdfs:label "is disrupted by"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "Inverse of disrupts." ;
+                                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "is disrupted by"@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/ExtendedRelationOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001819
+<https://www.commoncoreontologies.org/ont00001819> rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000003> ;
+                                                   rdfs:range <http://purl.obolibrary.org/obo/BFO_0000003> ;
+                                                   rdfs:label "caused by"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "x caused_by y iff x and y are instances of Occurrent, and x is a consequence of y."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/ExtendedRelationOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001888
+<https://www.commoncoreontologies.org/ont00001888> rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                                   rdfs:range <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                                   <http://purl.org/dc/terms/created> "2022-12-30T21:32:27-05:00"^^xsd:dateTime ;
+                                                   <http://purl.org/dc/terms/creator> "https://cubrc.org"^^xsd:anyURI ;
+                                                   rdfs:label "disrupts"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A relation where one process disrupts another process from occurring as it would have."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#editorialNote> "To lower the grade of a process is to lower the quality of a process according to some standard, for example when realizing a capability or a function."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "disrupts"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#scopeNote> "A process can disrupt another process from occurring as it would have by 1) preventing a disposition or role from being realized by that process, 2) lowering the grade of the process, or 3) stopping the process from continuing to occur."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/ExtendedRelationOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001904
+<https://www.commoncoreontologies.org/ont00001904> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf <https://www.commoncoreontologies.org/ont00001917> ;
+                                                   owl:inverseOf <https://www.commoncoreontologies.org/ont00001966> ;
+                                                   rdfs:range <https://www.commoncoreontologies.org/ont00001163> ;
+                                                   rdfs:label "is measured by"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "y is_measured_by x iff x is an instance of Information Content Entity and y is an instance of Entity, such that x describes some attribute of y relative to some scale or classification scheme."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001917
+<https://www.commoncoreontologies.org/ont00001917> rdf:type owl:ObjectProperty ;
+                                                   owl:inverseOf <https://www.commoncoreontologies.org/ont00001982> ;
+                                                   rdfs:range <https://www.commoncoreontologies.org/ont00000853> ;
+                                                   rdfs:label "described by"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "x described_by y iff y is an instance of Information Content Entity, and x is an instance of Entity, such that y is about the characteristics by which y can be recognized or visualized."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001933
+<https://www.commoncoreontologies.org/ont00001933> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf <https://www.commoncoreontologies.org/ont00001803> ;
+                                                   owl:inverseOf <https://www.commoncoreontologies.org/ont00001962> ;
+                                                   rdfs:label "process starts"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "x process_starts y iff x and y are instances of processes, and x is_cause_of y, and i is an instance of a temporal instant, and r is an instant of a temporal interval, and y has starting instance i, and x occurs on r, and r interval contains i."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#scopeNote> "A process x starts another process y when x causes y while x is still occurring."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/ExtendedRelationOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001962
+<https://www.commoncoreontologies.org/ont00001962> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf <https://www.commoncoreontologies.org/ont00001819> ;
+                                                   rdfs:label "process started by"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "x process_started_by y iff x and y are instances of processes, and x is caused_by y, and i is an instance of a temporal instant, and r is an instant of a temporal interval, and x has starting instance i, and y occurs on r, and r interval contains i."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#scopeNote> "A process x is started by another process y when y causes x while y is still occurring."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/ExtendedRelationOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001966
+<https://www.commoncoreontologies.org/ont00001966> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf <https://www.commoncoreontologies.org/ont00001982> ;
+                                                   rdfs:domain <https://www.commoncoreontologies.org/ont00001163> ;
+                                                   rdfs:comment "This object property, as well as all of its children are typified as functional properties. This means that for instances x, y, and z if x is a measurement of y and x is a measurement of z, then y = z."@en ;
+                                                   rdfs:label "is a measurement of"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "x is_a_measurement_of y iff x is an instance of Information Content Entity and y is an instance of Entity, such that x describes some attribute of y relative to some scale or classification scheme."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#scopeNote> "Given a stronger temporal interpretation, this property may be functional. For more info please refer to https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/temporal%20extensions."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001982
+<https://www.commoncoreontologies.org/ont00001982> rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain <https://www.commoncoreontologies.org/ont00000853> ;
+                                                   rdfs:comment "It is possible that this relation should be a functional property, that is for all x, y, z if x describes y and x describes z then y = z. For example, if a financial report x describes the quarterly results of a company y and that same financial report describes the quarterly results of a company z, then it should be inferred that companies y and z are the same. We refrained from classifying the relation as a functional property on the concern that descriptions are multifaceted and so consequently it may be that the same report would contain descriptions of multiple entities."@en ;
+                                                   rdfs:label "describes"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "x describes y iff x is an instance of Information Content Entity, and y is an instance of Entity, such that x is about the characteristics by which y can be recognized or visualized."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#example> "the content of a newspaper article describes some current event" ,
+                                                                                                 "the content of a visitor's log describes some facility visit" ,
+                                                                                                 "the content of an accident report describes some accident" ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.obolibrary.org/obo/BFO_0000001
+<http://purl.obolibrary.org/obo/BFO_0000001> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000003
+<http://purl.obolibrary.org/obo/BFO_0000003> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000015
+<http://purl.obolibrary.org/obo/BFO_0000015> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000016
+<http://purl.obolibrary.org/obo/BFO_0000016> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000035
+<http://purl.obolibrary.org/obo/BFO_0000035> rdf:type owl:Class .
+
+
+###  https://www.commoncoreontologies.org/ont00000011
+<https://www.commoncoreontologies.org/ont00000011> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000135> ;
+                                                   rdfs:label "Nominal Stasis"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#altLabel> "Nominal"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Stasis of Specifically Dependent Continuant in which some Independent Continuant bears a Quality or Realizable Entity that has a level of intensity or functionality that falls within the designed, expected, or acceptable range such that the Independent Continuant is of normal value, usefulness, or functionality."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001754> "https://en.oxforddictionaries.com/definition/nominal (Definition 6)" ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000082
+<https://www.commoncoreontologies.org/ont00000082> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000378> ;
+                                                   rdfs:label "Green"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Color that is between Yellow and Cyan with a wavelength in the visible spectrum, typically between 520 to 560 nanometers."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/QualityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000083
+<https://www.commoncoreontologies.org/ont00000083> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000035> ;
+                                                   rdfs:label "Process Ending"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Process Boundary that occurs on a Zero-Dimensional Temporal Region that is the ending instant of the One-Dimensional Temporal Region on which the Process, of which the Process Boundary is a part, occurs."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000115
+<https://www.commoncoreontologies.org/ont00000115> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000246> ;
+                                                   rdfs:label "Stasis of Disposition"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Stasis of Realizable Entity in which some Independent Continuant bears some Disposition that remains unchanged during a Temporal Interval."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000120
+<https://www.commoncoreontologies.org/ont00000120> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000853> ;
+                                                   rdfs:label "Measurement Unit"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Descriptive Information Content Entity that describes a definite magnitude of a physical quantity, defined and adopted by convention and/or by law, that is used as a standard for measurement of the same physical quantity."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001754> "https://en.wikipedia.org/w/index.php?title=Unit_of_measurement&oldid=1061038125"^^xsd:anyURI ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000135
+<https://www.commoncoreontologies.org/ont00000135> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000819> ;
+                                                   rdfs:label "Stasis of Specifically Dependent Continuant"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Stasis in which some Independent Continuant bears some Specifically Dependent Continuant that remains unchanged during a Temporal Interval."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000197
+<https://www.commoncoreontologies.org/ont00000197> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000035> ;
+                                                   rdfs:label "Process Beginning"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Process Boundary that occurs on a Zero-Dimensional Temporal Region that is the starting instant of the One-Dimensional Temporal Region on which the Process, of which the Process Boundary is a part, occurs."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000246
+<https://www.commoncoreontologies.org/ont00000246> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000135> ;
+                                                   rdfs:label "Stasis of Realizable Entity"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Stasis of Specifically Dependent Continuant in which some Independent Continuant bears some Realizable Entity that remains unchanged during a Temporal Interval."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000335
+<https://www.commoncoreontologies.org/ont00000335> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000819> ;
+                                                   rdfs:label "Stasis of Generically Dependent Continuant"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Stasis in which some Independent Continuant bears some Generically Dependent Continuant that remains unchanged during a Temporal Interval."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000378
+<https://www.commoncoreontologies.org/ont00000378> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000784> ;
+                                                   rdfs:label "Color"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "An Optical Property that inheres in a bearer in virtue of that bearer's Color Hue, Color Saturation and Color Brightness."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/QualityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000439
+<https://www.commoncoreontologies.org/ont00000439> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000378> ;
+                                                   rdfs:label "Black"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Color that lacks any hues as parts."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/QualityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000528
+<https://www.commoncoreontologies.org/ont00000528> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000378> ;
+                                                   rdfs:label "White"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Color of maximum brightness, the color of objects that reflect nearly all wavelengths of the visible light spectrum, thus considered achromatic."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/QualityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000555
+<https://www.commoncoreontologies.org/ont00000555> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000135> ;
+                                                   rdfs:label "Enhanced Stasis"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#altLabel> "Enhanced"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Stasis of Specifically Dependent Continuant in which some Independent Continuant bears a Quality or Realizable Entity that has undergone improvement (i.e., an increase or gain) due to a previous action or event such that the Independent Continuant is now of greater value, usefulness, or functionality."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001754> "http://www.thefreedictionary.com/enhance" ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000628
+<https://www.commoncoreontologies.org/ont00000628> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000016> ;
+                                                   rdfs:label "Electromagnetic Radiation Property"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Disposition that inheres in an bearer in virtue of how that bearer interacts with electromagnetic radiation."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/QualityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000660
+<https://www.commoncoreontologies.org/ont00000660> rdf:type owl:Class ;
+                                                   owl:equivalentClass [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000015>
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <https://www.commoncoreontologies.org/ont00001819> ;
+                                                                                                owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000015>
+                                                                                              ]
+                                                                                            ) ;
+                                                                         rdf:type owl:Class
+                                                                       ] ;
+                                                   rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                                   rdfs:label "Effect"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#altLabel> "Consequence"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Process that follows and is caused by some previous Process."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001754> "http://wordnetweb.princeton.edu/perl/webwn?s=effect" ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000784
+<https://www.commoncoreontologies.org/ont00000784> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000628> ;
+                                                   rdfs:label "Optical Property"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "An Electromagnetic Radiation Property that is realized when its bearer interacts with electromagnetic waves within the visible light spectrum."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/QualityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000818
+<https://www.commoncoreontologies.org/ont00000818> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000378> ;
+                                                   rdfs:label "Orange"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Color that is between Red and Yellow with a wavelength in the visible spectrum typically between 590 to 635 nanometers."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/QualityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000819
+<https://www.commoncoreontologies.org/ont00000819> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                                   rdfs:label "Stasis"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Process in which one or more Independent Continuants endure in an unchanging condition."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000820
+<https://www.commoncoreontologies.org/ont00000820> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000246> ;
+                                                   rdfs:label "Stasis of Function"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Stasis of Realizable Entity in which some Independent Continuant bears some Function that remains unchanged during a Temporal Interval."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000824
+<https://www.commoncoreontologies.org/ont00000824> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000246> ;
+                                                   rdfs:label "Stasis of Role"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Stasis of Realizable Entity in which some Independent Continuant bears some Role that remains unchanged during a Temporal Interval."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000850
+<https://www.commoncoreontologies.org/ont00000850> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000135> ;
+                                                   rdfs:label "Stasis of Quality"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Stasis of Specifically Dependent Continuant in which some Independent Continuant bears some Quality that remains unchanged during a Temporal Interval."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000853
+<https://www.commoncoreontologies.org/ont00000853> rdf:type owl:Class ;
+                                                   rdfs:label "Descriptive Information Content Entity"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#altLabel> "Descriptive ICE"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "An Information Content Entity that consists of a set of propositions that describe some Entity."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000872
+<https://www.commoncoreontologies.org/ont00000872> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000378> ;
+                                                   rdfs:label "Brown"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Color that consists of dark orange and red, and of very low intensity."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/QualityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000978
+<https://www.commoncoreontologies.org/ont00000978> rdf:type owl:Class ;
+                                                   owl:equivalentClass [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000015>
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <https://www.commoncoreontologies.org/ont00001803> ;
+                                                                                                owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000015>
+                                                                                              ]
+                                                                                            ) ;
+                                                                         rdf:type owl:Class
+                                                                       ] ;
+                                                   rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                                   rdfs:label "Cause"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Process that is the cause of or one of the causes of some other Process."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001163
+<https://www.commoncoreontologies.org/ont00001163> rdf:type owl:Class ;
+                                                   owl:equivalentClass [ owl:intersectionOf ( <https://www.commoncoreontologies.org/ont00000853>
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <https://www.commoncoreontologies.org/ont00001966> ;
+                                                                                                owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000001>
+                                                                                              ]
+                                                                                            ) ;
+                                                                         rdf:type owl:Class
+                                                                       ] ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000853> ;
+                                                   rdfs:label "Measurement Information Content Entity"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#altLabel> "Measurement ICE"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Descriptive Information Content Entity that describes the extent, dimensions, quantity, or quality of an Entity relative to some standard."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001189
+<https://www.commoncoreontologies.org/ont00001189> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000378> ;
+                                                   rdfs:label "Blue"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Color that is between Cyan and Violet with a wavelength in the visible spectrum typically between 450 to 490 nanometers."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/QualityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001225
+<https://www.commoncoreontologies.org/ont00001225> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000378> ;
+                                                   rdfs:label "Yellow"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Color that is between Orange and Green with a wavelength in the visible spectrum typically between 560 to 590 nanometers."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/QualityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001277
+<https://www.commoncoreontologies.org/ont00001277> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000378> ;
+                                                   rdfs:label "Red"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Color that is above Orange with a wavelength in the visible spectrum typically between 635 to 700 nanometers."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/QualityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001289
+<https://www.commoncoreontologies.org/ont00001289> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000135> ;
+                                                   rdfs:label "Damaged Stasis"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#altLabel> "Compromised"@en ,
+                                                                                                  "Damaged"@en ,
+                                                                                                  "Injured"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Stasis of Specifically Dependent Continuant in which some Independent Continuant bears a Quality or Realizable Entity that has suffered impairment (i.e., a decrease or loss) due to a previous action or event such that the Independent Continuant is now of lesser value, usefulness, or functionality."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#scopeNote> "This class can be used to instantiate instances that might otherwise be treated by defined classes such as Damaged Vehicle or Wounded Person. The Independent Continuant and Quality or Realizable Entity are participants of the stasis which can in turn be related to the temporal interval via the occurs on property. "@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001754> "http://www.thefreedictionary.com/damaged" ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001349
+<https://www.commoncoreontologies.org/ont00001349> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000378> ;
+                                                   rdfs:label "Grey"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Color between white and black colors."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/QualityOntology"^^xsd:anyURI .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

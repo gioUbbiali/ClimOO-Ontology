@@ -5,7 +5,7 @@
 
 This repository maintains the ClimOO ontology. ClimOO is a domain ontology, modeling (micro-)plastic pollution, climate change and their interrelation, with a primary focus on local South Tyrolean (Italy) agricultural production. ClimOO extends [Sustainability Core Ontology (SCO)](https://github.com/gioUbbiali/Sustainability-Core-Ontology) and [Basic Formal Ontology (BFO)](https://github.com/BFO-ontology/BFO-2020).
 
-See also ClimOO ontology webpage and ClimOO project website.
+The ClimOO ontology has been developed as part of the "Climate, Plastics and Sustainability: Ontology and Operationalisation (ClimOO)" project. See also ClimOO ontology webpage and [ClimOO project website](https://www.pthsta.it/en/research/climate-plastics-and-sustainability).
 
 
 ## Material
@@ -42,7 +42,7 @@ The most recent version of ClimOO can be always found here.
 
 ## Contact
 
-Giorgio A. Ubbiali - Giorgio.Ubbiali@unimi.it
+Giorgio A. Ubbiali - ga.ubbiali@gmail.com
 
 
 ## Publications and Documentation
