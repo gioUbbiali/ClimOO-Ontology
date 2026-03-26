@@ -253,7 +253,9 @@ We imported this hierarchy of EnvO classes with the purpose of including an alte
 
 EnvO classes for plastic debris particles do not present axioms besides the subsumption relation to the “piece of plastic” class. Class meaning concerning particle size only resides within the definitions.
 
-We import the “piece of plastic” class without including the related axiomatization and subsume this class directly to BFO: object class, as we imported it solely for grouping purposes. It is not relevant for the alignment."""@en ;
+We import the “piece of plastic” class without including the related axiomatization and subsume this class directly to BFO: object class, as we imported it solely for grouping purposes. It is not relevant for the alignment.
+
+We envision discussions with EnvO's curators to consolidate this alignment, especially in terms of class axiomatization."""@en ;
                                                rdfs:label "piece of plastic"@en .
 
 
