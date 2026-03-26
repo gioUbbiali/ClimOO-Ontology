@@ -1615,11 +1615,7 @@ We envision implementing such definitions in accordance with regulation revision
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty <http://purl.obolibrary.org/obo/RO_0002427> ;
-                                  owl:someValuesFrom [ rdf:type owl:Class ;
-                                                       owl:unionOf ( :ClimOO_0000172
-                                                                     :ClimOO_0000286
-                                                                   )
-                                                     ]
+                                  owl:someValuesFrom :ClimOO_0000172
                                 ] ;
                 rdfs:label "plastic object usage process"@en ;
                 <http://www.w3.org/2004/02/skos/core#definition> "A usage process of some piece of synthetic polymer-based material where at least one of the involved pieces of synthetic polymer-based material is a plastic object employed for a purpose."@en ;
@@ -1665,47 +1661,9 @@ We envision implementing such definitions in accordance with regulation revision
                                                          ) ;
                                       rdf:type owl:Class
                                     ] ;
-                rdfs:subClassOf :ClimOO_0000201 ,
-                                [ owl:intersectionOf ( :ClimOO_0000201
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <http://purl.obolibrary.org/obo/RO_0004009> ;
-                                                         owl:someValuesFrom [ owl:intersectionOf ( :ClimOO_0000194
-                                                                                                   [ rdf:type owl:Restriction ;
-                                                                                                     owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000177> ;
-                                                                                                     owl:someValuesFrom [ owl:intersectionOf ( :ClimOO_0000248
-                                                                                                                                               [ rdf:type owl:Restriction ;
-                                                                                                                                                 owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000177> ;
-                                                                                                                                                 owl:someValuesFrom [ owl:intersectionOf ( :ClimOO_0000153
-                                                                                                                                                                                           [ rdf:type owl:Restriction ;
-                                                                                                                                                                                             owl:onProperty <http://purl.obolibrary.org/obo/RO_0000087> ;
-                                                                                                                                                                                             owl:someValuesFrom <http://purl.obolibrary.org/obo/ENVO_01000665>
-                                                                                                                                                                                           ]
-                                                                                                                                                                                         ) ;
-                                                                                                                                                                      rdf:type owl:Class
-                                                                                                                                                                    ]
-                                                                                                                                               ]
-                                                                                                                                             ) ;
-                                                                                                                          rdf:type owl:Class
-                                                                                                                        ]
-                                                                                                   ]
-                                                                                                 ) ;
-                                                                              rdf:type owl:Class
-                                                                            ]
-                                                       ]
-                                                     ) ;
-                                  rdf:type owl:Class
-                                ] ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty <http://purl.obolibrary.org/obo/RO_0002212> ;
-                                  owl:someValuesFrom :ClimOO_0000266
-                                ] ,
-                                [ rdf:type owl:Restriction ;
+                rdfs:subClassOf [ rdf:type owl:Restriction ;
                                   owl:onProperty <http://purl.obolibrary.org/obo/RO_0002418> ;
                                   owl:someValuesFrom :ClimOO_0000199
-                                ] ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty <http://purl.obolibrary.org/obo/RO_0002418> ;
-                                  owl:someValuesFrom :ClimOO_0000238
                                 ] ;
                 rdfs:label "plastic recycling process"@en ;
                 <http://www.w3.org/2004/02/skos/core#definition> "A recycling process of synthetic polymer molecules that applies to some recyclable polymer molecules constituting a portion of synthetic plastic material composing some plastic waste."@en ;
@@ -1783,10 +1741,6 @@ We envision implementing such definitions in accordance with regulation revision
                                                        ]
                                                      ) ;
                                   rdf:type owl:Class
-                                ] ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty <http://purl.obolibrary.org/obo/RO_0002212> ;
-                                  owl:someValuesFrom :ClimOO_0000266
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty <http://purl.obolibrary.org/obo/RO_0002418> ;
@@ -2187,15 +2141,6 @@ Vert, M., Doi, Y., Hellwich, K.-H., Hess, M., Hodge, P., Kubisa, P., Rinaudo, M.
                                                          ) ;
                                       rdf:type owl:Class
                                     ] ;
-                rdfs:subClassOf :ClimOO_0000210 ,
-                                [ owl:intersectionOf ( :ClimOO_0000210
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <http://purl.obolibrary.org/obo/RO_0002353> ;
-                                                         owl:someValuesFrom :ClimOO_0000201
-                                                       ]
-                                                     ) ;
-                                  rdf:type owl:Class
-                                ] ;
                 rdfs:label "recycled polymer molecule"@en ;
                 <http://www.w3.org/2004/02/skos/core#definition> "A synthetic polymer molecule that is the main output of a recycling process of synthetic polymer molecule."@en ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
@@ -2239,15 +2184,11 @@ Vert, M., Doi, Y., Hellwich, K.-H., Hess, M., Hodge, P., Kubisa, P., Rinaudo, M.
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000055> ;
                                   owl:someValuesFrom :ClimOO_0000188
-                                ] ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty <http://purl.obolibrary.org/obo/RO_0002418> ;
-                                  owl:someValuesFrom :ClimOO_0000238
                                 ] ;
                 rdfs:comment "Reference to specific types of recycling processes, such as chemical recycling and mechanical recycling, can be added as needed."@en ;
                 rdfs:label "recycling process of synthetic polymer molecules"@en ;
                 rdfs:seeAlso "https://www.w3id.org/climoo#ClimOO_0000279"@en ;
-                <http://www.w3.org/2004/02/skos/core#definition> "A material processing that leads to the recovery of  some recyclable polymers, constituting the synthetic polymer-based material, composing some waste pieces of synthetic polymer-based material from those wasted items."@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A material processing that leads to the recovery of recyclable polymer molecules from waste pieces of synthetic polymer-based material."@en ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
@@ -2255,25 +2196,15 @@ Vert, M., Doi, Y., Hellwich, K.-H., Hess, M., Hodge, P., Kubisa, P., Rinaudo, M.
 :ClimOO_0000202 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000265 ,
                                 [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000167> ;
-                                                         owl:someValuesFrom [ owl:intersectionOf ( [ owl:intersectionOf ( :ClimOO_0000211
-                                                                                                                          [ rdf:type owl:Restriction ;
-                                                                                                                            owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000178> ;
-                                                                                                                            owl:someValuesFrom [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/CHEBI_24431>
-                                                                                                                                                                      [ rdf:type owl:Restriction ;
-                                                                                                                                                                        owl:onProperty <http://purl.obolibrary.org/obo/RO_0000087> ;
-                                                                                                                                                                        owl:someValuesFrom <http://purl.obolibrary.org/obo/CHEBI_78298>
-                                                                                                                                                                      ]
-                                                                                                                                                                    ) ;
-                                                                                                                                                 rdf:type owl:Class
-                                                                                                                                               ]
-                                                                                                                          ]
-                                                                                                                        ) ;
-                                                                                                     rdf:type owl:Class
-                                                                                                   ]
+                                                         owl:onProperty <http://purl.obolibrary.org/obo/RO_0002233> ;
+                                                         owl:someValuesFrom [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/CHEBI_24431>
                                                                                                    [ rdf:type owl:Restriction ;
                                                                                                      owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000176> ;
                                                                                                      owl:someValuesFrom :ClimOO_0000163
+                                                                                                   ]
+                                                                                                   [ rdf:type owl:Restriction ;
+                                                                                                     owl:onProperty <http://purl.obolibrary.org/obo/RO_0000087> ;
+                                                                                                     owl:someValuesFrom <http://purl.obolibrary.org/obo/CHEBI_78298>
                                                                                                    ]
                                                                                                  ) ;
                                                                               rdf:type owl:Class
@@ -2281,17 +2212,16 @@ Vert, M., Doi, Y., Hellwich, K.-H., Hess, M., Hodge, P., Kubisa, P., Rinaudo, M.
                                                        ]
                                                        [ rdf:type owl:Restriction ;
                                                          owl:onProperty <http://purl.obolibrary.org/obo/RO_0002234> ;
-                                                         owl:someValuesFrom [ owl:intersectionOf ( <http://www.semanticweb.org/bionik/portion_of_material>
+                                                         owl:someValuesFrom [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/CHEBI_24431>
+                                                                                                   [ rdf:type owl:Class ;
+                                                                                                     owl:complementOf [ rdf:type owl:Restriction ;
+                                                                                                                        owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000176> ;
+                                                                                                                        owl:someValuesFrom :ClimOO_0000163
+                                                                                                                      ]
+                                                                                                   ]
                                                                                                    [ rdf:type owl:Restriction ;
-                                                                                                     owl:onProperty <http://purl.obolibrary.org/obo/ENVO_02000200> ;
-                                                                                                     owl:someValuesFrom [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/CHEBI_24431>
-                                                                                                                                               [ rdf:type owl:Restriction ;
-                                                                                                                                                 owl:onProperty <http://purl.obolibrary.org/obo/RO_0000087> ;
-                                                                                                                                                 owl:someValuesFrom <http://purl.obolibrary.org/obo/CHEBI_78298>
-                                                                                                                                               ]
-                                                                                                                                             ) ;
-                                                                                                                          rdf:type owl:Class
-                                                                                                                        ]
+                                                                                                     owl:onProperty <http://purl.obolibrary.org/obo/RO_0000087> ;
+                                                                                                     owl:someValuesFrom <http://purl.obolibrary.org/obo/CHEBI_78298>
                                                                                                    ]
                                                                                                  ) ;
                                                                               rdf:type owl:Class
@@ -2695,11 +2625,7 @@ According to the current axiomatization and definition, this class may be a subc
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty <http://purl.obolibrary.org/obo/RO_0002427> ;
-                                  owl:someValuesFrom [ rdf:type owl:Class ;
-                                                       owl:unionOf ( :ClimOO_0000226
-                                                                     :ClimOO_0000284
-                                                                   )
-                                                     ]
+                                  owl:someValuesFrom :ClimOO_0000226
                                 ] ;
                 rdfs:label "usage process of some piece of synthetic polymer-based material"@en ;
                 <http://www.w3.org/2004/02/skos/core#definition> "A planned process that involves some piece of synthetic polymer-based material employed for some purpose."@en ;
@@ -2957,8 +2883,9 @@ See, for instance, ISO/TR 21960:2020Plastics — Environmental aspects — State
 ###  https://www.w3id.org/climoo#ClimOO_0000238
 :ClimOO_0000238 rdf:type owl:Class ;
                 rdfs:subClassOf <http://purl.obolibrary.org/obo/COB_0000035> ;
+                rdfs:comment "Extensions of the model will address 3R and 6R principles frameworks."@en ;
                 rdfs:label "plastic pollution prevention process"@en ;
-                <http://www.w3.org/2004/02/skos/core#definition> "A planned process that leads to avoiding the release and possible accumulation of plastic debris particles in a plastic debris sink, suppressing some plastic pollution process."@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A planned process that avoids the release of plastic debris particles into a plastic debris sink, suppressing some plastic pollution process."@en ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
 
 
@@ -3819,24 +3746,17 @@ http://purl.obolibrary.org/obo/ENVO_06105125""" ;
                                                      ]
                                 ] ,
                                 [ rdf:type owl:Restriction ;
-                                  owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000117> ;
-                                  owl:someValuesFrom :ClimOO_0000265
-                                ] ,
-                                [ rdf:type owl:Restriction ;
                                   owl:onProperty <http://purl.obolibrary.org/obo/RO_0002427> ;
-                                  owl:someValuesFrom [ rdf:type owl:Class ;
-                                                       owl:unionOf ( :ClimOO_0000221
-                                                                     :ClimOO_0000277
-                                                                   )
-                                                     ]
+                                  owl:someValuesFrom :ClimOO_0000277
                                 ] ;
                 rdfs:comment """Depending on the regulations and standards of reference, recycling may or may not be classified as a method of disposal. Sustainability impacts and implications may diverge equally across methods. 
 Currently, the ClimOO Ontology remains agnostic in those stances, making these two classes not disjoint. Users can specify the model based on their needs and according to endorsed standards.
 See, for instance, https://www.iso.org/standard/77957.html"""@en ,
-                             "Due to the main emphasis on the demise of wastes in literature and policy standards, currently, the ClimOO Ontology focuses this class on such a feature. Nevertheless, the notion of disposal is also often interpreted in terms of transportation. We icluded a related axiom as provisional. We envision discussions with subject matter experts to improve the current model."@en ,
+                             "Due to the main emphasis on the demise of wastes in literature and policy standards, currently, the ClimOO Ontology focuses this class on such a feature. Nevertheless, the notion of disposal is also often interpreted in terms of transportation. We envision discussions with subject matter experts to improve the current model."@en ,
+                             "Implementations may deal with disposal of pieces of polymer-based material that are not synthetic, as needed."@en ,
                              "Reference to specific types of disposal processes, such as incineration and landfill, can be added as needed."@en ;
-                rdfs:label "disposal process of a piece of polymer-based material"@en ;
-                <http://www.w3.org/2004/02/skos/core#definition> "A planned process that applies to piece of polymer-based material deemed to be waste, resulting in its removal and demise."@en ;
+                rdfs:label "disposal process of a piece of synthetic polymer-based material"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A planned process that applies to piece of synthetic polymer-based material deemed to be waste, resulting in its removal and demise."@en ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
 
 
@@ -3879,15 +3799,7 @@ See, for instance, https://www.iso.org/standard/77957.html"""@en ,
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty <http://purl.obolibrary.org/obo/RO_0002427> ;
-                                  owl:someValuesFrom :ClimOO_0000173
-                                ] ,
-                                [ rdf:type owl:Restriction ;
-                                  owl:onProperty <http://purl.obolibrary.org/obo/RO_0002427> ;
-                                  owl:someValuesFrom [ rdf:type owl:Class ;
-                                                       owl:unionOf ( :ClimOO_0000172
-                                                                     :ClimOO_0000173
-                                                                   )
-                                                     ]
+                                  owl:someValuesFrom :ClimOO_0000172
                                 ] ;
                 rdfs:label "disposal process of a plastic object"@en ;
                 <http://www.w3.org/2004/02/skos/core#definition> "A disposal process of a piece of plastic' that applies to some plastic object deemed to be waste, resulting in its removal and demise."@en ;
@@ -3909,7 +3821,7 @@ See, for instance, https://www.iso.org/standard/77957.html"""@en ,
                                   owl:onProperty <http://purl.obolibrary.org/obo/RO_0002427> ;
                                   owl:someValuesFrom :ClimOO_0000276
                                 ] ;
-                rdfs:label "transportation process of a portion of synthetic polymer-based material"@en ;
+                rdfs:label "planned transportation process of a portion of synthetic polymer-based material"@en ;
                 <http://www.w3.org/2004/02/skos/core#definition> "A transportation process that concerns a portion of synthetic polymer-based material."@en ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
@@ -3928,8 +3840,8 @@ See, for instance, https://www.iso.org/standard/77957.html"""@en ,
                                   owl:onProperty <http://purl.obolibrary.org/obo/RO_0002427> ;
                                   owl:someValuesFrom :ClimOO_0000278
                                 ] ;
-                rdfs:label "transportation process of a portion of synthetic plastic"@en ;
-                <http://www.w3.org/2004/02/skos/core#definition> "A transportation process of a portion of synthetic polymer-based material that concerns a portion of synthetic plastic."@en ;
+                rdfs:label "planned transportation process of a portion of synthetic plastic"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A planned transportation process of a portion of synthetic polymer-based material that concerns a portion of synthetic plastic."@en ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
@@ -3948,7 +3860,7 @@ See, for instance, https://www.iso.org/standard/77957.html"""@en ,
                                   owl:onProperty <http://purl.obolibrary.org/obo/RO_0002427> ;
                                   owl:someValuesFrom :ClimOO_0000277
                                 ] ;
-                rdfs:label "transportation process of a piece of synthetic polymer-based material"@en ;
+                rdfs:label "planned transportation process of a piece of synthetic polymer-based material"@en ;
                 <http://www.w3.org/2004/02/skos/core#definition> "A transportation process that concerns a piece of synthetic polymer-based material."@en ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
@@ -3964,8 +3876,8 @@ See, for instance, https://www.iso.org/standard/77957.html"""@en ,
                                   owl:onProperty <http://purl.obolibrary.org/obo/RO_0002427> ;
                                   owl:someValuesFrom :ClimOO_0000226
                                 ] ;
-                rdfs:label "transportation process of a piece of synthetic plastic"@en ;
-                <http://www.w3.org/2004/02/skos/core#definition> "A transportation process that concerns a piece of synthetic plastic."@en ;
+                rdfs:label "planned transportation process of a piece of synthetic plastic"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A planned transportation process that concerns a piece of synthetic plastic."@en ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
