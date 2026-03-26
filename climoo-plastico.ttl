@@ -115,6 +115,11 @@ Reference: Hastings J, De Matos P, Dekker A, Ennis M, Harsha B, Kale N, et al. T
 ChEBI covers several subclasses that may be relevant for inclusion, such as polyester or rubber polymer materials. We refer users to ChEBI for importing as needed."""@en .
 
 
+###  http://purl.obolibrary.org/obo/COB_0000035
+<http://purl.obolibrary.org/obo/COB_0000035> rdfs:comment """ClimOO Ontology comment: 
+Currently, we focus the following ClimOO classes on completely executed processes. Implementations can enhance the model to account for processes that might fail."""@en .
+
+
 ###  http://purl.obolibrary.org/obo/ENVO_06105002
 <http://purl.obolibrary.org/obo/ENVO_06105002> owl:disjointWith :ClimOO_0000124 ;
                                                rdfs:comment """ClimOO Ontology developer comment:
@@ -162,13 +167,6 @@ We aligned CCO and IAO classes according to SuMSO model."""@en .
 <http://purl.obolibrary.org/obo/IAO_0000033> owl:equivalentClass <http://www.ontologyrepository.com/CommonCoreOntologies/DirectiveInformationContentEntity> .
 
 
-###  http://purl.obolibrary.org/obo/IAO_0000104
-<http://purl.obolibrary.org/obo/IAO_0000104> rdfs:comment """ClimOO developer comment:
-Work to align representations of plans and plan specifications between IAO and CCO is required. We envision discussions with subject matter experts.
-See https://www.commoncoreontologies.org/ont00000974
-https://www.commoncoreontologies.org/ont00000476"""@en .
-
-
 ###  http://www.semanticweb.org/bionik/portion_of_material
 <http://www.semanticweb.org/bionik/portion_of_material> rdfs:subClassOf [ rdf:type owl:Class ;
                                                                           owl:unionOf ( [ rdf:type owl:Class ;
@@ -186,18 +184,6 @@ https://www.commoncoreontologies.org/ont00000476"""@en .
                                                                                         ]
                                                                                       )
                                                                         ] .
-
-
-###  https://w3id.org/sumso#SuMSO_0000043
-<https://w3id.org/sumso#SuMSO_0000043> rdfs:subClassOf :ClimOO_0000288 .
-
-
-###  https://w3id.org/sumso#SuMSO_0000050
-<https://w3id.org/sumso#SuMSO_0000050> rdfs:subClassOf :ClimOO_0000287 .
-
-
-###  https://w3id.org/sumso#SuMSO_0000051
-<https://w3id.org/sumso#SuMSO_0000051> rdfs:subClassOf :ClimOO_0000289 .
 
 
 ###  https://w3id.org/sumso#SuMSO_0000160
@@ -1604,8 +1590,8 @@ We envision implementing such definitions in accordance with regulation revision
 
 ###  https://www.w3id.org/climoo#ClimOO_0000173
 :ClimOO_0000173 rdf:type owl:Class ;
-                rdfs:subClassOf :ClimOO_0000221 ,
-                                [ owl:intersectionOf ( :ClimOO_0000221
+                rdfs:subClassOf :ClimOO_0000292 ,
+                                [ owl:intersectionOf ( :ClimOO_0000292
                                                        [ rdf:type owl:Restriction ;
                                                          owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000057> ;
                                                          owl:someValuesFrom :ClimOO_0000171
@@ -2625,7 +2611,7 @@ According to the current axiomatization and definition, this class may be a subc
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty <http://purl.obolibrary.org/obo/RO_0002427> ;
-                                  owl:someValuesFrom :ClimOO_0000226
+                                  owl:someValuesFrom :ClimOO_0000277
                                 ] ;
                 rdfs:label "usage process of some piece of synthetic polymer-based material"@en ;
                 <http://www.w3.org/2004/02/skos/core#definition> "A planned process that involves some piece of synthetic polymer-based material employed for some purpose."@en ;
@@ -3897,88 +3883,6 @@ See, for instance, https://www.iso.org/standard/77957.html"""@en ,
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000287
-:ClimOO_0000287 rdf:type owl:Class ;
-                owl:equivalentClass [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/COB_0000082>
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000055> ;
-                                                             owl:someValuesFrom [ rdf:type owl:Restriction ;
-                                                                                  owl:onProperty <http://purl.obolibrary.org/obo/RO_0000059> ;
-                                                                                  owl:someValuesFrom [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/IAO_0000104>
-                                                                                                                            [ rdf:type owl:Restriction ;
-                                                                                                                              owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000084> ;
-                                                                                                                              owl:someValuesFrom [ rdf:type owl:Class ;
-                                                                                                                                                   owl:unionOf ( <https://www.w3id.org/sco#SCO_0000026>
-                                                                                                                                                                 <https://www.w3id.org/sco#SCO_0000028>
-                                                                                                                                                               )
-                                                                                                                                                 ]
-                                                                                                                            ]
-                                                                                                                          ) ;
-                                                                                                       rdf:type owl:Class
-                                                                                                     ]
-                                                                                ]
-                                                           ]
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000118> ;
-                                                             owl:someValuesFrom :ClimOO_0000289
-                                                           ]
-                                                         ) ;
-                                      rdf:type owl:Class
-                                    ] ;
-                rdfs:subClassOf <http://purl.obolibrary.org/obo/COB_0000082> ;
-                <http://purl.org/dc/terms/source> <https://w3id.org/sumso#SuMSO_0000050> ;
-                rdfs:comment "According to SuMSO indications, we generalized “supply chain”, “supply chain activity”, and “complex system activity” classes to ensure represent and tracking transversality and concatenation of supply chains and activities across systems and environments. We extended these classes’ axiomatization to also refer to complex system environment components and interactions among complex system components. For further details and endorsed interpretations, see related SuMSO classes."@en ;
-                rdfs:label "supply chain"@en ;
-                rdfs:seeAlso """https://w3id.org/sumso#SuMSO_0000043 
-https://w3id.org/sumso#SuMSO_0000050 
-https://w3id.org/sumso#SuMSO_0000051""" .
-
-
-###  https://www.w3id.org/climoo#ClimOO_0000288
-:ClimOO_0000288 rdf:type owl:Class ;
-                rdfs:subClassOf <http://purl.obolibrary.org/obo/COB_0000082> ,
-                                [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/COB_0000082>
-                                                       [ rdf:type owl:Restriction ;
-                                                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000117> ;
-                                                         owl:someValuesFrom [ rdf:type owl:Class ;
-                                                                              owl:unionOf ( <https://www.w3id.org/sco#SCO_0000020>
-                                                                                            <https://www.w3id.org/sco#SCO_0000021>
-                                                                                            <https://www.w3id.org/sco#SCO_0000022>
-                                                                                          )
-                                                                            ]
-                                                       ]
-                                                     ) ;
-                                  rdf:type owl:Class
-                                ] ;
-                <http://purl.org/dc/terms/source> <https://w3id.org/sumso#SuMSO_0000043> ;
-                rdfs:comment "According to SuMSO indications, we generalized “supply chain”, “supply chain activity”, and “complex system activity” classes to ensure represent and tracking transversality and concatenation of supply chains and activities across systems and environments. We extended these classes’ axiomatization to also refer to complex system environment components and interactions among complex system components. For further details and endorsed interpretations, see related SuMSO classes."@en ;
-                rdfs:label "activity"@en ;
-                rdfs:seeAlso """https://w3id.org/sumso#SuMSO_0000043 
-https://w3id.org/sumso#SuMSO_0000050 
-https://w3id.org/sumso#SuMSO_0000051""" ;
-                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
-
-
-###  https://www.w3id.org/climoo#ClimOO_0000289
-:ClimOO_0000289 rdf:type owl:Class ;
-                owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000288
-                                                           [ rdf:type owl:Restriction ;
-                                                             owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000138> ;
-                                                             owl:someValuesFrom :ClimOO_0000287
-                                                           ]
-                                                         ) ;
-                                      rdf:type owl:Class
-                                    ] ;
-                rdfs:subClassOf :ClimOO_0000288 ;
-                <http://purl.org/dc/terms/source> <https://w3id.org/sumso#SuMSO_0000051> ;
-                rdfs:comment "According to SuMSO indications, we generalized “supply chain”, “supply chain activity”, and “complex system activity” classes to ensure represent and tracking transversality and concatenation of supply chains and activities across systems and environments. We extended these classes’ axiomatization to also refer to complex system environment components and interactions among complex system components. For further details and endorsed interpretations, see related SuMSO classes."@en ;
-                rdfs:label "supply chain activity"@en ;
-                rdfs:seeAlso """https://w3id.org/sumso#SuMSO_0000043
-https://w3id.org/sumso#SuMSO_0000050
-https://w3id.org/sumso#SuMSO_0000051""" ;
-                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
-
-
 ###  https://www.w3id.org/climoo#ClimOO_0000290
 :ClimOO_0000290 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000182
@@ -4005,6 +3909,21 @@ https://w3id.org/sumso#SuMSO_0000051""" ;
                 rdfs:label "transportation process of a plastic debris particle"@en ;
                 <http://www.w3.org/2004/02/skos/core#definition> "A transportation process that concerns a plastic debris particle."@en ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000292
+:ClimOO_0000292 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000221 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000057> ;
+                                  owl:someValuesFrom :ClimOO_0000153
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty <http://purl.obolibrary.org/obo/RO_0002427> ;
+                                  owl:someValuesFrom :ClimOO_0000226
+                                ] ;
+                rdfs:label "usage process of some piece of synthetic plastic"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A planned process that involves some piece of synthetic polymer-based material employed for some purpose."@en .
 
 
 #################################################################
@@ -4111,6 +4030,16 @@ UNI EN ISO 24187:2023 - Principles for the analysis of microplastics present in 
    owl:annotatedTarget <https://www.w3id.org/sco#SCO_0000016> ;
    rdfs:comment "This individual currently instantiate the “perspective class. Implementations may revise to specify that is a human perspective."@en
  ] .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://purl.obolibrary.org/obo/IAO_0000104> rdfs:comment """ClimOO developer comment:
+Work to align representations of plans and plan specifications between IAO and CCO is required. We envision discussions with subject matter experts.
+See https://www.commoncoreontologies.org/ont00000974
+https://www.commoncoreontologies.org/ont00000476"""@en .
 
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
