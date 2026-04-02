@@ -8,7 +8,8 @@
 
 <https://www.w3id.org/climoo/climoo-plastico> rdf:type owl:Ontology ;
                                                owl:versionIRI :V1.0.0 ;
-                                               owl:imports <https://raw.githubusercontent.com/ClimOO/ClimOO-Ontology/refs/heads/main/ClimOO%20material/src/ontology/plastico%20imports/bionik-imports.ttl> ,
+                                               owl:imports <http://ClimOO/climoo/imports/pmdco-imports#2026-04-01> ,
+                                                           <https://raw.githubusercontent.com/ClimOO/ClimOO-Ontology/refs/heads/main/ClimOO%20material/src/ontology/plastico%20imports/bionik-imports.ttl> ,
                                                            <https://raw.githubusercontent.com/ClimOO/ClimOO-Ontology/refs/heads/main/ClimOO%20material/src/ontology/plastico%20imports/cco-imports.ttl> ,
                                                            <https://raw.githubusercontent.com/ClimOO/ClimOO-Ontology/refs/heads/main/ClimOO%20material/src/ontology/plastico%20imports/chebi-imports.ttl> ,
                                                            <https://raw.githubusercontent.com/ClimOO/ClimOO-Ontology/refs/heads/main/ClimOO%20material/src/ontology/plastico%20imports/envo-imports-merged.ttl> ,
@@ -167,7 +168,8 @@ We aligned CCO and IAO classes according to SuMSO model."""@en .
 
 
 ###  http://www.semanticweb.org/bionik/portion_of_material
-<http://www.semanticweb.org/bionik/portion_of_material> rdfs:subClassOf [ rdf:type owl:Class ;
+<http://www.semanticweb.org/bionik/portion_of_material> rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0000001> ,
+                                                                        [ rdf:type owl:Class ;
                                                                           owl:unionOf ( [ rdf:type owl:Class ;
                                                                                           owl:unionOf ( <http://purl.obolibrary.org/obo/RO_0002577>
                                                                                                         <https://www.w3id.org/sco#SCO_0000006>
@@ -183,6 +185,57 @@ We aligned CCO and IAO classes according to SuMSO model."""@en .
                                                                                         ]
                                                                                       )
                                                                         ] .
+
+
+###  https://w3id.org/pmd/co/PMD_0000888
+<https://w3id.org/pmd/co/PMD_0000888> owl:equivalentClass :ClimOO_0000246 ;
+                                      rdfs:comment """ClimOO Ontology comment:
+Till release 3.0.0-rc2, despite acknowledging the existence of natural polymer materials, PMDco focused the polymer classes on those of synthetic production. In the current release (3.0.0), PMDco changed the subsumption axiomatization of the “polymer” class from being a subclass of the “engineered material” class to the “material” class. We assume to extend its coverage to also include non-synthetic polymer materials (see included subclasses)and map accordingly. The definition of the PMDco “polymer” class, however, has not been changed yet, still referring to engineered materials."""@en .
+
+
+###  https://w3id.org/pmd/co/PMD_0050004
+<https://w3id.org/pmd/co/PMD_0050004> owl:equivalentClass :ClimOO_0000252 .
+
+
+###  https://w3id.org/pmd/co/PMD_0050006
+<https://w3id.org/pmd/co/PMD_0050006> rdfs:subClassOf :ClimOO_0000293 .
+
+
+###  https://w3id.org/pmd/co/PMD_0050007
+<https://w3id.org/pmd/co/PMD_0050007> rdfs:subClassOf :ClimOO_0000293 .
+
+
+###  https://w3id.org/pmd/co/PMD_0050008
+<https://w3id.org/pmd/co/PMD_0050008> rdfs:subClassOf :ClimOO_0000293 .
+
+
+###  https://w3id.org/pmd/co/PMD_0050022
+<https://w3id.org/pmd/co/PMD_0050022> owl:equivalentClass :ClimOO_0000251 .
+
+
+###  https://w3id.org/pmd/co/PMD_0050030
+<https://w3id.org/pmd/co/PMD_0050030> owl:equivalentClass :ClimOO_0000250 .
+
+
+###  https://w3id.org/pmd/co/PMD_0050037
+<https://w3id.org/pmd/co/PMD_0050037> rdfs:subClassOf :ClimOO_0000107 ;
+                                      rdfs:comment """ClimOO Ontology comment:
+We did not include the PMDco class for biodegradable polymers because PMDco erroneously refers to biodegradability in the portions of material and not to the constituting polymer molecules. We, however, imported PMDco “biodegradability” class and mapped it as equivalent to ClimOO “biodegradability” class. We also include the PMDco “polybutylene succinate” and “polylactic acid” classes, subclasses of and mapped as subclasses of the ClimOO “portion of biodegradable plastic” class. This aims to be an initial mapping till PMDco revises its class.
+See: https://w3id.org/pmd/co/PMD_0050036 
+https://w3id.org/pmd/co/PMD_0200001""" .
+
+
+###  https://w3id.org/pmd/co/PMD_0050039
+<https://w3id.org/pmd/co/PMD_0050039> rdfs:subClassOf :ClimOO_0000107 .
+
+
+###  https://w3id.org/pmd/co/PMD_0200001
+<https://w3id.org/pmd/co/PMD_0200001> owl:equivalentClass :ClimOO_0000104 ;
+                                      rdfs:comment """ClimOO Ontology comment:
+We did not include the PMDco class for biodegradable polymers because PMDco erroneously refers to biodegradability in the portions of material and not to the constituting polymer molecules. We, however, imported PMDco “biodegradability” class and mapped it as equivalent to ClimOO “biodegradability” class. We also include the PMDco “polybutylene succinate” and “polylactic acid” classes, subclasses of and mapped as subclasses of the ClimOO “portion of biodegradable plastic” class. This aims to be an initial mapping till PMDco revises its class.
+See: https://w3id.org/pmd/co/PMD_0050036 
+https://w3id.org/pmd/co/PMD_0050039
+https://w3id.org/pmd/co/PMD_0050037"""@en .
 
 
 ###  https://www.w3id.org/climoo#ClimOO_0000097
@@ -1776,8 +1829,8 @@ We envision implementing such definitions in accordance with regulation revision
 
 ###  https://www.w3id.org/climoo#ClimOO_0000182
 :ClimOO_0000182 rdf:type owl:Class ;
-                rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000015>
-                                                       [ rdf:type owl:Restriction ;
+                rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0010033> ,
+                                [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                          owl:onProperty <http://purl.obolibrary.org/obo/RO_0004008> ;
                                                          owl:someValuesFrom :ClimOO_0000242
                                                        ]
@@ -3063,7 +3116,7 @@ See, for instance, ISO/TR 21960:2020Plastics — Environmental aspects — State
                 rdfs:subClassOf :ClimOO_0000246 ;
                 <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> "thermoset polymer material"@en ,
                                                                                  "thermosetting polymer resin"@en ;
-                rdfs:label "portion of thermosetting material"@en ;
+                rdfs:label "portion of thermosetting polymer-based material"@en ;
                 rdfs:seeAlso "http://purl.obolibrary.org/obo/ENVO_06105005"@en ;
                 <http://www.w3.org/2004/02/skos/core#definition> "A portion of polymer-based material that bears a disposition to be thermoset (thermosetting disposition)."@en ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
@@ -3080,7 +3133,7 @@ See, for instance, ISO/TR 21960:2020Plastics — Environmental aspects — State
                                       rdf:type owl:Class
                                     ] ;
                 rdfs:subClassOf :ClimOO_0000246 ;
-                rdfs:label "portion of thermoplastic material"@en ;
+                rdfs:label "portion of thermoplastic polymer-based material"@en ;
                 rdfs:seeAlso "http://purl.obolibrary.org/obo/ENVO_06105003" ;
                 <http://www.w3.org/2004/02/skos/core#definition> "A portion of polymer-based material that bears a disposition to be thermoplastic (thermoplasticity)."@en ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
@@ -3379,7 +3432,7 @@ We envision implementing such definitions in accordance with regulation revision
                                                          ) ;
                                       rdf:type owl:Class
                                     ] ;
-                rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0010034> ;
                 <http://purl.org/dc/terms/source> "https://w3id.org/pmd/co/PMD_0010034" ;
                 rdfs:label "thermosetting polymer curing process"@en ;
                 rdfs:seeAlso "http://purl.obolibrary.org/obo/CHMO_0001480" ;
@@ -3909,6 +3962,18 @@ See, for instance, https://www.iso.org/standard/77957.html"""@en ,
                                 ] ;
                 rdfs:label "usage process of some piece of synthetic plastic"@en ;
                 <http://www.w3.org/2004/02/skos/core#definition> "A planned process that involves some piece of synthetic polymer-based material employed for some purpose."@en .
+
+
+###  https://www.w3id.org/climoo#ClimOO_0000293
+:ClimOO_0000293 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000211 ,
+                                :ClimOO_0000252 ;
+                rdfs:comment "A portion of thermoplastic polymer-based material produced by polymerization of ethylene monomers including further crosslinking and modifications using other comonomers ( with exclusion of ultra-high molecular polyethylene)."@en ,
+                             """This class has been created to overcome shortcomings of the PMD:polyethylene class axiomatization (inclusion of ChEBI:polymerization monomer; modelling monomers in terms of role instead of their disposition to polymerize). Subclasses of the PMD:polyethylene class have been included as subclasses of this class.
+
+We plan to deprecate this class and reuse the PMDco class as soon as this latter is revised."""@en ;
+                rdfs:label "portion of polyethylene"@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
 
 
 #################################################################
