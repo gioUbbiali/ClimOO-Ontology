@@ -1290,13 +1290,14 @@ We envision implementing such definitions in accordance with regulation revision
                                       rdf:type owl:Class
                                     ] ;
                 rdfs:subClassOf :ClimOO_0000150 ;
-                <http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> "synthetic polymer debris"@en ;
-                <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "plastic debris, plastic litter"@en ;
+                <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "plastic debris"@en ;
+                <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> "plastic litter"@en ;
                 rdfs:comment """Classification systems for plastic debris vary, especially according to particle size. For instance, EnvO considers 5 mm as the upper-level threshold to define microplastic particles, as this is a commonly recognized size edge in discussions on microplastic litter. Nevertheless, this is merely an operative definition, and there is no complete consensus on employing it (Hartmann et al., 2019). Hartmann et al. (2019) propose a range of 1-1000 micrometers. For illustrative purposes, the ClimOO ontology includes EnvO classification of plastic debris particles and maps it with that proposed by Hartmann et al. (2019), (covered by the ClimOO Ontology). The focus of the mpping is only on prticle size. See also comments to EnvO \"piece of plastic\" class.
 
 These classifications differentiate for the size range of micro-, macro-, and meso-plastic particles. The shared size ranges for mega- and nano-plastic particles. This is also intended to be an initial guideline to align and map different classification systems."""@en ,
                              "Ontology implementations can extend the modelling of environmental persistence concerning pieces and materials made of plastics and synthetic polymers."@en ,
-                             "The term “environment” can be interpreted as referring to both systems and their environments contingent upon the focus of the analysis."@en ;
+                             "The term “environment” can be interpreted as referring to both systems and their environments contingent upon the focus of the analysis."@en ,
+                             "The term “litter” is used sometimes as a synonym of that of “debris”, sometimes with a slightly different meaning. Currently, the ClimOO Ontology focuses on debris, maintaining a neutral stance with regard to litter. Implementations will deal with possible sematic discrepancies by offering models to accommodate different usages of these terms."@en ;
                 rdfs:label "plastic debris particle"@en ;
                 <http://www.w3.org/2004/02/skos/core#definition> "a piece of synthetic polymer-based material that, at a certain time, is 1) solid, 2) not soluble in water (water solubility), 3) persistent in an environment (bearing a disposition to environmental persistence), generally as pollutant, 4) mobile (bearing a disposition to motion in the environment), and 5) is no longer used for a purpose."@en ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
