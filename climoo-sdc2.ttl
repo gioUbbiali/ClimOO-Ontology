@@ -16,7 +16,7 @@
 
 SDC ontology: https://github.com/hbabaie1/Sustainable-Development-and-Climate-SDC-ontology"""@en ;
                                            <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0/" ;
-                                           <http://purl.org/dc/terms/title> "ClimOO Ontology - SDC2 module"@en ;
+                                           <http://purl.org/dc/terms/title> "ClimOO Ontology - ClimOO-SDC2 module"@en ;
                                            rdfs:comment """The SDC Ontology provides a relevant model of climate and climate change, primarily with a focus on Sustainable Development Goals (Davarpanah et al., 2023). Despite its relevance, the SDC Onto model appears undermaintained and presents several shortcomings, including:
 • Absence of natural language definitions.
 • Reusage of PATO representations that violate the BFO model, such as those concerning process properties, or that are inaccurate, such as those concerning increased and decreased dependent continuants.
@@ -50,6 +50,7 @@ Documentation webpage: https://www.w3id.org/climoo/docs"""@en ,
 ###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000297
 :ClimOO_0000297 rdf:type owl:Class ;
                 rdfs:label "climate"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A disposition that is realized in some climate system process and is statistically described in terms of the mean and variability of relevant attributes (usually temperature, precipitation, and wind) over a period of time ranging from months to thousands or millions of years. Note: typically it realizes in seasonal cycles."@en ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom> "https://www.ipcc.ch/report/ar6/syr/downloads/report/IPCC_AR6_SYR_FullVolume.pdf" ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
                 <https://www.w3id.org/sco#SCO_0000039> :ClimOO_0000306 ,
