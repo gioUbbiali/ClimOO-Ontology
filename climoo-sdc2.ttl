@@ -1,0 +1,168 @@
+@prefix : <https://www.w3id.org/climoo/climoo-sdc2#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://www.w3id.org/climoo/climoo-sdc2#> .
+
+<https://www.w3id.org/climoo/climoo-sdc2> rdf:type owl:Ontology ;
+                                           owl:versionIRI :sdc2-v1.0.0 ;
+                                           owl:imports <https://www.w3id.org/sco/sco-b#v1.1.0/sco-b> ;
+                                           <http://purl.org/dc/terms/contributor> "Giorgio A. Ubbiali" ,
+                                                                                  "Ludger Jansen" ;
+                                           <http://purl.org/dc/terms/creator> "Giorgio A. Ubbiali" ;
+                                           <http://purl.org/dc/terms/description> """ClimOO Ontology is a reference ontology, modeling plastics, (micro-)plastic pollution, climate change, and their interrelation, with a primary focus on agricultural systems. The ClimOO Ontology is structured in a suite of nested ontological modules.The SDC2 module forks the Sustainable Development and Climate (SDC) Ontology, updating the proposed models. The SDC2 module centers on climate and climate change, especially with regard to environmental features and related interconnections. Emphasis is also dedicated to relevant policies.
+
+SDC ontology: https://github.com/hbabaie1/Sustainable-Development-and-Climate-SDC-ontology"""@en ;
+                                           <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0/" ;
+                                           <http://purl.org/dc/terms/title> "ClimOO Ontology - SDC2 module"@en ;
+                                           rdfs:comment """The SDC Ontology provides a relevant model of climate and climate change, primarily with a focus on Sustainable Development Goals (Davarpanah et al., 2023). Despite its relevance, the SDC Onto model appears undermaintained and presents several shortcomings, including:
+• Absence of natural language definitions.
+• Reusage of PATO representations that violate the BFO model, such as those concerning process properties, or that are inaccurate, such as those concerning increased and decreased dependent continuants.
+• Misleadingness of certain classes.
+• Inadequate axiomatization of certain classes.
+For more details, see here (coming soon).
+
+Thus, we forked SDC Onto to develop a novel version, named ClimOO-SDC2. ClimOO-SDC2 is the module of the ClimOO Ontology dedicated to climate change. ClimOO-SDC2 focuses on environmental features and related interconnections modeled in SDC Onto. ClimOO-SDC2 offers an active reference hub that addresses SDC Onto's shortcomings, while integrating the SDC Onto model into the ClimOO Ontology. ClimOO-SDC2 extends SCO, aligning SDC models with primary existing BFO-compliant sustainability ontologies. We intend ClimOO-SDC2 as an initial starting point to establish a unique BFO-compliant representation of climate and climate change. 
+
+To construct ClimOO-SDC2, we proceed as follows (focus on OWL classes; we followed the same approach concerning the other OWL building blocks).
+• If the class was not relevant, we did not import it.
+• If the class was relevant and adequate, we directly imported it.
+• If the class was relevant but inadequately axiomatized, we created a corresponding class that supports appropriate axioms but maintains the local identifier of the original SDC Onto class. We opted for this solution to offer a direct strategy of reference to the original version from which SDC2 has been forked. In the future, alternative, possibly more robust, strategies can be implemented. Exceptions: Given their centrality in the model, the following class has been supplied with ClimOO local identifiers and annotated towards original SDC Onto classes:
+   • climate
+   • climate change
+   • (atmospheric) weather
+   • climate system process
+• If the class, despite axiomatization, was misleading, we did not import it, and we created adequate class(es) as needed. We supplied it with a ClimOO local identifier.
+
+All SDC2 building blocks support the following namespace to ensure appropriate identification and fairness: https://www.w3id.org/climoo/climoo-sdc2#"""@en ;
+                                           owl:versionInfo "2026-05-15"@en ,
+                                                           "V1.0.0."@en ;
+                                           <http://www.w3.org/2004/02/skos/core#note> """Repository: https://www.w3id.org/climoo/repo
+Documentation webpage: https://www.w3id.org/climoo/docs"""@en ,
+                                                                                      "The most recent version of this file is available on GitHub at the following link: https://www.w3id.org/climoo/climoo-sdc2."@en .
+
+#################################################################
+#    Classes
+#################################################################
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000297
+:ClimOO_0000297 rdf:type owl:Class ;
+                rdfs:label "climate"@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom> "https://www.ipcc.ch/report/ar6/syr/downloads/report/IPCC_AR6_SYR_FullVolume.pdf" ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
+                <https://www.w3id.org/sco#SCO_0000039> :ClimOO_0000306 ,
+                                                       :ClimOO_0000308 .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000298
+:ClimOO_0000298 rdf:type owl:Class ;
+                rdfs:label "climate system"@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom> "https://www.ipcc.ch/report/ar6/syr/downloads/report/IPCC_AR6_SYR_FullVolume.pdf" ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
+                <https://www.w3id.org/sco#SCO_0000039> :ClimOO_0000306 ,
+                                                       :ClimOO_0000307 ,
+                                                       :ClimOO_0000308 .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000299
+:ClimOO_0000299 rdf:type owl:Class ;
+                rdfs:label "climate variability - measurement"@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom> "https://unterm.un.org/unterm2/en/view/e0be578f-2cfc-401c-b536-7d5de7fe8559" ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
+                <https://www.w3id.org/sco#SCO_0000039> :ClimOO_0000306 ,
+                                                       :ClimOO_0000308 .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000300
+:ClimOO_0000300 rdf:type owl:Class ;
+                rdfs:label "climate variability - process profile"@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom> "https://unterm.un.org/unterm2/en/view/e0be578f-2cfc-401c-b536-7d5de7fe8559" ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
+                <https://www.w3id.org/sco#SCO_0000039> :ClimOO_0000306 ,
+                                                       :ClimOO_0000308 .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000301
+:ClimOO_0000301 rdf:type owl:Class ;
+                rdfs:label "climate change"@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom> "https://www.ipcc.ch/report/ar6/syr/downloads/report/IPCC_AR6_SYR_FullVolume.pdf" ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
+                <https://www.w3id.org/sco#SCO_0000039> :ClimOO_0000306 ,
+                                                       :ClimOO_0000307 ,
+                                                       :ClimOO_0000308 .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000302
+:ClimOO_0000302 rdf:type owl:Class ;
+                rdfs:label "climate system component"@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
+                <https://www.w3id.org/sco#SCO_0000039> :ClimOO_0000306 ,
+                                                       :ClimOO_0000308 .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000303
+:ClimOO_0000303 rdf:type owl:Class ;
+                rdfs:comment "We refer to weather primarily at the mesospheric level of analysis. We do not refer to weather, for instance, when we deal with the molecular composition of the atmosphere."@en ;
+                rdfs:label "atmospheric weather"@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom> "https://wmo.int/topics/weather; https://unterm.un.org/unterm2/en/" ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
+                <https://www.w3id.org/sco#SCO_0000039> :ClimOO_0000306 ,
+                                                       :ClimOO_0000307 ,
+                                                       :ClimOO_0000308 .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000304
+:ClimOO_0000304 rdf:type owl:Class ;
+                rdfs:comment "Climate system processes have the climate system as participant, meaning that any occurrence happening in a portion of a climate system component/climate system component also affects the overall climate system."@en ;
+                rdfs:label "climate system process"@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
+                <https://www.w3id.org/sco#SCO_0000039> :ClimOO_0000306 ,
+                                                       :ClimOO_0000308 .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000305
+:ClimOO_0000305 rdf:type owl:Class ;
+                rdfs:label "atmospheric process"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A process that pertains to some portion of atmosphere."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
+                <https://www.w3id.org/sco#SCO_0000039> :ClimOO_0000308 .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000306
+:ClimOO_0000306 rdf:type owl:NamedIndividual ,
+                         <https://www.w3id.org/sco#SCO_0000016> ;
+                <http://purl.org/dc/terms/description> "This owl:NamedIndividual tracks the perspectives of the Intergovernmental Panel on Climate Change (IPCC) on weather, climate, and climate change according to which this ontology has been built."@en ;
+                <http://purl.org/dc/terms/source> "https://www.ipcc.ch/report/ar6/syr/downloads/report/IPCC_AR6_SYR_FullVolume.pdf"@en ;
+                rdfs:label "IPCC perspective on weather, climate, and climate change"@en ;
+                rdfs:seeAlso "https://www.ipcc.ch/" ;
+                owl:versionInfo "2026-05-15"@en .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000307
+:ClimOO_0000307 rdf:type owl:NamedIndividual ,
+                         <https://www.w3id.org/sco#SCO_0000016> ;
+                <http://purl.org/dc/terms/description> "This owl:NamedIndividual tracks the perspectives of the World Metereological Organization (WMO) on weather, climat, and climate change according to which this ontology has been built."@en ;
+                rdfs:label "WMO perspective on weather, climate, and climate change"@en ;
+                rdfs:seeAlso "https://wmo.int" ;
+                owl:versionInfo "2026-05-15"@en .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000308
+:ClimOO_0000308 rdf:type owl:NamedIndividual ,
+                         <https://www.w3id.org/sco#SCO_0000016> ;
+                <http://purl.org/dc/terms/description> "This owl:NamedIndividual tracks the perspectives of ClimOO project participants according to which this ontology has been built."@en ;
+                <http://www.ontologyrepository.com/CommonCoreOntologies/definition> "The perspective of the ClimOO project participants."@en ;
+                rdfs:label "ClimOO project perspective on weather, climate, and climate change"@en ;
+                rdfs:seeAlso "https://pthsta.it/climoo" ;
+                owl:versionInfo "2026-05-18" ;
+                <https://www.w3id.org/sco#SCO_0000039> :ClimOO_0000306 ,
+                                                       :ClimOO_0000307 .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
