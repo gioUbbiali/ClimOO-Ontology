@@ -8,7 +8,9 @@
 
 <https://www.w3id.org/climoo/climoo-sdc2> rdf:type owl:Ontology ;
                                            owl:versionIRI :sdc2-v1.0.0 ;
-                                           owl:imports <https://www.w3id.org/sco/sco-b#v1.1.0/sco-b> ;
+                                           owl:imports <http://ClimOO/climoo/climoo-sdc2/imports/cco-imports#2026-04-09> ,
+                                                       <http://ClimOO/climoo/climoo-sdc2/imports/sdc-ontology-imports/sdc-ontology-gdc-imports#2026-04-08> ,
+                                                       <https://www.w3id.org/sco/sco-b#v1.1.0/sco-b> ;
                                            <http://purl.org/dc/terms/contributor> "Giorgio A. Ubbiali" ,
                                                                                   "Ludger Jansen" ;
                                            <http://purl.org/dc/terms/creator> "Giorgio A. Ubbiali" ;
@@ -18,6 +20,7 @@ SDC ontology: https://github.com/hbabaie1/Sustainable-Development-and-Climate-SD
                                            <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0/" ;
                                            <http://purl.org/dc/terms/title> "ClimOO Ontology - ClimOO-SDC2 module"@en ;
                                            rdfs:comment """The SDC Ontology provides a relevant model of climate and climate change, primarily with a focus on Sustainable Development Goals (Davarpanah et al., 2023). Despite its relevance, the SDC Onto model appears undermaintained and presents several shortcomings, including:
+• Inconsistent hierarchy root.
 • Absence of natural language definitions.
 • Reusage of PATO representations that violate the BFO model, such as those concerning process properties, or that are inaccurate, such as those concerning increased and decreased dependent continuants.
 • Misleadingness of certain classes.
@@ -34,7 +37,9 @@ To construct ClimOO-SDC2, we proceed as follows (focus on OWL classes; we follow
    • climate change
    • (atmospheric) weather
    • climate system process
+   • climate system component 
 • If the class, despite axiomatization, was misleading, we did not import it, and we created adequate class(es) as needed. We supplied it with a ClimOO local identifier.
+When revising classes, we complied with BFO and OBO-Foundry best practices.
 
 All SDC2 building blocks support the following namespace to ensure appropriate identification and fairness: https://www.w3id.org/climoo/climoo-sdc2#"""@en ;
                                            owl:versionInfo "2026-05-15"@en ,
@@ -44,11 +49,42 @@ Documentation webpage: https://www.w3id.org/climoo/docs"""@en ,
                                                                                       "The most recent version of this file is available on GitHub at the following link: https://www.w3id.org/climoo/climoo-sdc2."@en .
 
 #################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2002/07/owl#minQualifiedCardinality
+owl:minQualifiedCardinality rdf:type owl:AnnotationProperty .
+
+
+#################################################################
 #    Classes
 #################################################################
 
 ###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000297
 :ClimOO_0000297 rdf:type owl:Class ;
+                rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000016> ,
+                                [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000054> ;
+                                                         owl:someValuesFrom :ClimOO_0000304
+                                                       ]
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000054> ;
+                                                         owl:allValuesFrom :ClimOO_0000304
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] ,
+                                [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000197> ;
+                                                         owl:someValuesFrom :ClimOO_0000298
+                                                       ]
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000197> ;
+                                                         owl:allValuesFrom :ClimOO_0000298
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] ;
                 rdfs:label "climate"@en ;
                 <http://www.w3.org/2004/02/skos/core#definition> "A disposition that is realized in some climate system process and is statistically described in terms of the mean and variability of relevant attributes (usually temperature, precipitation, and wind) over a period of time ranging from months to thousands or millions of years. Note: typically it realizes in seasonal cycles."@en ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom> "https://www.ipcc.ch/report/ar6/syr/downloads/report/IPCC_AR6_SYR_FullVolume.pdf" ;
@@ -59,7 +95,49 @@ Documentation webpage: https://www.w3id.org/climoo/docs"""@en ,
 
 ###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000298
 :ClimOO_0000298 rdf:type owl:Class ;
+                owl:equivalentClass [ owl:intersectionOf ( <https://www.w3id.org/sco#SCO_0000015>
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000196> ;
+                                                             owl:someValuesFrom :ClimOO_0000297
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                rdfs:subClassOf <https://www.w3id.org/sco#SCO_0000015> ,
+                                [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000110> ;
+                                                         owl:someValuesFrom :ClimOO_0000302
+                                                       ]
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000111> ;
+                                                         owl:someValuesFrom :ClimOO_0000310
+                                                       ]
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000166> ;
+                                                         owl:someValuesFrom :ClimOO_0000319
+                                                       ]
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000185> ;
+                                                         owl:someValuesFrom :ClimOO_0000315
+                                                       ]
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000211> ;
+                                                         owl:someValuesFrom :ClimOO_0000311
+                                                       ]
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://purl.obolibrary.org/obo/RO_0002163> ;
+                                                         owl:someValuesFrom :ClimOO_0000313
+                                                       ]
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000185> ;
+                                                         owl:allValuesFrom :ClimOO_0000315
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] ;
+                owl:disjointWith :ClimOO_0000313 ;
                 rdfs:label "climate system"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A complex system that bears a climate disposition. Earth climate systemt is mainly composed of the atmosphere, the hydrosphere, the cryosphere, the lithosphere and the biosphere."@en ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom> "https://www.ipcc.ch/report/ar6/syr/downloads/report/IPCC_AR6_SYR_FullVolume.pdf" ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
                 <https://www.w3id.org/sco#SCO_0000039> :ClimOO_0000306 ,
@@ -69,7 +147,9 @@ Documentation webpage: https://www.w3id.org/climoo/docs"""@en ,
 
 ###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000299
 :ClimOO_0000299 rdf:type owl:Class ;
+                rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity> ;
                 rdfs:label "climate variability - measurement"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An information content entity that is a measurement of the deviations of climate over a period of time from the long-term climate statistics for the corresponding calendar period.An information content entity that is a measurement of the deviations of climate over a period of time from the long-term climate statistics for the corresponding calendar period."@en ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom> "https://unterm.un.org/unterm2/en/view/e0be578f-2cfc-401c-b536-7d5de7fe8559" ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
                 <https://www.w3id.org/sco#SCO_0000039> :ClimOO_0000306 ,
@@ -78,7 +158,9 @@ Documentation webpage: https://www.w3id.org/climoo/docs"""@en ,
 
 ###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000300
 :ClimOO_0000300 rdf:type owl:Class ;
+                rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000144> ;
                 rdfs:label "climate variability - process profile"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A process profile that is an occurrent part of some climate system process and is measured by some climate variability - measurement."@en ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom> "https://unterm.un.org/unterm2/en/view/e0be578f-2cfc-401c-b536-7d5de7fe8559" ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
                 <https://www.w3id.org/sco#SCO_0000039> :ClimOO_0000306 ,
@@ -87,7 +169,9 @@ Documentation webpage: https://www.w3id.org/climoo/docs"""@en ,
 
 ###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000301
 :ClimOO_0000301 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000304 ;
                 rdfs:label "climate change"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A climate system process that alters the climate of a climate system for an extended period of time (typically decades or longer), and can be identified by the variation of the mean and/or the variability of the attributes, according to which that climate is statistically described."@en ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom> "https://www.ipcc.ch/report/ar6/syr/downloads/report/IPCC_AR6_SYR_FullVolume.pdf" ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
                 <https://www.w3id.org/sco#SCO_0000039> :ClimOO_0000306 ,
@@ -97,7 +181,20 @@ Documentation webpage: https://www.w3id.org/climoo/docs"""@en ,
 
 ###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000302
 :ClimOO_0000302 rdf:type owl:Class ;
+                owl:equivalentClass [ owl:intersectionOf ( <https://www.w3id.org/sco#SCO_0000028>
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000176> ;
+                                                             owl:someValuesFrom :ClimOO_0000298
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                rdfs:subClassOf <https://www.w3id.org/sco#SCO_0000028> ;
+                owl:disjointWith :ClimOO_0000312 ;
+                rdfs:comment "Reference to stakeholders of climate systems can be added as needed."@en ;
                 rdfs:label "climate system component"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A complex system component that is part of a climate system."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom> "http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Climate_System_Component" ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
                 <https://www.w3id.org/sco#SCO_0000039> :ClimOO_0000306 ,
                                                        :ClimOO_0000308 .
@@ -105,8 +202,14 @@ Documentation webpage: https://www.w3id.org/climoo/docs"""@en ,
 
 ###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000303
 :ClimOO_0000303 rdf:type owl:Class ;
+                rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019> ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000197> ;
+                                  owl:someValuesFrom :atmosphere
+                                ] ;
                 rdfs:comment "We refer to weather primarily at the mesospheric level of analysis. We do not refer to weather, for instance, when we deal with the molecular composition of the atmosphere."@en ;
                 rdfs:label "atmospheric weather"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A quality that is realized in an atmospheric process and is described in terms of meteorological attributes, such as temperature, precipitation, atmospheric pressure, wind, and humidity."@en ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom> "https://wmo.int/topics/weather; https://unterm.un.org/unterm2/en/" ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
                 <https://www.w3id.org/sco#SCO_0000039> :ClimOO_0000306 ,
@@ -116,8 +219,14 @@ Documentation webpage: https://www.w3id.org/climoo/docs"""@en ,
 
 ###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000304
 :ClimOO_0000304 rdf:type owl:Class ;
+                rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000167> ;
+                                  owl:someValuesFrom :ClimOO_0000298
+                                ] ;
                 rdfs:comment "Climate system processes have the climate system as participant, meaning that any occurrence happening in a portion of a climate system component/climate system component also affects the overall climate system."@en ;
                 rdfs:label "climate system process"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A process that pertains to a climate system."@en ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
                 <https://www.w3id.org/sco#SCO_0000039> :ClimOO_0000306 ,
                                                        :ClimOO_0000308 .
@@ -125,10 +234,237 @@ Documentation webpage: https://www.w3id.org/climoo/docs"""@en ,
 
 ###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000305
 :ClimOO_0000305 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000304 ;
                 rdfs:label "atmospheric process"@en ;
                 <http://www.w3.org/2004/02/skos/core#definition> "A process that pertains to some portion of atmosphere."@en ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
                 <https://www.w3id.org/sco#SCO_0000039> :ClimOO_0000308 .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000309
+:ClimOO_0000309 rdf:type owl:Class ;
+                owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000302
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://www.w3id.org/sco#SCO_0000038> ;
+                                                             owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                  owl:unionOf ( :ClimOO_0000316
+                                                                                                :ClimOO_0000318
+                                                                                              )
+                                                                                ]
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                rdfs:subClassOf :ClimOO_0000302 ;
+                owl:disjointWith :ClimOO_0000314 ;
+                rdfs:label "climate system agent"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An climate system component that is an agent in an interaction among climate system components or in an interaction between climate system components and climate system environment components."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000310
+:ClimOO_0000310 rdf:type owl:Class ;
+                owl:equivalentClass [ owl:intersectionOf ( <https://www.w3id.org/sco#SCO_0000031>
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000137> ;
+                                                             owl:someValuesFrom :ClimOO_0000298
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                rdfs:subClassOf <https://www.w3id.org/sco#SCO_0000031> ;
+                rdfs:label "climate system boundary"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A complex system boundary of a climate system."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000311
+:ClimOO_0000311 rdf:type owl:Class ;
+                rdfs:subClassOf <https://www.w3id.org/sco#SCO_0000032> ;
+                rdfs:label "climate system spatial region"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A complex system spatial region of a climate system."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000312
+:ClimOO_0000312 rdf:type owl:Class ;
+                owl:equivalentClass [ owl:intersectionOf ( <https://www.w3id.org/sco#SCO_0000026>
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000176> ;
+                                                             owl:someValuesFrom :ClimOO_0000313
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                rdfs:subClassOf <https://www.w3id.org/sco#SCO_0000026> ;
+                rdfs:label "climate system environment component"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A complex system environment component that belongs to the complex system environment of a climate system."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000313
+:ClimOO_0000313 rdf:type owl:Class ;
+                rdfs:subClassOf <https://www.w3id.org/sco#SCO_0000012> ,
+                                [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000110> ;
+                                                         owl:someValuesFrom :ClimOO_0000312
+                                                       ]
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://purl.obolibrary.org/obo/RO_0002163> ;
+                                                         owl:someValuesFrom :ClimOO_0000298
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] ;
+                rdfs:label "climate system environment"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A complex system environment that surrounds and is distinct and disjoint from an climate system."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000314
+:ClimOO_0000314 rdf:type owl:Class ;
+                owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000312
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://www.w3id.org/sco#SCO_0000038> ;
+                                                             owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                  owl:unionOf ( :ClimOO_0000317
+                                                                                                :ClimOO_0000318
+                                                                                              )
+                                                                                ]
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                rdfs:subClassOf :ClimOO_0000312 ;
+                rdfs:label "climate system environment agent"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An climate system environment component that is an agent in an interaction among climate system environment components or in an interaction between climate system components and climate system environment components."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000315
+:ClimOO_0000315 rdf:type owl:Class ;
+                owl:equivalentClass [ owl:intersectionOf ( <https://www.w3id.org/sco#SCO_0000023>
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000184> ;
+                                                             owl:someValuesFrom :ClimOO_0000298
+                                                           ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000184> ;
+                                                             owl:allValuesFrom :ClimOO_0000298
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                rdfs:subClassOf <https://www.w3id.org/sco#SCO_0000023> ;
+                rdfs:label "climate system history"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> " The complex system history of a climate system."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000316
+:ClimOO_0000316 rdf:type owl:Class ;
+                rdfs:subClassOf <https://www.w3id.org/sco#SCO_0000022> ,
+                                [ owl:intersectionOf ( <https://www.w3id.org/sco#SCO_0000022>
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://www.w3id.org/sco#SCO_0000037> ;
+                                                         owl:someValuesFrom :ClimOO_0000309
+                                                       ]
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://www.w3id.org/sco#SCO_0000037> ;
+                                                         owl:allValuesFrom :ClimOO_0000309
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] ;
+                owl:disjointWith :ClimOO_0000317 ,
+                                 :ClimOO_0000318 ;
+                rdfs:label "interaction among climate system components"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An interaction among complex system components that occurs among at least two climatel system components of an climate system."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000317
+:ClimOO_0000317 rdf:type owl:Class ;
+                rdfs:subClassOf <https://www.w3id.org/sco#SCO_0000021> ,
+                                [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://www.w3id.org/sco#SCO_0000037> ;
+                                                         owl:someValuesFrom :ClimOO_0000314
+                                                       ]
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://www.w3id.org/sco#SCO_0000037> ;
+                                                         owl:allValuesFrom :ClimOO_0000314
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] ;
+                owl:disjointWith :ClimOO_0000318 ;
+                rdfs:label "interaction among climate system environment components"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An interaction among complex system environment components that occurs among at least two climate system environment components of an climate system."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000318
+:ClimOO_0000318 rdf:type owl:Class ;
+                rdfs:subClassOf <https://www.w3id.org/sco#SCO_0000020> ,
+                                [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000167> ;
+                                                         owl:someValuesFrom :ClimOO_0000302
+                                                       ]
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000167> ;
+                                                         owl:someValuesFrom :ClimOO_0000312
+                                                       ]
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://www.w3id.org/sco#SCO_0000037> ;
+                                                         owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                              owl:unionOf ( :ClimOO_0000309
+                                                                                            :ClimOO_0000314
+                                                                                          )
+                                                                            ]
+                                                       ]
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://www.w3id.org/sco#SCO_0000037> ;
+                                                         owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                             owl:unionOf ( :ClimOO_0000309
+                                                                                           :ClimOO_0000314
+                                                                                         )
+                                                                           ]
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] ;
+                rdfs:label "interaction between climate system components and climate system environment components"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An interaction between complex system components and complex system environment components that occurs between at least one climte system component and one climate system environment component where the latter belongs to the system environment of the climate system to which the environmental system component belongs."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000319
+:ClimOO_0000319 rdf:type owl:Class ;
+                rdfs:subClassOf <https://www.w3id.org/sco#SCO_0000010> ,
+                                [ owl:intersectionOf ( <https://www.w3id.org/sco#SCO_0000002>
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000167> ;
+                                                         owl:someValuesFrom :ClimOO_0000298
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] ;
+                rdfs:label "climate system development"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> " The complex system development of a climate system."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#atmosphere
+:atmosphere rdf:type owl:Class ;
+            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000024> ,
+                            :ClimOO_0000302 ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000196> ;
+                              owl:someValuesFrom :ClimOO_0000303
+                            ] ;
+            rdfs:label "atmosphere" ;
+            rdfs:seeAlso """http://www.ontologyrepository.com/CommonCoreOntologies/PortionOfAtmosphere 
+http://purl.obolibrary.org/obo/ENVO_01000267""" .
 
 
 #################################################################
@@ -165,5 +501,11 @@ Documentation webpage: https://www.w3id.org/climoo/docs"""@en ,
                 <https://www.w3id.org/sco#SCO_0000039> :ClimOO_0000306 ,
                                                        :ClimOO_0000307 .
 
+
+[ owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
+] .
+
+[ owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
+ ] .
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

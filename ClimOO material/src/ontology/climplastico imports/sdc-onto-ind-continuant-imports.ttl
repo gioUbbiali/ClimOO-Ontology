@@ -1,18 +1,18 @@
-@prefix : <http://ClimOO/climoo/climoo-sdc2/imports/sdc-ontology-imports/sdc-ontology-ind-continuant-imports#> .
+@prefix : <http://ClimOO/climoo/imports/sdc-ontology-imports/sdc-ontology-ind-continuant-imports#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://ClimOO/climoo/climoo-sdc2/imports/sdc-ontology-imports/sdc-ontology-ind-continuant-imports#> .
+@base <http://ClimOO/climoo/imports/sdc-ontology-imports/sdc-ontology-ind-continuant-imports#> .
 
 <http://ClimOO/climoo/climoo-sdc2/imports/sdc-ontology-imports/sdc-ontology-ind-continuant-imports> rdf:type owl:Ontology ;
-                                                                                         owl:versionIRI <http://ClimOO/climoo/imports/sdc-ontology-imports/sdc-ontology-ind-continuant-imports#2026-04-08> ;
-                                                                                         rdfs:comment """This file contains ClimOO Ontology imports from the Sustainable Development and Climate ontology (SDC ontology) (independent continuant hierarchy of BFO). Imports were manually collected and revised.
+                                                                                                     owl:versionIRI <http://ClimOO/climoo/climoo-sdc2/imports/sdc-ontology-imports/sdc-ontology-ind-continuant-imports#2026-04-08> ;
+                                                                                                     rdfs:comment """This file contains ClimOO Ontology imports from the Sustainable Development and Climate ontology (SDC ontology) (independent continuant hierarchy of BFO). Imports were manually collected and revised.
 
 Ontology source: https://raw.githubusercontent.com/hbabaie1/Sustainable-Development-and-Climate-SDC-ontology/refs/heads/main/SDC_v1.owl"""@en ;
-                                                                                         rdfs:seeAlso "https://github.com/hbabaie1/Sustainable-Development-and-Climate-SDC-ontology/tree/main" ;
-                                                                                         owl:versionInfo "2026-04-08" .
+                                                                                                     rdfs:seeAlso "https://github.com/hbabaie1/Sustainable-Development-and-Climate-SDC-ontology/tree/main" ;
+                                                                                                     owl:versionInfo "2026-04-08" .
 
 #################################################################
 #    Annotation properties
@@ -63,18 +63,6 @@ Ontology source: https://raw.githubusercontent.com/hbabaie1/Sustainable-Developm
                                                                                                         rdfs:label "Atmospheric Component" .
 
 
-###  http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Atmospheric_Oxygen
-<http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Atmospheric_Oxygen> rdf:type owl:Class ;
-                                                                                                     rdfs:subClassOf <http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Oxygen> ;
-                                                                                                     rdfs:label "Atmospheric Oxygen" .
-
-
-###  http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Atmospheric_Water_Vapor
-<http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Atmospheric_Water_Vapor> rdf:type owl:Class ;
-                                                                                                          rdfs:subClassOf <http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Water_Vapor> ;
-                                                                                                          rdfs:label "Atmospheric Water Vapor" .
-
-
 ###  http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Biosphere
 <http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Biosphere> rdf:type owl:Class ;
                                                                                             rdfs:subClassOf <http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Climate_System_Component> ;
@@ -85,18 +73,6 @@ Ontology source: https://raw.githubusercontent.com/hbabaie1/Sustainable-Developm
 <http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#CO2_Sink> rdf:type owl:Class ;
                                                                                            rdfs:subClassOf <http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Sink> ;
                                                                                            rdfs:label "CO2 Sink" .
-
-
-###  http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Carbon_Dioxide
-<http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Carbon_Dioxide> rdf:type owl:Class ;
-                                                                                                 rdfs:subClassOf <http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Well-mixed_Greenhouse_Gas> ;
-                                                                                                 rdfs:label "Carbon Dioxide" .
-
-
-###  http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Chloroflurocarbon
-<http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Chloroflurocarbon> rdf:type owl:Class ;
-                                                                                                    rdfs:subClassOf <http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Greenhouse_Gas> ;
-                                                                                                    rdfs:label "Chloroflurocarbon" .
 
 
 ###  http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Climate_System_Component
@@ -117,12 +93,6 @@ Ontology source: https://raw.githubusercontent.com/hbabaie1/Sustainable-Developm
                                                                                                              rdfs:label "Extra-tropical Troposphere" .
 
 
-###  http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Gas
-<http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Gas> rdf:type owl:Class ;
-                                                                                      rdfs:subClassOf <http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Material_Substance> ;
-                                                                                      rdfs:label "Gas" .
-
-
 ###  http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Geosphere
 <http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Geosphere> rdf:type owl:Class ;
                                                                                             rdfs:subClassOf <http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Climate_System_Component> ;
@@ -141,52 +111,10 @@ Ontology source: https://raw.githubusercontent.com/hbabaie1/Sustainable-Developm
                                                                                                         rdfs:label "Global Ocean CO2 Sink" .
 
 
-###  http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Greenhouse_Gas
-<http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Greenhouse_Gas> rdf:type owl:Class ;
-                                                                                                 rdfs:subClassOf <http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Trace_Gas> ;
-                                                                                                 rdfs:label "Greenhouse Gas" .
-
-
-###  http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Halocarbon
-<http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Halocarbon> rdf:type owl:Class ;
-                                                                                             rdfs:subClassOf <http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Well-mixed_Greenhouse_Gas> ;
-                                                                                             rdfs:label "Halocarbon" .
-
-
 ###  http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Hydrosphere
 <http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Hydrosphere> rdf:type owl:Class ;
                                                                                               rdfs:subClassOf <http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Climate_System_Component> ;
                                                                                               rdfs:label "Hydrosphere" .
-
-
-###  http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Material_Substance
-<http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Material_Substance> rdf:type owl:Class ;
-                                                                                                     rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> ;
-                                                                                                     rdfs:label "Material Substance" .
-
-
-###  http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Methane
-<http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Methane> rdf:type owl:Class ;
-                                                                                          rdfs:subClassOf <http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Well-mixed_Greenhouse_Gas> ;
-                                                                                          rdfs:label "Methane" .
-
-
-###  http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Nitrous_Oxide
-<http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Nitrous_Oxide> rdf:type owl:Class ;
-                                                                                                rdfs:subClassOf <http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Well-mixed_Greenhouse_Gas> ;
-                                                                                                rdfs:label "Nitrous Oxide" .
-
-
-###  http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Oxygen
-<http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Oxygen> rdf:type owl:Class ;
-                                                                                         rdfs:subClassOf <http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Gas> ;
-                                                                                         rdfs:label "Oxygen" .
-
-
-###  http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Ozone
-<http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Ozone> rdf:type owl:Class ;
-                                                                                        rdfs:subClassOf <http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Greenhouse_Gas> ;
-                                                                                        rdfs:label "Ozone" .
 
 
 ###  http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Sink
@@ -200,28 +128,10 @@ Ontology source: https://raw.githubusercontent.com/hbabaie1/Sustainable-Developm
                                                                                                rdfs:label "Stratosphere" .
 
 
-###  http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Trace_Gas
-<http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Trace_Gas> rdf:type owl:Class ;
-                                                                                            rdfs:subClassOf <http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Gas> ;
-                                                                                            rdfs:label "Trace Gas" .
-
-
 ###  http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Troposphere
 <http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Troposphere> rdf:type owl:Class ;
                                                                                               rdfs:subClassOf <http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Atmospheric_Component> ;
                                                                                               rdfs:label "Troposphere" .
-
-
-###  http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Water_Vapor
-<http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Water_Vapor> rdf:type owl:Class ;
-                                                                                              rdfs:subClassOf <http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Greenhouse_Gas> ;
-                                                                                              rdfs:label "Water Vapor" .
-
-
-###  http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Well-mixed_Greenhouse_Gas
-<http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Well-mixed_Greenhouse_Gas> rdf:type owl:Class ;
-                                                                                                            rdfs:subClassOf <http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Greenhouse_Gas> ;
-                                                                                                            rdfs:label "Well-mixed Greenhouse Gas" .
 
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
