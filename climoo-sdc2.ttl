@@ -86,6 +86,7 @@ owl:minQualifiedCardinality rdf:type owl:AnnotationProperty .
                                   rdf:type owl:Class
                                 ] ;
                 rdfs:label "climate"@en ;
+                rdfs:seeAlso "http://purl.obolibrary.org/obo/ENVO_01001082" ;
                 <http://www.w3.org/2004/02/skos/core#definition> "A disposition that is realized in some climate system process and is statistically described in terms of the mean and variability of relevant attributes (usually temperature, precipitation, and wind) over a period of time ranging from months to thousands or millions of years. Note: typically it realizes in seasonal cycles."@en ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom> "https://www.ipcc.ch/report/ar6/syr/downloads/report/IPCC_AR6_SYR_FullVolume.pdf" ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
@@ -137,6 +138,7 @@ owl:minQualifiedCardinality rdf:type owl:AnnotationProperty .
                                 ] ;
                 owl:disjointWith :ClimOO_0000313 ;
                 rdfs:label "climate system"@en ;
+                rdfs:seeAlso "http://purl.obolibrary.org/obo/ENVO_01001364" ;
                 <http://www.w3.org/2004/02/skos/core#definition> "A complex system that bears a climate disposition. Earth climate systemt is mainly composed of the atmosphere, the hydrosphere, the cryosphere, the lithosphere and the biosphere."@en ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom> "https://www.ipcc.ch/report/ar6/syr/downloads/report/IPCC_AR6_SYR_FullVolume.pdf" ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
@@ -147,6 +149,14 @@ owl:minQualifiedCardinality rdf:type owl:AnnotationProperty .
 
 ###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000299
 :ClimOO_0000299 rdf:type owl:Class ;
+                owl:equivalentClass [ owl:intersectionOf ( <http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity>
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://www.ontologyrepository.com/CommonCoreOntologies/is_a_measurement_of> ;
+                                                             owl:someValuesFrom :ClimOO_0000300
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
                 rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity> ;
                 rdfs:label "climate variability - measurement"@en ;
                 <http://www.w3.org/2004/02/skos/core#definition> "An information content entity that is a measurement of the deviations of climate over a period of time from the long-term climate statistics for the corresponding calendar period.An information content entity that is a measurement of the deviations of climate over a period of time from the long-term climate statistics for the corresponding calendar period."@en ;
@@ -158,7 +168,11 @@ owl:minQualifiedCardinality rdf:type owl:AnnotationProperty .
 
 ###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000300
 :ClimOO_0000300 rdf:type owl:Class ;
-                rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000144> ;
+                rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000144> ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000138> ;
+                                  owl:someValuesFrom :ClimOO_0000304
+                                ] ;
                 rdfs:label "climate variability - process profile"@en ;
                 <http://www.w3.org/2004/02/skos/core#definition> "A process profile that is an occurrent part of some climate system process and is measured by some climate variability - measurement."@en ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom> "https://unterm.un.org/unterm2/en/view/e0be578f-2cfc-401c-b536-7d5de7fe8559" ;
@@ -171,6 +185,7 @@ owl:minQualifiedCardinality rdf:type owl:AnnotationProperty .
 :ClimOO_0000301 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000304 ;
                 rdfs:label "climate change"@en ;
+                rdfs:seeAlso "http://purl.obolibrary.org/obo/ENVO_01000629" ;
                 <http://www.w3.org/2004/02/skos/core#definition> "A climate system process that alters the climate of a climate system for an extended period of time (typically decades or longer), and can be identified by the variation of the mean and/or the variability of the attributes, according to which that climate is statistically described."@en ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom> "https://www.ipcc.ch/report/ar6/syr/downloads/report/IPCC_AR6_SYR_FullVolume.pdf" ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
@@ -189,7 +204,7 @@ owl:minQualifiedCardinality rdf:type owl:AnnotationProperty .
                                                          ) ;
                                       rdf:type owl:Class
                                     ] ;
-                rdfs:subClassOf <https://www.w3id.org/sco#SCO_0000028> ;
+                rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000024> ;
                 owl:disjointWith :ClimOO_0000312 ;
                 rdfs:comment "Reference to stakeholders of climate systems can be added as needed."@en ;
                 rdfs:label "climate system component"@en ;
@@ -209,6 +224,7 @@ owl:minQualifiedCardinality rdf:type owl:AnnotationProperty .
                                 ] ;
                 rdfs:comment "We refer to weather primarily at the mesospheric level of analysis. We do not refer to weather, for instance, when we deal with the molecular composition of the atmosphere."@en ;
                 rdfs:label "atmospheric weather"@en ;
+                rdfs:seeAlso "http://purl.obolibrary.org/obo/ENVO_01001078" ;
                 <http://www.w3.org/2004/02/skos/core#definition> "A quality that is realized in an atmospheric process and is described in terms of meteorological attributes, such as temperature, precipitation, atmospheric pressure, wind, and humidity."@en ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom> "https://wmo.int/topics/weather; https://unterm.un.org/unterm2/en/" ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
@@ -220,6 +236,14 @@ owl:minQualifiedCardinality rdf:type owl:AnnotationProperty .
 ###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000304
 :ClimOO_0000304 rdf:type owl:Class ;
                 rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000132> ;
+                                  owl:someValuesFrom [ rdf:type owl:Class ;
+                                                       owl:unionOf ( :ClimOO_0000316
+                                                                     :ClimOO_0000318
+                                                                   )
+                                                     ]
+                                ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000167> ;
                                   owl:someValuesFrom :ClimOO_0000298
@@ -234,8 +258,18 @@ owl:minQualifiedCardinality rdf:type owl:AnnotationProperty .
 
 ###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000305
 :ClimOO_0000305 rdf:type owl:Class ;
-                rdfs:subClassOf :ClimOO_0000304 ;
+                rdfs:subClassOf :ClimOO_0000304 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000167> ;
+                                  owl:someValuesFrom :ClimOO_0000303
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000167> ;
+                                  owl:someValuesFrom :atmosphere
+                                ] ;
+                rdfs:comment "Subclasses do not aim to be an exhaustive classification of atmospheric processes."@en ;
                 rdfs:label "atmospheric process"@en ;
+                rdfs:seeAlso "http://purl.obolibrary.org/obo/ENVO_02500003" ;
                 <http://www.w3.org/2004/02/skos/core#definition> "A process that pertains to some portion of atmosphere."@en ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
                 <https://www.w3id.org/sco#SCO_0000039> :ClimOO_0000308 .
@@ -454,10 +488,27 @@ owl:minQualifiedCardinality rdf:type owl:AnnotationProperty .
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000320
+:ClimOO_0000320 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000305 ;
+                rdfs:label "physical atmospheric process"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An atmospheric process that involves the transfer of energy and mass related to a portion of the atmosphere."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom> "https://www.eionet.europa.eu/gemet/en/concept/639" ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000321
+:ClimOO_0000321 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000305 ;
+                rdfs:label "chemical atmospheric process"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An atmospheric process that alters the chemical composition of a portion of the atmosphere."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom> "https://www.eionet.europa.eu/gemet/en/concept/639" ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
 ###  https://www.w3id.org/climoo/climoo-sdc2#atmosphere
 :atmosphere rdf:type owl:Class ;
-            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000024> ,
-                            :ClimOO_0000302 ,
+            rdfs:subClassOf :ClimOO_0000302 ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000196> ;
                               owl:someValuesFrom :ClimOO_0000303
