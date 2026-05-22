@@ -27,9 +27,9 @@ SDC ontology: https://github.com/hbabaie1/Sustainable-Development-and-Climate-SD
 • Inadequate axiomatization of certain classes.
 For more details, see here (coming soon).
 
-Thus, we forked SDC Onto to develop a novel version, named ClimOO-SDC2. ClimOO-SDC2 is the module of the ClimOO Ontology dedicated to climate change. ClimOO-SDC2 focuses on environmental features and related interconnections modeled in SDC Onto. ClimOO-SDC2 offers an active reference hub that addresses SDC Onto's shortcomings, while integrating the SDC Onto model into the ClimOO Ontology. ClimOO-SDC2 extends SCO, aligning SDC models with primary existing BFO-compliant sustainability ontologies. We intend ClimOO-SDC2 as an initial starting point to establish a unique BFO-compliant representation of climate and climate change. 
+Thus, we forked SDC Onto to develop a novel version, named ClimOO-SDC2. ClimOO-SDC2 is the module of the ClimOO Ontology dedicated to climate change. ClimOO-SDC2 focuses on environmental features and related interconnections modeled in SDC Onto. ClimOO-SDC2 offers an active reference hub that addresses SDC Onto's shortcomings, while integrating the SDC Onto model into the ClimOO Ontology. ClimOO-SDC2 extends SCO, aligning the SDC Onto model with primary existing BFO-compliant sustainability ontologies. We intend ClimOO-SDC2 as an initial starting point to establish a unique BFO-compliant representation of climate and climate change. 
 
-To construct ClimOO-SDC2, we proceed as follows (focus on OWL classes; we followed the same approach concerning the other OWL building blocks).
+To construct ClimOO-SDC2, we proceed as follows (focus on OWL classes; we applied the same approach concerning the other OWL building blocks).
 • If the class was not relevant, we did not import it.
 • If the class was relevant and adequate, we directly imported it.
 • If the class was relevant but inadequately axiomatized, we created a corresponding class that supports appropriate axioms but maintains the local identifier of the original SDC Onto class. We opted for this solution to offer a direct strategy of reference to the original version from which SDC2 has been forked. In the future, alternative, possibly more robust, strategies can be implemented. Exceptions: Given their centrality in the model, the following class has been supplied with ClimOO local identifiers and annotated towards original SDC Onto classes:
@@ -41,7 +41,10 @@ To construct ClimOO-SDC2, we proceed as follows (focus on OWL classes; we follow
 • If the class, despite axiomatization, was misleading, we did not import it, and we created adequate class(es) as needed. We supplied it with a ClimOO local identifier.
 When revising classes, we complied with BFO and OBO-Foundry best practices.
 
-All SDC2 building blocks support the following namespace to ensure appropriate identification and fairness: https://www.w3id.org/climoo/climoo-sdc2#"""@en ;
+All SDC2 building blocks support the following namespace to ensure appropriate identification and fairness: https://www.w3id.org/climoo/climoo-sdc2#
+
+Bibliography
+Davarpanah, A., Babaie, H., & Dhakal, N. (2023). Semantic modeling of climate change impacts on the implementation of the U.N. sustainable development goals related to poverty, hunger, water, and energy. Earth Sci. Inf., 16(1), 929–943."""@en ;
                                            owl:versionInfo "2026-05-15"@en ,
                                                            "V1.0.0."@en ;
                                            <http://www.w3.org/2004/02/skos/core#note> """Repository: https://www.w3id.org/climoo/repo
