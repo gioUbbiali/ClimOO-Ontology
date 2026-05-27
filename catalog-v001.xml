@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://ClimOO/climoo/climoo-sdc2/imports/bionik-imports#2026-05-27" uri="ClimOO%20material/src/ontology/sdc2%20imports/bionik-imports.ttl"/>
     <uri id="Imports Wizard Entry" name="http://ClimOO/climoo/climoo-sdc2/imports/sdc-ontology-imports/sdc-ontology-gdc-imports#2026-04-08" uri="ClimOO%20material/src/ontology/sdc2%20imports/sdc-onto-regulations-imports.ttl"/>
     <uri id="Imports Wizard Entry" name="http://ClimOO/climoo/climoo-sdc2/imports/sdc-onto-imports#2026-05-19" uri="ClimOO%20material/src/ontology/sdc2%20imports/sdc-onto-imports-merged.ttl"/>
     <uri id="Imports Wizard Entry" name="http://ClimOO/climoo/climoo-sdc2/imports/cco-imports#2026-04-09" uri="ClimOO%20material/src/ontology/sdc2%20imports/cco-imports.ttl"/>
