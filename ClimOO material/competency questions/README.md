@@ -1,4 +1,4 @@
-# ClimOO Ontology -  Competency Questions (CQs)
+# ClimOO Ontology suite -  Competency Questions (CQs)
 
 
 ## Description
