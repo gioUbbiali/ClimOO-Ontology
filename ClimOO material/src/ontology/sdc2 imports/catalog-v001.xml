@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://ClimOO/climoo/imports/sdc-ontology-imports/sdc-ontology-ind-continuant-imports#2026-04-08" uri="sdc-onto-ind-continuant-imports.ttl"/>
+    <uri id="Imports Wizard Entry" name="http://ClimOO/climoo/climoo-sdc2/imports/sdc-ontology-imports/sdc-ontology-gdc-imports#2026-04-08" uri="sdc-onto-regulations-imports.ttl"/>
+    <uri id="Imports Wizard Entry" name="http://ClimOO/climoo/imports/sdc-ontology-imports/sdc-ontology-sdc-imports#2026-04-08" uri="sdc-onto-sdc-imports.ttl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base=""/>
+</catalog>

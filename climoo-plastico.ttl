@@ -1,10 +1,10 @@
-@prefix : <https://www.w3id.org/climoo#> .
+@prefix : <https://www.w3id.org/climoo/climoo-plastico#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://www.w3id.org/climoo#> .
+@base <https://www.w3id.org/climoo/climoo-plastico#> .
 
 <https://www.w3id.org/climoo/climoo-plastico> rdf:type owl:Ontology ;
                                                owl:versionIRI :plastico-v1.0.0 ;
@@ -25,7 +25,7 @@
                                                <http://purl.org/dc/terms/description> "ClimOO Ontology is a reference ontology, modeling plastics, (micro-)plastic pollution, climate change, and their interrelation, with a primary focus on agricultural systems. The ClimOO Ontology is structured in a suite of nested ontological modules. The PlasticO module centers on representing polymer molecules, plastic materials, pieces of plastic, and plastic objects, along with corresponding life cycles and pollution processes. Emphasis is also dedicated to relevant assessment devices and related data, especially with regard to sustainability."@en ;
                                                <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0/" ;
                                                <http://purl.org/dc/terms/title> "ClimOO Ontology - PlasticO module"@en ;
-                                               owl:versionInfo "2026-02-25"@en ,
+                                               owl:versionInfo "2026-05-18"@en ,
                                                                "V1.0.0."@en ;
                                                <http://www.w3.org/2004/02/skos/core#note> """Repository: https://www.w3id.org/climoo/repo
 Documentation webpage: https://www.w3id.org/climoo/docs"""@en ,
@@ -222,7 +222,7 @@ https://w3id.org/pmd/co/PMD_0050039
 https://w3id.org/pmd/co/PMD_0050037"""@en .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000097
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000097
 :ClimOO_0000097 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000248 ,
                                 [ rdf:type owl:Restriction ;
@@ -236,7 +236,7 @@ https://w3id.org/pmd/co/PMD_0050037"""@en .
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000098
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000098
 :ClimOO_0000098 rdf:type owl:Class ;
                 rdfs:subClassOf [ owl:intersectionOf ( :ClimOO_0000143
                                                        [ rdf:type owl:Restriction ;
@@ -258,7 +258,7 @@ https://w3id.org/pmd/co/PMD_0050037"""@en .
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000099
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000099
 :ClimOO_0000099 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000278
                                                            [ rdf:type owl:Restriction ;
@@ -279,7 +279,7 @@ https://w3id.org/pmd/co/PMD_0050037"""@en .
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000100
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000100
 :ClimOO_0000100 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000210 ;
                 rdfs:comment "Reference to specif feedstock and related production processes can be added, as needed."@en ;
@@ -288,7 +288,7 @@ https://w3id.org/pmd/co/PMD_0050037"""@en .
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000104
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000104
 :ClimOO_0000104 rdf:type owl:Class ;
                 rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000016> ,
                                 [ rdf:type owl:Restriction ;
@@ -312,7 +312,7 @@ We envision implementing such definitions in accordance with regulation revision
                                                        :ClimOO_0000228 .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000107
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000107
 :ClimOO_0000107 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000247 ,
                                 [ rdf:type owl:Restriction ;
@@ -325,7 +325,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000108
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000108
 :ClimOO_0000108 rdf:type owl:Class ;
                 rdfs:subClassOf [ owl:intersectionOf ( :ClimOO_0000145
                                                        [ rdf:type owl:Restriction ;
@@ -347,7 +347,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000109
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000109
 :ClimOO_0000109 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000242 ,
                                 [ rdf:type owl:Restriction ;
@@ -360,7 +360,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000111
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000111
 :ClimOO_0000111 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000278
                                                            [ rdf:type owl:Restriction ;
@@ -385,7 +385,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000112
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000112
 :ClimOO_0000112 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000113
                                                            [ rdf:type owl:Restriction ;
@@ -419,7 +419,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000113
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000113
 :ClimOO_0000113 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000207
                                                            [ rdf:type owl:Restriction ;
@@ -446,7 +446,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000114
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000114
 :ClimOO_0000114 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000245
                                                            [ rdf:type owl:Restriction ;
@@ -463,7 +463,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000115
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000115
 :ClimOO_0000115 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000104
                                                            [ rdf:type owl:Restriction ;
@@ -489,7 +489,7 @@ We envision implementing such definitions in accordance with regulation revision
                                                        :ClimOO_0000228 .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000116
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000116
 :ClimOO_0000116 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000108 ,
                                 [ owl:intersectionOf ( :ClimOO_0000146
@@ -512,7 +512,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000117
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000117
 :ClimOO_0000117 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000205 ;
                 rdfs:label "portion of compostable synthetic plastic material"@en ;
@@ -520,7 +520,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000119
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000119
 :ClimOO_0000119 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000263
                                                            [ rdf:type owl:Restriction ;
@@ -547,7 +547,7 @@ We envision implementing such definitions in accordance with regulation revision
                                                        :ClimOO_0000228 .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000121
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000121
 :ClimOO_0000121 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000211 ,
                                 [ rdf:type owl:Restriction ;
@@ -563,7 +563,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000123
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000123
 :ClimOO_0000123 rdf:type owl:Class ;
                 rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000016> ,
                                 [ rdf:type owl:Restriction ;
@@ -583,7 +583,7 @@ Vert, M., Doi, Y., Hellwich, K.-H., Hess, M., Hodge, P., Kubisa, P., Rinaudo, M.
                                                        :ClimOO_0000228 .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000124
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000124
 :ClimOO_0000124 rdf:type owl:Class ;
                 rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000016> ;
                 rdfs:comment "References to processes realizing this disposition can be added as needed."@en ;
@@ -593,7 +593,7 @@ Vert, M., Doi, Y., Hellwich, K.-H., Hess, M., Hodge, P., Kubisa, P., Rinaudo, M.
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000125
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000125
 :ClimOO_0000125 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000242
                                                            [ rdf:type owl:Restriction ;
@@ -616,7 +616,7 @@ Vert, M., Doi, Y., Hellwich, K.-H., Hess, M., Hodge, P., Kubisa, P., Rinaudo, M.
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000126
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000126
 :ClimOO_0000126 rdf:type owl:Class ;
                 rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000016> ;
                 <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> "durability"@en ;
@@ -626,7 +626,7 @@ Vert, M., Doi, Y., Hellwich, K.-H., Hess, M., Hodge, P., Kubisa, P., Rinaudo, M.
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000127
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000127
 :ClimOO_0000127 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000163 ;
                 rdfs:label "film debris particle"@en ;
@@ -635,7 +635,7 @@ Vert, M., Doi, Y., Hellwich, K.-H., Hess, M., Hodge, P., Kubisa, P., Rinaudo, M.
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000128
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000128
 :ClimOO_0000128 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000273 ,
                                 [ rdf:type owl:Restriction ;
@@ -663,7 +663,7 @@ We envision implementing such definitions in accordance with regulation revision
                                                        :ClimOO_0000228 .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000129
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000129
 :ClimOO_0000129 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000242 ;
                 rdfs:comment "Specifications of this class can be added as needed."@en ;
@@ -672,7 +672,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000130
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000130
 :ClimOO_0000130 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000211 ,
                                 [ rdf:type owl:Restriction ;
@@ -688,7 +688,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000132
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000132
 :ClimOO_0000132 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000163 ,
                                 [ rdf:type owl:Restriction ;
@@ -701,7 +701,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000133
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000133
 :ClimOO_0000133 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000253 ;
                 rdfs:comment "This system of classification refers to that proposed by Hartmann et al. (2019)."@en ;
@@ -711,7 +711,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://www.w3id.org/sco#SCO_0000039> :ClimOO_0000073 .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000134
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000134
 :ClimOO_0000134 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000253 ;
                 rdfs:comment "This system of classification refers to that proposed by Hartmann et al. (2019)."@en ;
@@ -721,7 +721,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://www.w3id.org/sco#SCO_0000039> :ClimOO_0000073 .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000135
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000135
 :ClimOO_0000135 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000253 ;
                 rdfs:comment "This system of classification refers to that proposed by Hartmann et al. (2019)."@en ;
@@ -731,7 +731,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://www.w3id.org/sco#SCO_0000039> :ClimOO_0000073 .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000136
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000136
 :ClimOO_0000136 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000253 ;
                 rdfs:comment "This system of classification refers to that proposed by Hartmann et al. (2019)."@en ;
@@ -741,7 +741,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://www.w3id.org/sco#SCO_0000039> :ClimOO_0000073 .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000137
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000137
 :ClimOO_0000137 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000266 ,
                                 [ rdf:type owl:Restriction ;
@@ -758,7 +758,7 @@ We envision implementing such definitions in accordance with regulation revision
                                                        :ClimOO_0000228 .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000138
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000138
 :ClimOO_0000138 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000237
                                                            [ rdf:type owl:Restriction ;
@@ -800,7 +800,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000139
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000139
 :ClimOO_0000139 rdf:type owl:Class ;
                 rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> ,
                                 [ rdf:type owl:Restriction ;
@@ -823,7 +823,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000140
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000140
 :ClimOO_0000140 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000210 ;
                 rdfs:comment "References to slightly natural polymers can be added as needed."@en ,
@@ -833,7 +833,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000141
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000141
 :ClimOO_0000141 rdf:type owl:Class ;
                 rdfs:subClassOf <http://purl.obolibrary.org/obo/CHEBI_23367> ,
                                 [ rdf:type owl:Class ;
@@ -867,7 +867,7 @@ We envision implementing such definitions in accordance with regulation revision
                                                        :ClimOO_0000228 .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000142
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000142
 :ClimOO_0000142 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000253 ;
                 rdfs:comment "This system of classification refers to that proposed by Hartmann et al. (2019)."@en ;
@@ -877,7 +877,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://www.w3id.org/sco#SCO_0000039> :ClimOO_0000073 .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000143
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000143
 :ClimOO_0000143 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000153 ,
                                 [ rdf:type owl:Restriction ;
@@ -889,7 +889,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000144
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000144
 :ClimOO_0000144 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000253 ,
                                 [ rdf:type owl:Restriction ;
@@ -901,7 +901,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000145
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000145
 :ClimOO_0000145 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000144 ,
                                 [ owl:intersectionOf ( :ClimOO_0000153
@@ -917,7 +917,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000146
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000146
 :ClimOO_0000146 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000145 ,
                                 [ rdf:type owl:Restriction ;
@@ -929,7 +929,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000147
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000147
 :ClimOO_0000147 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000150 ,
                                 [ rdf:type owl:Restriction ;
@@ -941,7 +941,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000148
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000148
 :ClimOO_0000148 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000150 ,
                                 [ rdf:type owl:Restriction ;
@@ -953,7 +953,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000149
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000149
 :ClimOO_0000149 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000150 ,
                                 [ rdf:type owl:Restriction ;
@@ -965,7 +965,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000150
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000150
 :ClimOO_0000150 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000254 ,
                                 [ rdf:type owl:Restriction ;
@@ -983,7 +983,7 @@ We envision implementing such definitions in accordance with regulation revision
                                                        :ClimOO_0000228 .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000151
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000151
 :ClimOO_0000151 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000153 ,
                                 [ rdf:type owl:Restriction ;
@@ -995,7 +995,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000152
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000152
 :ClimOO_0000152 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000153 ,
                                 [ rdf:type owl:Restriction ;
@@ -1007,7 +1007,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000153
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000153
 :ClimOO_0000153 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000253
                                                            [ rdf:type owl:Restriction ;
@@ -1023,7 +1023,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000154
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000154
 :ClimOO_0000154 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000150 ,
                                 [ rdf:type owl:Restriction ;
@@ -1035,7 +1035,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000155
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000155
 :ClimOO_0000155 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000153 ,
                                 [ rdf:type owl:Restriction ;
@@ -1047,7 +1047,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000156
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000156
 :ClimOO_0000156 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000212
                                                            [ rdf:type owl:Restriction ;
@@ -1063,7 +1063,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000157
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000157
 :ClimOO_0000157 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000271
                                                            [ rdf:type owl:Restriction ;
@@ -1091,7 +1091,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000158
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000158
 :ClimOO_0000158 rdf:type owl:Class ;
                 rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> ,
                                 [ rdf:type owl:Restriction ;
@@ -1114,7 +1114,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000159
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000159
 :ClimOO_0000159 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000119
                                                            [ rdf:type owl:Restriction ;
@@ -1155,7 +1155,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000160
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000160
 :ClimOO_0000160 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000027>
                                                            [ rdf:type owl:Restriction ;
@@ -1194,7 +1194,7 @@ We envision implementing such definitions in accordance with regulation revision
                                                        :ClimOO_0000228 .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000161
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000161
 :ClimOO_0000161 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000275
                                                            [ rdf:type owl:Restriction ;
@@ -1229,7 +1229,7 @@ We envision implementing such definitions in accordance with regulation revision
                                                        :ClimOO_0000228 .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000162
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000162
 :ClimOO_0000162 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000128 ,
                                 [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
@@ -1261,7 +1261,7 @@ We envision implementing such definitions in accordance with regulation revision
                                                        :ClimOO_0000228 .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000163
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000163
 :ClimOO_0000163 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000150
                                                            [ rdf:type owl:Restriction ;
@@ -1290,13 +1290,14 @@ We envision implementing such definitions in accordance with regulation revision
                                       rdf:type owl:Class
                                     ] ;
                 rdfs:subClassOf :ClimOO_0000150 ;
-                <http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym> "synthetic polymer debris"@en ;
-                <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "plastic debris, plastic litter"@en ;
+                <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "plastic debris"@en ;
+                <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> "plastic litter"@en ;
                 rdfs:comment """Classification systems for plastic debris vary, especially according to particle size. For instance, EnvO considers 5 mm as the upper-level threshold to define microplastic particles, as this is a commonly recognized size edge in discussions on microplastic litter. Nevertheless, this is merely an operative definition, and there is no complete consensus on employing it (Hartmann et al., 2019). Hartmann et al. (2019) propose a range of 1-1000 micrometers. For illustrative purposes, the ClimOO ontology includes EnvO classification of plastic debris particles and maps it with that proposed by Hartmann et al. (2019), (covered by the ClimOO Ontology). The focus of the mpping is only on prticle size. See also comments to EnvO \"piece of plastic\" class.
 
 These classifications differentiate for the size range of micro-, macro-, and meso-plastic particles. The shared size ranges for mega- and nano-plastic particles. This is also intended to be an initial guideline to align and map different classification systems."""@en ,
                              "Ontology implementations can extend the modelling of environmental persistence concerning pieces and materials made of plastics and synthetic polymers."@en ,
-                             "The term “environment” can be interpreted as referring to both systems and their environments contingent upon the focus of the analysis."@en ;
+                             "The term “environment” can be interpreted as referring to both systems and their environments contingent upon the focus of the analysis."@en ,
+                             "The term “litter” is used sometimes as a synonym of that of “debris”, sometimes with a slightly different meaning. Currently, the ClimOO Ontology focuses on debris, maintaining a neutral stance with regard to litter. Implementations will deal with possible sematic discrepancies by offering models to accommodate different usages of these terms."@en ;
                 rdfs:label "plastic debris particle"@en ;
                 <http://www.w3.org/2004/02/skos/core#definition> "a piece of synthetic polymer-based material that, at a certain time, is 1) solid, 2) not soluble in water (water solubility), 3) persistent in an environment (bearing a disposition to environmental persistence), generally as pollutant, 4) mobile (bearing a disposition to motion in the environment), and 5) is no longer used for a purpose."@en ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
@@ -1307,7 +1308,7 @@ These classifications differentiate for the size range of micro-, macro-, and me
                                                        :ClimOO_0000228 .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000164
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000164
 :ClimOO_0000164 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000040>
                                                            [ rdf:type owl:Restriction ;
@@ -1340,7 +1341,7 @@ These classifications differentiate for the size range of micro-, macro-, and me
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000165
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000165
 :ClimOO_0000165 rdf:type owl:Class ;
                 rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> ;
                 rdfs:label "plastic debris sink role"@en ;
@@ -1348,7 +1349,7 @@ These classifications differentiate for the size range of micro-, macro-, and me
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000166
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000166
 :ClimOO_0000166 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000040>
                                                            [ rdf:type owl:Restriction ;
@@ -1385,7 +1386,7 @@ These classifications differentiate for the size range of micro-, macro-, and me
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000167
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000167
 :ClimOO_0000167 rdf:type owl:Class ;
                 rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> ;
                 rdfs:label "plastic debris source role"@en ;
@@ -1393,7 +1394,7 @@ These classifications differentiate for the size range of micro-, macro-, and me
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000168
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000168
 :ClimOO_0000168 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000269
                                                            [ rdf:type owl:Restriction ;
@@ -1423,7 +1424,7 @@ These classifications differentiate for the size range of micro-, macro-, and me
                                                        :ClimOO_0000228 .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000169
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000169
 :ClimOO_0000169 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000273 ,
                                 [ rdf:type owl:Restriction ;
@@ -1451,7 +1452,7 @@ We envision implementing such definitions in accordance with regulation revision
                                                        :ClimOO_0000228 .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000171
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000171
 :ClimOO_0000171 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000153
                                                            [ rdf:type owl:Restriction ;
@@ -1470,7 +1471,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000172
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000172
 :ClimOO_0000172 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000226
                                                            [ rdf:type owl:Restriction ;
@@ -1487,7 +1488,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000173
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000173
 :ClimOO_0000173 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000292 ,
                                 [ owl:intersectionOf ( :ClimOO_0000292
@@ -1507,7 +1508,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000174
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000174
 :ClimOO_0000174 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000163 ;
                 rdfs:label "plastic pellet debris particle"@en ;
@@ -1515,7 +1516,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000175
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000175
 :ClimOO_0000175 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000201
                                                            [ rdf:type owl:Restriction ;
@@ -1555,7 +1556,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000176
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000176
 :ClimOO_0000176 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000214
                                                            [ rdf:type owl:Restriction ;
@@ -1587,7 +1588,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000177
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000177
 :ClimOO_0000177 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000163 ;
                 rdfs:label "plastic surface coating debris particle"@en ;
@@ -1595,7 +1596,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000178
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000178
 :ClimOO_0000178 rdf:type owl:Class ;
                 rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/COB_0000110>
                                                        [ rdf:type owl:Restriction ;
@@ -1633,7 +1634,7 @@ We envision implementing such definitions in accordance with regulation revision
  ] .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000180
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000180
 :ClimOO_0000180 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000269
                                                            [ rdf:type owl:Restriction ;
@@ -1659,7 +1660,7 @@ We envision implementing such definitions in accordance with regulation revision
                                                        :ClimOO_0000228 .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000181
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000181
 :ClimOO_0000181 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000211 ;
                 rdfs:label "portion of polymer composite-based synthetic material"@en ;
@@ -1667,7 +1668,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000182
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000182
 :ClimOO_0000182 rdf:type owl:Class ;
                 rdfs:subClassOf <https://w3id.org/pmd/co/PMD_0010033> ,
                                 [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
@@ -1705,7 +1706,7 @@ Vert, M., Doi, Y., Hellwich, K.-H., Hess, M., Hodge, P., Kubisa, P., Rinaudo, M.
                                                        :ClimOO_0000228 .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000183
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000183
 :ClimOO_0000183 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000226
                                                            [ rdf:type owl:Restriction ;
@@ -1729,7 +1730,7 @@ Vert, M., Doi, Y., Hellwich, K.-H., Hess, M., Hodge, P., Kubisa, P., Rinaudo, M.
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000184
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000184
 :ClimOO_0000184 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000226
                                                            [ rdf:type owl:Restriction ;
@@ -1753,7 +1754,7 @@ Vert, M., Doi, Y., Hellwich, K.-H., Hess, M., Hodge, P., Kubisa, P., Rinaudo, M.
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000185
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000185
 :ClimOO_0000185 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000226
                                                            [ rdf:type owl:Restriction ;
@@ -1777,7 +1778,7 @@ Vert, M., Doi, Y., Hellwich, K.-H., Hess, M., Hodge, P., Kubisa, P., Rinaudo, M.
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000186
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000186
 :ClimOO_0000186 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000226
                                                            [ rdf:type owl:Restriction ;
@@ -1801,7 +1802,7 @@ Vert, M., Doi, Y., Hellwich, K.-H., Hess, M., Hodge, P., Kubisa, P., Rinaudo, M.
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000188
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000188
 :ClimOO_0000188 rdf:type owl:Class ;
                 rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000016> ;
                 rdfs:label "recyclability"@en ;
@@ -1821,7 +1822,7 @@ Vert, M., Doi, Y., Hellwich, K.-H., Hess, M., Hodge, P., Kubisa, P., Rinaudo, M.
  ] .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000191
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000191
 :ClimOO_0000191 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000248 ,
                                 [ rdf:type owl:Restriction ;
@@ -1834,7 +1835,7 @@ Vert, M., Doi, Y., Hellwich, K.-H., Hess, M., Hodge, P., Kubisa, P., Rinaudo, M.
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000192
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000192
 :ClimOO_0000192 rdf:type owl:Class ;
                 rdfs:subClassOf [ owl:intersectionOf ( :ClimOO_0000151
                                                        [ rdf:type owl:Restriction ;
@@ -1856,7 +1857,7 @@ Vert, M., Doi, Y., Hellwich, K.-H., Hess, M., Hodge, P., Kubisa, P., Rinaudo, M.
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000193
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000193
 :ClimOO_0000193 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000278
                                                            [ rdf:type owl:Restriction ;
@@ -1877,7 +1878,7 @@ Vert, M., Doi, Y., Hellwich, K.-H., Hess, M., Hodge, P., Kubisa, P., Rinaudo, M.
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000194
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000194
 :ClimOO_0000194 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000210
                                                            [ rdf:type owl:Restriction ;
@@ -1893,7 +1894,7 @@ Vert, M., Doi, Y., Hellwich, K.-H., Hess, M., Hodge, P., Kubisa, P., Rinaudo, M.
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000197
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000197
 :ClimOO_0000197 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000248 ,
                                 [ rdf:type owl:Restriction ;
@@ -1907,7 +1908,7 @@ Vert, M., Doi, Y., Hellwich, K.-H., Hess, M., Hodge, P., Kubisa, P., Rinaudo, M.
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000198
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000198
 :ClimOO_0000198 rdf:type owl:Class ;
                 rdfs:subClassOf [ owl:intersectionOf ( :ClimOO_0000152
                                                        [ rdf:type owl:Restriction ;
@@ -1929,7 +1930,7 @@ Vert, M., Doi, Y., Hellwich, K.-H., Hess, M., Hodge, P., Kubisa, P., Rinaudo, M.
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000199
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000199
 :ClimOO_0000199 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000278
                                                            [ rdf:type owl:Restriction ;
@@ -1954,7 +1955,7 @@ Vert, M., Doi, Y., Hellwich, K.-H., Hess, M., Hodge, P., Kubisa, P., Rinaudo, M.
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000200
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000200
 :ClimOO_0000200 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000210
                                                            [ rdf:type owl:Restriction ;
@@ -1969,7 +1970,7 @@ Vert, M., Doi, Y., Hellwich, K.-H., Hess, M., Hodge, P., Kubisa, P., Rinaudo, M.
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000201
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000201
 :ClimOO_0000201 rdf:type owl:Class ;
                 rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/COB_0000110>
                                                        [ rdf:type owl:Restriction ;
@@ -2024,7 +2025,7 @@ Vert, M., Doi, Y., Hellwich, K.-H., Hess, M., Hodge, P., Kubisa, P., Rinaudo, M.
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000202
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000202
 :ClimOO_0000202 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000265 ,
                                 [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
@@ -2084,7 +2085,7 @@ http://purl.obolibrary.org/obo/ENVO_02000200"""@en ,
                                                        :ClimOO_0000228 .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000203
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000203
 :ClimOO_0000203 rdf:type owl:Class ;
                 rdfs:subClassOf <http://purl.obolibrary.org/obo/CHEBI_23367> ,
                                 [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/CHEBI_23367>
@@ -2132,7 +2133,7 @@ http://purl.obolibrary.org/obo/ENVO_02000200"""@en ,
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000204
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000204
 :ClimOO_0000204 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000261 ;
                 <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "submicronplastic debris, submicronplastic litter"@en ;
@@ -2141,7 +2142,7 @@ http://purl.obolibrary.org/obo/ENVO_02000200"""@en ,
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000205
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000205
 :ClimOO_0000205 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000107 ,
                                 [ owl:intersectionOf ( :ClimOO_0000248
@@ -2163,7 +2164,7 @@ http://purl.obolibrary.org/obo/ENVO_02000200"""@en ,
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000207
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000207
 :ClimOO_0000207 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000168
                                                            [ rdf:type owl:Restriction ;
@@ -2187,7 +2188,7 @@ http://purl.obolibrary.org/obo/ENVO_02000200"""@en ,
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000208
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000208
 :ClimOO_0000208 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000128
                                                            [ rdf:type owl:Restriction ;
@@ -2212,7 +2213,7 @@ http://purl.obolibrary.org/obo/ENVO_02000200"""@en ,
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000210
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000210
 :ClimOO_0000210 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000242
                                                            [ rdf:type owl:Restriction ;
@@ -2230,7 +2231,7 @@ http://purl.obolibrary.org/obo/ENVO_02000200"""@en ,
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000211
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000211
 :ClimOO_0000211 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000246 ,
                                 [ owl:intersectionOf ( :ClimOO_0000246
@@ -2246,7 +2247,7 @@ http://purl.obolibrary.org/obo/ENVO_02000200"""@en ,
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000212
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000212
 :ClimOO_0000212 rdf:type owl:Class ;
                 rdfs:subClassOf <http://purl.obolibrary.org/obo/CHEBI_23367> ,
                                 [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
@@ -2286,7 +2287,7 @@ http://purl.obolibrary.org/obo/ENVO_02000200"""@en ,
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000213
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000213
 :ClimOO_0000213 rdf:type owl:Class ;
                 rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> ;
                 <http://purl.org/dc/terms/source> "References to additive incorporation, such as chemical binding or juxtaposition, can be added as needed."@en ,
@@ -2301,7 +2302,7 @@ http://purl.obolibrary.org/obo/ENVO_02000200"""@en ,
                                                        :ClimOO_0000228 .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000214
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000214
 :ClimOO_0000214 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000265 ,
                                 [ rdf:type owl:Restriction ;
@@ -2337,7 +2338,7 @@ According to the current axiomatization and definition, this class may be a subc
                                                        :ClimOO_0000228 .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000215
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000215
 :ClimOO_0000215 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000210
                                                            [ rdf:type owl:Restriction ;
@@ -2354,7 +2355,7 @@ According to the current axiomatization and definition, this class may be a subc
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000216
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000216
 :ClimOO_0000216 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000211
                                                            [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
@@ -2385,7 +2386,7 @@ According to the current axiomatization and definition, this class may be a subc
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000217
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000217
 :ClimOO_0000217 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000242
                                                            [ rdf:type owl:Restriction ;
@@ -2408,7 +2409,7 @@ According to the current axiomatization and definition, this class may be a subc
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000218
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000218
 :ClimOO_0000218 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000242
                                                            [ rdf:type owl:Restriction ;
@@ -2431,7 +2432,7 @@ According to the current axiomatization and definition, this class may be a subc
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000219
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000219
 :ClimOO_0000219 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000220 ,
                                 [ rdf:type owl:Restriction ;
@@ -2444,7 +2445,7 @@ According to the current axiomatization and definition, this class may be a subc
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000220
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000220
 :ClimOO_0000220 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000163 ;
                 <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "TWP"@en ;
@@ -2453,7 +2454,7 @@ According to the current axiomatization and definition, this class may be a subc
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000221
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000221
 :ClimOO_0000221 rdf:type owl:Class ;
                 rdfs:subClassOf <http://purl.obolibrary.org/obo/COB_0000035> ,
                                 [ rdf:type owl:Restriction ;
@@ -2478,7 +2479,7 @@ According to the current axiomatization and definition, this class may be a subc
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000222
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000222
 :ClimOO_0000222 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000248 ;
                 <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "virgin plastic"@en ;
@@ -2487,7 +2488,7 @@ According to the current axiomatization and definition, this class may be a subc
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000223
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000223
 :ClimOO_0000223 rdf:type owl:Class ;
                 rdfs:subClassOf [ owl:intersectionOf ( :ClimOO_0000155
                                                        [ rdf:type owl:Restriction ;
@@ -2509,7 +2510,7 @@ According to the current axiomatization and definition, this class may be a subc
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000224
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000224
 :ClimOO_0000224 rdf:type owl:Class ;
                 rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000016> ;
                 <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "solubility in water"@en ;
@@ -2526,7 +2527,7 @@ According to the current axiomatization and definition, this class may be a subc
  ] .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000226
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000226
 :ClimOO_0000226 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000277
                                                            [ rdf:type owl:Restriction ;
@@ -2551,7 +2552,7 @@ According to the current axiomatization and definition, this class may be a subc
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000229
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000229
 :ClimOO_0000229 rdf:type owl:Class ;
                 rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/Color> ;
                 rdfs:comment """For insights on definitions, see, for instance:
@@ -2562,7 +2563,7 @@ https://en.wikipedia.org/wiki/Transparency_and_translucency"""@en ,
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000230
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000230
 :ClimOO_0000230 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000231 ;
                 owl:disjointWith :ClimOO_0000232 ,
@@ -2576,7 +2577,7 @@ See, for instance, ISO/TR 21960:2020Plastics — Environmental aspects — State
                 <https://www.w3id.org/sco#SCO_0000039> :ClimOO_0000073 .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000231
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000231
 :ClimOO_0000231 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000163 ;
                 rdfs:comment "This class has only been created for grouping purposes. Do not use it directly."@en ,
@@ -2585,7 +2586,7 @@ See, for instance, ISO/TR 21960:2020Plastics — Environmental aspects — State
                 <https://www.w3id.org/sco#SCO_0000039> :ClimOO_0000073 .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000232
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000232
 :ClimOO_0000232 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000231 ;
                 owl:disjointWith :ClimOO_0000233 ,
@@ -2596,7 +2597,7 @@ See, for instance, ISO/TR 21960:2020Plastics — Environmental aspects — State
                 <https://www.w3id.org/sco#SCO_0000039> :ClimOO_0000073 .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000233
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000233
 :ClimOO_0000233 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000231 ;
                 owl:disjointWith :ClimOO_0000261 ;
@@ -2607,7 +2608,7 @@ See, for instance, ISO/TR 21960:2020Plastics — Environmental aspects — State
                 <https://www.w3id.org/sco#SCO_0000039> :ClimOO_0000073 .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000236
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000236
 :ClimOO_0000236 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000157
                                                            [ rdf:type owl:Restriction ;
@@ -2638,7 +2639,7 @@ See, for instance, ISO/TR 21960:2020Plastics — Environmental aspects — State
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000237
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000237
 :ClimOO_0000237 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000214
                                                            [ rdf:type owl:Restriction ;
@@ -2679,7 +2680,7 @@ See, for instance, ISO/TR 21960:2020Plastics — Environmental aspects — State
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000238
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000238
 :ClimOO_0000238 rdf:type owl:Class ;
                 rdfs:subClassOf <http://purl.obolibrary.org/obo/COB_0000035> ,
                                 [ rdf:type owl:Restriction ;
@@ -2697,7 +2698,7 @@ See, for instance, ISO/TR 21960:2020Plastics — Environmental aspects — State
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000241
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000241
 :ClimOO_0000241 rdf:type owl:Class ;
                 rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000016> ;
                 rdfs:comment "Reference to corresponding motion processes can be added as needed."@en ;
@@ -2706,7 +2707,7 @@ See, for instance, ISO/TR 21960:2020Plastics — Environmental aspects — State
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000242
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000242
 :ClimOO_0000242 rdf:type owl:Class ;
                 rdfs:subClassOf <http://purl.obolibrary.org/obo/CHEBI_23367> ,
                                 [ rdf:type owl:Class ;
@@ -2741,7 +2742,7 @@ See, for instance, ISO/TR 21960:2020Plastics — Environmental aspects — State
                                                        :ClimOO_0000228 .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000243
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000243
 :ClimOO_0000243 rdf:type owl:Class ;
                 rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000016> ;
                 rdfs:comment "A disposition that realizes in a process of combustion."@en ,
@@ -2752,7 +2753,7 @@ See, for instance, ISO/TR 21960:2020Plastics — Environmental aspects — State
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000244
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000244
 :ClimOO_0000244 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/bionik/portion_of_material>
                                                            [ rdf:type owl:Restriction ;
@@ -2769,7 +2770,7 @@ See, for instance, ISO/TR 21960:2020Plastics — Environmental aspects — State
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000245
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000245
 :ClimOO_0000245 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000244
                                                            [ rdf:type owl:Restriction ;
@@ -2798,7 +2799,7 @@ See, for instance, ISO/TR 21960:2020Plastics — Environmental aspects — State
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000246
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000246
 :ClimOO_0000246 rdf:type owl:Class ;
                 rdfs:subClassOf <http://www.semanticweb.org/bionik/portion_of_material> ,
                                 [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
@@ -2847,7 +2848,7 @@ See, for instance, ISO/TR 21960:2020Plastics — Environmental aspects — State
                                                        :ClimOO_0000228 .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000247
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000247
 :ClimOO_0000247 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000246
                                                            [ rdf:type owl:Class ;
@@ -2876,7 +2877,7 @@ See, for instance, ISO/TR 21960:2020Plastics — Environmental aspects — State
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000248
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000248
 :ClimOO_0000248 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000211 ,
                                 [ owl:intersectionOf ( :ClimOO_0000247
@@ -2894,7 +2895,7 @@ See, for instance, ISO/TR 21960:2020Plastics — Environmental aspects — State
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000249
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000249
 :ClimOO_0000249 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000247 ;
                 rdfs:label "portion of natural plastic material"@en ;
@@ -2903,7 +2904,7 @@ See, for instance, ISO/TR 21960:2020Plastics — Environmental aspects — State
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000250
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000250
 :ClimOO_0000250 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000246
                                                            [ rdf:type owl:Restriction ;
@@ -2919,7 +2920,7 @@ See, for instance, ISO/TR 21960:2020Plastics — Environmental aspects — State
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000251
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000251
 :ClimOO_0000251 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000246
                                                            [ rdf:type owl:Restriction ;
@@ -2938,7 +2939,7 @@ See, for instance, ISO/TR 21960:2020Plastics — Environmental aspects — State
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000252
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000252
 :ClimOO_0000252 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000246
                                                            [ rdf:type owl:Restriction ;
@@ -2955,7 +2956,7 @@ See, for instance, ISO/TR 21960:2020Plastics — Environmental aspects — State
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000253
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000253
 :ClimOO_0000253 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000254 ,
                                 [ rdf:type owl:Restriction ;
@@ -2973,7 +2974,7 @@ See, for instance, ISO/TR 21960:2020Plastics — Environmental aspects — State
                                                        :ClimOO_0000228 .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000254
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000254
 :ClimOO_0000254 rdf:type owl:Class ;
                 rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000030> ,
                                 [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
@@ -3037,7 +3038,7 @@ Reference to weight can be added as needed."""@en ,
                                                        :ClimOO_0000228 .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000255
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000255
 :ClimOO_0000255 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000153 ;
                 rdfs:label "plastic film"@en ;
@@ -3046,7 +3047,7 @@ Reference to weight can be added as needed."""@en ,
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000256
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000256
 :ClimOO_0000256 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000253
                                                            [ rdf:type owl:Restriction ;
@@ -3067,7 +3068,7 @@ Reference to weight can be added as needed."""@en ,
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000257
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000257
 :ClimOO_0000257 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000253 ,
                                 [ rdf:type owl:Restriction ;
@@ -3080,7 +3081,7 @@ Reference to weight can be added as needed."""@en ,
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000258
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000258
 :ClimOO_0000258 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000153 ,
                                 [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
@@ -3101,7 +3102,7 @@ Reference to weight can be added as needed."""@en ,
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000259
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000259
 :ClimOO_0000259 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000258 ;
                 <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "pre-production plastic pellets"@en ;
@@ -3111,7 +3112,7 @@ Reference to weight can be added as needed."""@en ,
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000260
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000260
 :ClimOO_0000260 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000230 ;
                 rdfs:label "secondary microplastic particle"@en ;
@@ -3121,7 +3122,7 @@ Reference to weight can be added as needed."""@en ,
                 <https://www.w3id.org/sco#SCO_0000039> :ClimOO_0000073 .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000261
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000261
 :ClimOO_0000261 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000231 ;
                 rdfs:label "nanoplastic particle - Hartmann et al. (2019) classification"@en ;
@@ -3130,7 +3131,7 @@ Reference to weight can be added as needed."""@en ,
                 <https://www.w3id.org/sco#SCO_0000039> :ClimOO_0000073 .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000262
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000262
 :ClimOO_0000262 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000230 ;
                 rdfs:label "primary microplastic particle"@en ;
@@ -3140,7 +3141,7 @@ Reference to weight can be added as needed."""@en ,
                 <https://www.w3id.org/sco#SCO_0000039> :ClimOO_0000073 .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000263
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000263
 :ClimOO_0000263 rdf:type owl:Class ;
                 rdfs:subClassOf <http://purl.obolibrary.org/obo/GO_0008150> ,
                                 [ rdf:type owl:Restriction ;
@@ -3166,7 +3167,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000264
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000264
 :ClimOO_0000264 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000180
                                                            [ rdf:type owl:Restriction ;
@@ -3191,7 +3192,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000265
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000265
 :ClimOO_0000265 rdf:type owl:Class ;
                 rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> ,
                                 [ rdf:type owl:Restriction ;
@@ -3210,7 +3211,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000266
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000266
 :ClimOO_0000266 rdf:type owl:Class ;
                 rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> ,
                                 [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
@@ -3245,7 +3246,7 @@ We envision implementing such definitions in accordance with regulation revision
                                                        :ClimOO_0000228 .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000267
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000267
 :ClimOO_0000267 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000246
                                                            [ rdf:type owl:Restriction ;
@@ -3263,7 +3264,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000268
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000268
 :ClimOO_0000268 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000015>
                                                            [ rdf:type owl:Restriction ;
@@ -3298,7 +3299,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000269
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000269
 :ClimOO_0000269 rdf:type owl:Class ;
                 rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> ,
                                 [ rdf:type owl:Restriction ;
@@ -3321,7 +3322,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000270
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000270
 :ClimOO_0000270 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000207
                                                            [ rdf:type owl:Restriction ;
@@ -3351,7 +3352,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000271
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000271
 :ClimOO_0000271 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000139 ,
                                 [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/GO_0008150>
@@ -3380,7 +3381,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000272
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000272
 :ClimOO_0000272 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000236
                                                            [ rdf:type owl:Restriction ;
@@ -3418,7 +3419,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000273
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000273
 :ClimOO_0000273 rdf:type owl:Class ;
                 rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> ,
                                 [ rdf:type owl:Restriction ;
@@ -3448,7 +3449,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000274
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000274
 :ClimOO_0000274 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000269
                                                            [ rdf:type owl:Restriction ;
@@ -3471,7 +3472,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000275
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000275
 :ClimOO_0000275 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000274
                                                            [ rdf:type owl:Restriction ;
@@ -3501,7 +3502,7 @@ We envision implementing such definitions in accordance with regulation revision
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000276
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000276
 :ClimOO_0000276 rdf:type owl:Class ;
                 rdfs:subClassOf <http://purl.obolibrary.org/obo/COB_0000110> ,
                                 [ rdf:type owl:Restriction ;
@@ -3529,7 +3530,7 @@ http://purl.obolibrary.org/obo/ENVO_06105125""" ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000277
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000277
 :ClimOO_0000277 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/COB_0000110>
                                                            [ rdf:type owl:Restriction ;
@@ -3562,7 +3563,7 @@ http://purl.obolibrary.org/obo/ENVO_06105125""" ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000278
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000278
 :ClimOO_0000278 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000276
                                                            [ rdf:type owl:Restriction ;
@@ -3578,7 +3579,7 @@ http://purl.obolibrary.org/obo/ENVO_06105125""" ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000279
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000279
 :ClimOO_0000279 rdf:type owl:Class ;
                 rdfs:subClassOf <http://purl.obolibrary.org/obo/COB_0000035> ,
                                 [ rdf:type owl:Restriction ;
@@ -3616,7 +3617,7 @@ See, for instance, https://www.iso.org/standard/77957.html"""@en ,
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000280
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000280
 :ClimOO_0000280 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000279 ,
                                 [ rdf:type owl:Restriction ;
@@ -3639,7 +3640,7 @@ See, for instance, https://www.iso.org/standard/77957.html"""@en ,
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000281
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000281
 :ClimOO_0000281 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000280 ,
                                 [ rdf:type owl:Restriction ;
@@ -3662,7 +3663,7 @@ See, for instance, https://www.iso.org/standard/77957.html"""@en ,
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000282
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000282
 :ClimOO_0000282 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000265 ,
                                 [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/COB_0000035>
@@ -3691,7 +3692,7 @@ See, for instance, https://www.iso.org/standard/77957.html"""@en ,
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000283
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000283
 :ClimOO_0000283 rdf:type owl:Class ;
                 rdfs:subClassOf [ owl:intersectionOf ( :ClimOO_0000282
                                                        [ rdf:type owl:Restriction ;
@@ -3710,7 +3711,7 @@ See, for instance, https://www.iso.org/standard/77957.html"""@en ,
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000284
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000284
 :ClimOO_0000284 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000265 ,
                                 [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/COB_0000035>
@@ -3739,7 +3740,7 @@ See, for instance, https://www.iso.org/standard/77957.html"""@en ,
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000285
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000285
 :ClimOO_0000285 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000284 ,
                                 [ rdf:type owl:Restriction ;
@@ -3755,7 +3756,7 @@ See, for instance, https://www.iso.org/standard/77957.html"""@en ,
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000286
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000286
 :ClimOO_0000286 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000285 ,
                                 [ rdf:type owl:Restriction ;
@@ -3771,7 +3772,7 @@ See, for instance, https://www.iso.org/standard/77957.html"""@en ,
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000290
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000290
 :ClimOO_0000290 rdf:type owl:Class ;
                 owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000182
                                                            [ rdf:type owl:Restriction ;
@@ -3787,7 +3788,7 @@ See, for instance, https://www.iso.org/standard/77957.html"""@en ,
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000291
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000291
 :ClimOO_0000291 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000285 ,
                                 [ rdf:type owl:Restriction ;
@@ -3799,7 +3800,7 @@ See, for instance, https://www.iso.org/standard/77957.html"""@en ,
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000292
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000292
 :ClimOO_0000292 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000221 ,
                                 [ rdf:type owl:Restriction ;
@@ -3814,7 +3815,7 @@ See, for instance, https://www.iso.org/standard/77957.html"""@en ,
                 <http://www.w3.org/2004/02/skos/core#definition> "A planned process that involves some piece of synthetic polymer-based material employed for some purpose."@en .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000293
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000293
 :ClimOO_0000293 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000211 ,
                                 :ClimOO_0000252 ;
@@ -3826,7 +3827,7 @@ We plan to deprecate this class and reuse the PMDco class as soon as this latter
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000294
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000294
 :ClimOO_0000294 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000295 ,
                                 [ rdf:type owl:Restriction ;
@@ -3838,7 +3839,7 @@ We plan to deprecate this class and reuse the PMDco class as soon as this latter
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000295
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000295
 :ClimOO_0000295 rdf:type owl:Class ;
                 rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> ,
                                 [ rdf:type owl:Restriction ;
@@ -3863,7 +3864,7 @@ http://purl.obolibrary.org/obo/ENVO_06105126""" ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000296
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000296
 :ClimOO_0000296 rdf:type owl:Class ;
                 rdfs:subClassOf :ClimOO_0000295 ,
                                 [ rdf:type owl:Restriction ;
@@ -3879,12 +3880,12 @@ http://purl.obolibrary.org/obo/ENVO_06105126""" ;
 #    Individuals
 #################################################################
 
-###  https://www.w3id.org/climoo#ClimOO_0000072
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000072
 :ClimOO_0000072 rdf:type owl:NamedIndividual ,
                          <https://www.w3id.org/sco#SCO_0000016> ;
                 <http://purl.org/dc/terms/description> "This owl:NamedIndividual tracks the perspectives of ClimOO project participants according to which this ontology has been built."@en ;
                 <http://www.ontologyrepository.com/CommonCoreOntologies/definition> "The perspective of the ClimOO project participants."@en ;
-                rdfs:label "ClimOO project perspective"@en ;
+                rdfs:label "ClimOO project perspective on plastics"@en ;
                 rdfs:seeAlso "https://pthsta.it/climoo" ;
                 owl:versionInfo "2025-08-08" ;
                 <https://www.w3id.org/sco#SCO_0000039> :ClimOO_0000073 ,
@@ -3893,7 +3894,7 @@ http://purl.obolibrary.org/obo/ENVO_06105126""" ;
                                                        :ClimOO_0000228 .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000073
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000073
 :ClimOO_0000073 rdf:type owl:NamedIndividual ,
                          <https://www.w3id.org/sco#SCO_0000016> ;
                 <http://purl.org/dc/terms/description> "This owl:NamedIndividual tracks the framework view proposed by Hartmann et al. (2019)."@en ;
@@ -3901,32 +3902,32 @@ http://purl.obolibrary.org/obo/ENVO_06105126""" ;
                 rdfs:comment """See the following standards concerning microplastic classification. They recommend using the same size range as Hartmann et al. (2019) of 1 and 1000 µm in its largest dimension.
 ISO/TR 21960:2020Plastics — Environmental aspects — State of knowledge and methodologies https://www.iso.org/standard/72300.html
 ISO 4484-1:2023Textiles and textile products — Microplastics from textile sources Part 1: Determination of material loss from fabrics during washing https://www.iso.org/standard/82238.html"""@en ;
-                rdfs:label "Hartmann et al. perspective on microplastics"@en .
+                rdfs:label "Hartmann et al. (2019) perspective on microplastics"@en .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :ClimOO_0000073 ;
    owl:annotatedProperty rdf:type ;
    owl:annotatedTarget <https://www.w3id.org/sco#SCO_0000016> ;
-   rdfs:comment "This individual currently instantiate the “perspective class. Implementations may revise to specify that is a human perspective."@en
+   rdfs:comment "This individual currently instantiate the “perspective\" class. Implementations may revise to specify that is a human perspective."@en
  ] .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000074
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000074
 :ClimOO_0000074 rdf:type owl:NamedIndividual ,
                          <https://www.w3id.org/sco#SCO_0000016> ;
                 <http://purl.org/dc/terms/description> "This owl:NamedIndividual tracks the framework view proposed by Rochman et al. (2019)."@en ;
                 <http://purl.org/dc/terms/source> "Rochman, C. M., Brookson, C., Bikker, J., Djuric, N., Earn, A., Bucci, K., Athey, S., Huntington, A., McIlwraith, H., Munno, K., De Frond, H., Kolomijeca, A., Erdle, L., Grbic, J., Bayoumi, M., Borrelle, S. B., Wu, T., Santoro, S., Werbowski, L. M., … Hung, C. (2019). Rethinking microplastics as a diverse contaminant suite. Environmental Toxicology and Chemistry, 38(4), 703–711. https://doi.org/10.1002/etc.4371" ;
-                rdfs:label "Rochman et al. perspective on microplastics"@en .
+                rdfs:label "Rochman et al. (2019) perspective on microplastics"@en .
 
 [ rdf:type owl:Axiom ;
    owl:annotatedSource :ClimOO_0000074 ;
    owl:annotatedProperty rdf:type ;
    owl:annotatedTarget <https://www.w3id.org/sco#SCO_0000016> ;
-   rdfs:comment "This individual currently instantiate the “perspective class. Implementations may revise to specify that is a human perspective."@en
+   rdfs:comment "This individual currently instantiate the “perspective\" class. Implementations may revise to specify that is a human perspective."@en
  ] .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000075
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000075
 :ClimOO_0000075 rdf:type owl:NamedIndividual ,
                          <https://www.w3id.org/sco#SCO_0000016> ;
                 <http://purl.org/dc/terms/description> "This owl:NamedIndividual tracks the framework view proposed by the 2019 GESAMP report."@en ;
@@ -3937,26 +3938,19 @@ ISO 4484-1:2023Textiles and textile products — Microplastics from textile sour
    owl:annotatedSource :ClimOO_0000075 ;
    owl:annotatedProperty rdf:type ;
    owl:annotatedTarget <https://www.w3id.org/sco#SCO_0000016> ;
-   rdfs:comment "This individual currently instantiate the “perspective class. Implementations may revise to specify that is a human perspective."@en
+   rdfs:comment "This individual currently instantiate the “perspective\" class. Implementations may revise to specify that is a human perspective."@en
  ] .
 
 
-###  https://www.w3id.org/climoo#ClimOO_0000131
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000131
 :ClimOO_0000131 rdf:type owl:NamedIndividual ,
                          <https://www.w3id.org/sco#SCO_0000016> ;
                 <http://purl.org/dc/terms/description> """This owl:NamedIndividual tracks the framework view endby EnvO.
 https://github.com/EnvironmentOntology/envo/releases/tag/v2025-02-05"""@en ;
                 rdfs:label "EnvO perspective on microplastics"@en .
 
-[ rdf:type owl:Axiom ;
-   owl:annotatedSource :ClimOO_0000131 ;
-   owl:annotatedProperty rdf:type ;
-   owl:annotatedTarget <https://www.w3id.org/sco#SCO_0000016> ;
-   rdfs:comment "This individual currently instantiate the “perspective class. Implementations may revise to specify that is a human perspective."@en
- ] .
 
-
-###  https://www.w3id.org/climoo#ClimOO_0000228
+###  https://www.w3id.org/climoo/climoo-plastico#ClimOO_0000228
 :ClimOO_0000228 rdf:type owl:NamedIndividual ,
                          <https://www.w3id.org/sco#SCO_0000016> ;
                 <http://purl.org/dc/terms/description> "This owl:NamedIndividual aims to track current view endorsed by the Europeen Union."@en ;
@@ -3977,7 +3971,7 @@ UNI EN ISO 24187:2023 - Principles for the analysis of microplastics present in 
    owl:annotatedSource :ClimOO_0000228 ;
    owl:annotatedProperty rdf:type ;
    owl:annotatedTarget <https://www.w3id.org/sco#SCO_0000016> ;
-   rdfs:comment "This individual currently instantiate the “perspective class. Implementations may revise to specify that is a human perspective."@en
+   rdfs:comment "This individual currently instantiate the “perspective\" class. Implementations may revise to specify that is a human perspective."@en
  ] .
 
 

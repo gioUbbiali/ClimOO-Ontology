@@ -1,12 +1,12 @@
-@prefix : <http://ClimOO/climoo/imports/sdc-ontology-imports/sdc-ontology-ind-continuant-imports#> .
+@prefix : <http://ClimOO/climoo/climoo-sdc2/imports/sdc-ontology-imports/sdc-ontology-ind-continuant-imports#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://ClimOO/climoo/imports/sdc-ontology-imports/sdc-ontology-ind-continuant-imports#> .
+@base <http://ClimOO/climoo/climoo-sdc2/imports/sdc-ontology-imports/sdc-ontology-ind-continuant-imports#> .
 
-<http://ClimOO/climoo/imports/sdc-ontology-imports/sdc-ontology-ind-continuant-imports> rdf:type owl:Ontology ;
+<http://ClimOO/climoo/climoo-sdc2/imports/sdc-ontology-imports/sdc-ontology-ind-continuant-imports> rdf:type owl:Ontology ;
                                                                                          owl:versionIRI <http://ClimOO/climoo/imports/sdc-ontology-imports/sdc-ontology-ind-continuant-imports#2026-04-08> ;
                                                                                          rdfs:comment """This file contains ClimOO Ontology imports from the Sustainable Development and Climate ontology (SDC ontology) (independent continuant hierarchy of BFO). Imports were manually collected and revised.
 

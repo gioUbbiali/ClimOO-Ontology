@@ -1,0 +1,2164 @@
+@prefix : <https://www.w3id.org/climoo/climoo-sdc2#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://www.w3id.org/climoo/climoo-sdc2#> .
+
+<https://www.w3id.org/climoo/climoo-sdc2> rdf:type owl:Ontology ;
+                                           owl:versionIRI :sdc2-v1.0.0 ;
+                                           owl:imports <http://ClimOO/climoo/climoo-sdc2/imports/bionik-imports#2026-05-27> ,
+                                                       <http://ClimOO/climoo/climoo-sdc2/imports/cco-imports#2026-05-29> ,
+                                                       <http://ClimOO/climoo/climoo-sdc2/imports/pato-imports#2026-05-27> ,
+                                                       <http://ClimOO/climoo/climoo-sdc2/imports/ro-imports#2026-05-29> ,
+                                                       <http://ClimOO/climoo/climoo-sdc2/imports/sdc-ontology-imports/sdc-ontology-gdc-imports#2026-04-08> ,
+                                                       <https://www.w3id.org/sco/sco-b#v1.1.0/sco-b> ;
+                                           <http://purl.org/dc/terms/contributor> "Giorgio A. Ubbiali" ,
+                                                                                  "Ludger Jansen" ;
+                                           <http://purl.org/dc/terms/creator> "Giorgio A. Ubbiali" ;
+                                           <http://purl.org/dc/terms/description> """ClimOO Ontology is a reference ontology, modeling plastics, (micro-)plastic pollution, climate change, and their interrelation, with a primary focus on agricultural systems. The ClimOO Ontology is structured in a suite of nested ontological modules.The SDC2 module forks the Sustainable Development and Climate (SDC) Ontology, updating the proposed models. The SDC2 module centers on climate and climate change, especially with regard to environmental features and related interconnections. Emphasis is also dedicated to relevant policies.
+
+SDC ontology: https://github.com/hbabaie1/Sustainable-Development-and-Climate-SDC-ontology"""@en ;
+                                           <http://purl.org/dc/terms/license> "https://creativecommons.org/licenses/by/4.0/" ;
+                                           <http://purl.org/dc/terms/title> "ClimOO Ontology - ClimOO-SDC2 module"@en ;
+                                           rdfs:comment """The SDC Ontology provides a relevant model of climate and climate change, primarily with a focus on Sustainable Development Goals (Davarpanah et al., 2023). Despite its relevance, the SDC Onto model appears undermaintained and presents several shortcomings, including:
+• Inconsistent hierarchy root.
+• Absence of natural language definitions.
+• Reusage of PATO representations that violate the BFO model, such as those concerning process properties, or that are inaccurate, such as those concerning increased and decreased dependent continuants.
+• Misleadingness of certain classes.
+• Inadequate axiomatization of certain classes.
+For more details, see here (coming soon).
+
+Thus, we forked SDC Onto to develop a novel version, named ClimOO-SDC2. ClimOO-SDC2 is the module of the ClimOO Ontology dedicated to climate change. ClimOO-SDC2 focuses on environmental features and related interconnections modeled in SDC Onto. ClimOO-SDC2 offers an active reference hub that addresses SDC Onto's shortcomings, while integrating the SDC Onto model into the ClimOO Ontology. ClimOO-SDC2 extends SCO, aligning the SDC Onto model with primary existing BFO-compliant sustainability ontologies. We intend ClimOO-SDC2 as an initial starting point to establish a unique BFO-compliant representation of climate and climate change. 
+
+To construct ClimOO-SDC2, we proceed as follows (focus on OWL classes; we applied the same approach concerning the other OWL building blocks).
+• If the class was not relevant, we did not import it.
+• If the class was relevant and adequate, we directly imported it.
+• If the class was relevant but inadequately axiomatized, we created a corresponding class that supports appropriate axioms but maintains the local identifier of the original SDC Onto class. We opted for this solution to offer a direct strategy of reference to the original version from which SDC2 has been forked. In the future, alternative, possibly more robust, strategies can be implemented. Exceptions: Given their centrality in the model, the following class has been supplied with ClimOO local identifiers and annotated towards original SDC Onto classes:
+   • climate
+   • climate change
+   • (atmospheric) weather
+   • climate system process
+   • climate system component 
+• If the class, despite axiomatization, was misleading, we did not import it, and we created adequate class(es) as needed. We supplied it with a ClimOO local identifier.
+When revising classes, we complied with BFO and OBO-Foundry best practices.
+
+All SDC2 building blocks support the following namespace to ensure appropriate identification and fairness: https://www.w3id.org/climoo/climoo-sdc2#
+
+Bibliography
+Davarpanah, A., Babaie, H., & Dhakal, N. (2023). Semantic modeling of climate change impacts on the implementation of the U.N. sustainable development goals related to poverty, hunger, water, and energy. Earth Sci. Inf., 16(1), 929–943."""@en ;
+                                           owl:versionInfo "2026-05-15"@en ,
+                                                           "V1.0.0."@en ;
+                                           <http://www.w3.org/2004/02/skos/core#note> """Repository: https://www.w3id.org/climoo/repo
+Documentation webpage: https://www.w3id.org/climoo/docs"""@en ,
+                                                                                      "The most recent version of this file is available on GitHub at the following link: https://www.w3id.org/climoo/climoo-sdc2."@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2002/07/owl#minQualifiedCardinality
+owl:minQualifiedCardinality rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Amount
+<http://www.ontologyrepository.com/CommonCoreOntologies/Amount> rdfs:comment """ClimOO Ontology comment:
+We envision discussions with subject matter experts and implementations concerning this class as related subclasses."""@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Vulnerability
+<http://www.ontologyrepository.com/CommonCoreOntologies/Vulnerability> rdfs:comment """ClimOO Ontology comment:
+Implementations are needed to align this representation with additional existing models, such as those proposed by COVER, ResiliOnt, and SuMSO.
+See:
+https://github.com/unibz-core/value-and-risk-ontology 
+https://github.com/pedropaulofb/resiliont/tree/main 
+https://w3id.org/sumso/repo"""@en .
+
+
+###  http://www.semanticweb.org/bionik/portion_of_material
+<http://www.semanticweb.org/bionik/portion_of_material> rdfs:subClassOf [ rdf:type owl:Class ;
+                                                                          owl:unionOf ( [ rdf:type owl:Class ;
+                                                                                          owl:unionOf ( <http://purl.obolibrary.org/obo/RO_0002577>
+                                                                                                        <https://www.w3id.org/sco#SCO_0000006>
+                                                                                                      )
+                                                                                        ]
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000176> ;
+                                                                                          owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                                               owl:unionOf ( <http://purl.obolibrary.org/obo/RO_0002577>
+                                                                                                                             <https://www.w3id.org/sco#SCO_0000006>
+                                                                                                                           )
+                                                                                                             ]
+                                                                                        ]
+                                                                                      )
+                                                                        ] ;
+                                                        rdfs:comment """ClimOO Ontology comment:
+For reasons of practicality, we did not subsume other ClimOO-SDC2 classes with respect to this class. We did not incorporate disjointness axioms to allow reclassification in such a manner. Implementations will deal with such an aspect, as needed."""@en ;
+                                                        rdfs:seeAlso "http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Material_Substance" .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Adaptive_Capacity
+:Adaptive_Capacity rdf:type owl:Class ;
+                   rdfs:subClassOf :Capacity ;
+                   rdfs:label "adaptive capacity"@en ;
+                   <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Adaptive_Capacity_to_Climate-related_Hazards_and_Natural_Disasters
+:Adaptive_Capacity_to_Climate-related_Hazards_and_Natural_Disasters rdf:type owl:Class ;
+                                                                    rdfs:subClassOf :Adaptive_Capacity ;
+                                                                    rdfs:label "adaptive capacity to climate-related hazards and natural disasters"@en ;
+                                                                    <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Affordability
+:Affordability rdf:type owl:Class ;
+               rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000016> ;
+               rdfs:comment """ClimOO Ontology comment:
+These classes required further implementations."""@en ;
+               rdfs:label "affordability"@en ;
+               <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Amount_of_River_Discharge
+:Amount_of_River_Discharge rdf:type owl:Class ;
+                           rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/Amount> ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty <http://purl.obolibrary.org/obo/RO_0000080> ;
+                                             owl:someValuesFrom :River
+                                           ] ;
+                           rdfs:label "amount of river discharge"@en ;
+                           <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Argon
+:Argon rdf:type owl:Class ;
+       rdfs:subClassOf :Gas ;
+       rdfs:label "portion of argon"@en ;
+       <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Aridity
+:Aridity rdf:type owl:Class ;
+         rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019> ;
+         rdfs:label "aridity"@en ;
+         <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Atmospheric_Component
+:Atmospheric_Component rdf:type owl:Class ;
+                       rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000024> ,
+                                       [ rdf:type owl:Class ;
+                                         owl:unionOf ( [ rdf:type owl:Class ;
+                                                         owl:unionOf ( <http://purl.obolibrary.org/obo/RO_0002577>
+                                                                       <https://www.w3id.org/sco#SCO_0000006>
+                                                                     )
+                                                       ]
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000176> ;
+                                                         owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                              owl:unionOf ( <http://purl.obolibrary.org/obo/RO_0002577>
+                                                                                            <https://www.w3id.org/sco#SCO_0000006>
+                                                                                          )
+                                                                            ]
+                                                       ]
+                                                     )
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000110> ;
+                                         owl:someValuesFrom :Gas
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000177> ;
+                                         owl:someValuesFrom :atmosphere
+                                       ] ;
+                       rdfs:label "atmospheric component" ;
+                       <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Atmospheric_Evaporative_Demand
+:Atmospheric_Evaporative_Demand rdf:type owl:Class ;
+                                rdfs:subClassOf :Demand ;
+                                rdfs:label "atmospheric evaporative demand"@en ;
+                                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Atmospheric_Oxygen
+:Atmospheric_Oxygen rdf:type owl:Class ;
+                    rdfs:subClassOf :Oxygen ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000176> ;
+                                      owl:someValuesFrom :atmosphere
+                                    ] ;
+                    rdfs:label "portion of atmospheric oxygen"@en ;
+                    <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Atmospheric_Water_Demand
+:Atmospheric_Water_Demand rdf:type owl:Class ;
+                          rdfs:subClassOf :Demand ;
+                          rdfs:label "atmospheric water demand"@en ;
+                          <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Atmospheric_Water_Vapor
+:Atmospheric_Water_Vapor rdf:type owl:Class ;
+                         rdfs:subClassOf :Water_Vapor ,
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000176> ;
+                                           owl:someValuesFrom :atmosphere
+                                         ] ;
+                         rdfs:label "portion of atmospheric water vapor"@en ;
+                         <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Availability
+:Availability rdf:type owl:Class ;
+              rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019> ;
+              rdfs:comment """ClimOO Ontology comment:
+Implementations will supply definitions to subclasses that require them."""@en ;
+              rdfs:label "availability"@en ;
+              <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Biodiversity
+:Biodiversity rdf:type owl:Class ;
+              rdfs:subClassOf :Diversity ;
+              rdfs:label "biodiversity"@en ;
+              <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Biosphere
+:Biosphere rdf:type owl:Class ;
+           rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000024> ,
+                           [ rdf:type owl:Class ;
+                             owl:unionOf ( [ rdf:type owl:Class ;
+                                             owl:unionOf ( <http://purl.obolibrary.org/obo/RO_0002577>
+                                                           <https://www.w3id.org/sco#SCO_0000006>
+                                                         )
+                                           ]
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000176> ;
+                                             owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                  owl:unionOf ( <http://purl.obolibrary.org/obo/RO_0002577>
+                                                                                <https://www.w3id.org/sco#SCO_0000006>
+                                                                              )
+                                                                ]
+                                           ]
+                                         )
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000176> ;
+                             owl:someValuesFrom :ClimOO_0000298
+                           ] ;
+           rdfs:label "portion of biosphere"@en ;
+           rdfs:seeAlso "http://purl.obolibrary.org/obo/ENVO_01000817" ;
+           <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#CO
+:CO rdf:type owl:Class ;
+    rdfs:subClassOf :Short-lived_Gas ;
+    <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "potion of CO"@en ;
+    rdfs:label "portion of carbon monoxide"@en ;
+    <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#CO2_Sink
+:CO2_Sink rdf:type owl:Class ;
+          rdfs:subClassOf :Sink ;
+          rdfs:comment """ClimOO Ontoloy comment:
+We did not include original subclasses, as those classes should be modeled by reclassifying ocean and land classes as CO2 sinks via axiomatization if needed.
+
+http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Global_Land_CO2_Sink 
+http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Global_Ocean_CO2_Sink"""@en ;
+          rdfs:label "CO2 sink material entity"@en ;
+          <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Capacity
+:Capacity rdf:type owl:Class ;
+          rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019> ;
+          rdfs:comment """ClimOO Ontology comment:
+We envision discussions with subject matter experts and implementations concerning this class as related subclasses."""@en ;
+          rdfs:label "capacity"@en ;
+          <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Capacity_for_Effective_Climate-related_Management
+:Capacity_for_Effective_Climate-related_Management rdf:type owl:Class ;
+                                                   rdfs:subClassOf :Capacity ;
+                                                   rdfs:label "capacity for effective climate-related management"@en ;
+                                                   <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Capacity_for_Effective_Climate-related_Planning
+:Capacity_for_Effective_Climate-related_Planning rdf:type owl:Class ;
+                                                 rdfs:subClassOf :Capacity ;
+                                                 rdfs:label "capacity for effective climate-related planning"@en ;
+                                                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Carbon_Dioxide
+:Carbon_Dioxide rdf:type owl:Class ;
+                rdfs:subClassOf :Well-mixed_Greenhouse_Gas ;
+                <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "CO2"@en ;
+                rdfs:label "portion of carbon dioxide"@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Carbon_Storage
+:Carbon_Storage rdf:type owl:Class ;
+                rdfs:subClassOf :Storage ;
+                rdfs:label "carbon storage material entity"@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Chloroflurocarbon
+:Chloroflurocarbon rdf:type owl:Class ;
+                   rdfs:subClassOf :Greenhouse_Gas ;
+                   rdfs:label "portion of chloroflurocarbon"@en ;
+                   <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000297
+:ClimOO_0000297 rdf:type owl:Class ;
+                rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000016> ,
+                                [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000054> ;
+                                                         owl:someValuesFrom :ClimOO_0000304
+                                                       ]
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000054> ;
+                                                         owl:allValuesFrom :ClimOO_0000304
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] ,
+                                [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000197> ;
+                                                         owl:someValuesFrom :ClimOO_0000298
+                                                       ]
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000197> ;
+                                                         owl:allValuesFrom :ClimOO_0000298
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] ;
+                rdfs:label "climate"@en ;
+                rdfs:seeAlso "http://purl.obolibrary.org/obo/ENVO_01001082" ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A disposition that is realized in some climate system process and is statistically described in terms of the mean and variability of relevant attributes (usually temperature, precipitation, and wind) over a period of time ranging from months to thousands or millions of years. Note: typically it realizes in seasonal cycles."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom> "https://www.ipcc.ch/report/ar6/syr/downloads/report/IPCC_AR6_SYR_FullVolume.pdf" ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
+                <https://www.w3id.org/sco#SCO_0000039> :ClimOO_0000306 ,
+                                                       :ClimOO_0000308 .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000298
+:ClimOO_0000298 rdf:type owl:Class ;
+                owl:equivalentClass [ owl:intersectionOf ( <https://www.w3id.org/sco#SCO_0000015>
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000196> ;
+                                                             owl:someValuesFrom :ClimOO_0000297
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                rdfs:subClassOf <https://www.w3id.org/sco#SCO_0000015> ,
+                                [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000110> ;
+                                                         owl:someValuesFrom :ClimOO_0000302
+                                                       ]
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000111> ;
+                                                         owl:someValuesFrom :ClimOO_0000310
+                                                       ]
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000166> ;
+                                                         owl:someValuesFrom :ClimOO_0000319
+                                                       ]
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000185> ;
+                                                         owl:someValuesFrom :ClimOO_0000315
+                                                       ]
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000211> ;
+                                                         owl:someValuesFrom :ClimOO_0000311
+                                                       ]
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://purl.obolibrary.org/obo/RO_0002163> ;
+                                                         owl:someValuesFrom :ClimOO_0000313
+                                                       ]
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000185> ;
+                                                         owl:allValuesFrom :ClimOO_0000315
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] ;
+                owl:disjointWith :ClimOO_0000313 ;
+                rdfs:label "climate system"@en ;
+                rdfs:seeAlso "http://purl.obolibrary.org/obo/ENVO_01001364" ,
+                             "http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Climate_System_Role and subclasses" ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A complex system that bears a climate disposition. Earth climate systemt is mainly composed of the atmosphere, the hydrosphere, the cryosphere, the lithosphere and the biosphere."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom> "https://www.ipcc.ch/report/ar6/syr/downloads/report/IPCC_AR6_SYR_FullVolume.pdf" ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
+                <https://www.w3id.org/sco#SCO_0000039> :ClimOO_0000306 ,
+                                                       :ClimOO_0000307 ,
+                                                       :ClimOO_0000308 .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000299
+:ClimOO_0000299 rdf:type owl:Class ;
+                owl:equivalentClass [ owl:intersectionOf ( <http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity>
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://www.ontologyrepository.com/CommonCoreOntologies/is_a_measurement_of> ;
+                                                             owl:someValuesFrom :ClimOO_0000300
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity> ;
+                rdfs:label "climate variability - measurement"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An information content entity that is a measurement of the deviations of climate over a period of time from the long-term climate statistics for the corresponding calendar period.An information content entity that is a measurement of the deviations of climate over a period of time from the long-term climate statistics for the corresponding calendar period."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom> "https://unterm.un.org/unterm2/en/view/e0be578f-2cfc-401c-b536-7d5de7fe8559" ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
+                <https://www.w3id.org/sco#SCO_0000039> :ClimOO_0000306 ,
+                                                       :ClimOO_0000308 .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000300
+:ClimOO_0000300 rdf:type owl:Class ;
+                rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000144> ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000138> ;
+                                  owl:someValuesFrom :ClimOO_0000304
+                                ] ;
+                rdfs:label "climate variability - process profile"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A process profile that is an occurrent part of some climate system process and is measured by some climate variability - measurement."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom> "https://unterm.un.org/unterm2/en/view/e0be578f-2cfc-401c-b536-7d5de7fe8559" ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
+                <https://www.w3id.org/sco#SCO_0000039> :ClimOO_0000306 ,
+                                                       :ClimOO_0000308 .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000301
+:ClimOO_0000301 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000304 ;
+                rdfs:label "climate change"@en ;
+                rdfs:seeAlso "http://purl.obolibrary.org/obo/ENVO_01000629" ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A climate system process that alters the climate of a climate system for an extended period of time (typically decades or longer), and can be identified by the variation of the mean and/or the variability of the attributes, according to which that climate is statistically described."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom> "https://www.ipcc.ch/report/ar6/syr/downloads/report/IPCC_AR6_SYR_FullVolume.pdf" ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
+                <https://www.w3id.org/sco#SCO_0000039> :ClimOO_0000306 ,
+                                                       :ClimOO_0000307 ,
+                                                       :ClimOO_0000308 .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000302
+:ClimOO_0000302 rdf:type owl:Class ;
+                owl:equivalentClass [ owl:intersectionOf ( <https://www.w3id.org/sco#SCO_0000028>
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000176> ;
+                                                             owl:someValuesFrom :ClimOO_0000298
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                rdfs:subClassOf <https://www.w3id.org/sco#SCO_0000028> ;
+                owl:disjointWith :ClimOO_0000312 ;
+                rdfs:comment "Reference to stakeholders of climate systems can be added as needed."@en ;
+                rdfs:label "climate system component"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A complex system component that is part of a climate system."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom> "http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Climate_System_Component" ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
+                <https://www.w3id.org/sco#SCO_0000039> :ClimOO_0000306 ,
+                                                       :ClimOO_0000308 .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000303
+:ClimOO_0000303 rdf:type owl:Class ;
+                rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019> ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000197> ;
+                                  owl:someValuesFrom :atmosphere
+                                ] ;
+                rdfs:comment "We refer to weather primarily at the mesospheric level of analysis. We do not refer to weather, for instance, when we deal with the molecular composition of the atmosphere."@en ;
+                rdfs:label "atmospheric weather"@en ;
+                rdfs:seeAlso "http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Weather and subclasses."@en ,
+                             "http://purl.obolibrary.org/obo/ENVO_01001078" ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A quality that is realized in an atmospheric process and is described in terms of meteorological attributes, such as temperature, precipitation, atmospheric pressure, wind, and humidity."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom> "https://wmo.int/topics/weather; https://unterm.un.org/unterm2/en/" ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
+                <https://www.w3id.org/sco#SCO_0000039> :ClimOO_0000306 ,
+                                                       :ClimOO_0000307 ,
+                                                       :ClimOO_0000308 .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000304
+:ClimOO_0000304 rdf:type owl:Class ;
+                rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000132> ;
+                                  owl:someValuesFrom [ rdf:type owl:Class ;
+                                                       owl:unionOf ( :ClimOO_0000316
+                                                                     :ClimOO_0000318
+                                                                   )
+                                                     ]
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000167> ;
+                                  owl:someValuesFrom :ClimOO_0000298
+                                ] ;
+                rdfs:comment "Climate system processes have the climate system as participant, meaning that any occurrence happening in a portion of a climate system component/climate system component also affects the overall climate system."@en ;
+                rdfs:label "climate system process"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A process that pertains to a climate system."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
+                <https://www.w3id.org/sco#SCO_0000039> :ClimOO_0000306 ,
+                                                       :ClimOO_0000308 .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000305
+:ClimOO_0000305 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000304 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000167> ;
+                                  owl:someValuesFrom :ClimOO_0000303
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000167> ;
+                                  owl:someValuesFrom :atmosphere
+                                ] ;
+                rdfs:comment "Subclasses do not aim to be an exhaustive classification of atmospheric processes."@en ;
+                rdfs:label "atmospheric process"@en ;
+                rdfs:seeAlso "http://purl.obolibrary.org/obo/ENVO_02500003" ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A process that pertains to some portion of atmosphere."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> ;
+                <https://www.w3id.org/sco#SCO_0000039> :ClimOO_0000308 .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000309
+:ClimOO_0000309 rdf:type owl:Class ;
+                owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000302
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://www.w3id.org/sco#SCO_0000038> ;
+                                                             owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                  owl:unionOf ( :ClimOO_0000316
+                                                                                                :ClimOO_0000318
+                                                                                              )
+                                                                                ]
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                rdfs:subClassOf :ClimOO_0000302 ;
+                owl:disjointWith :ClimOO_0000314 ;
+                rdfs:label "climate system agent"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An climate system component that is an agent in an interaction among climate system components or in an interaction between climate system components and climate system environment components."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000310
+:ClimOO_0000310 rdf:type owl:Class ;
+                owl:equivalentClass [ owl:intersectionOf ( <https://www.w3id.org/sco#SCO_0000031>
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000137> ;
+                                                             owl:someValuesFrom :ClimOO_0000298
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                rdfs:subClassOf <https://www.w3id.org/sco#SCO_0000031> ;
+                rdfs:label "climate system boundary"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A complex system boundary of a climate system."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000311
+:ClimOO_0000311 rdf:type owl:Class ;
+                rdfs:subClassOf <https://www.w3id.org/sco#SCO_0000032> ;
+                rdfs:comment "Implementations will deal with updating geospatial region classes, such as those for tropics and oceans."@en ;
+                rdfs:label "climate system spatial region"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A complex system spatial region of a climate system."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000312
+:ClimOO_0000312 rdf:type owl:Class ;
+                owl:equivalentClass [ owl:intersectionOf ( <https://www.w3id.org/sco#SCO_0000026>
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000176> ;
+                                                             owl:someValuesFrom :ClimOO_0000313
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                rdfs:subClassOf <https://www.w3id.org/sco#SCO_0000026> ;
+                rdfs:label "climate system environment component"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A complex system environment component that belongs to the complex system environment of a climate system."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000313
+:ClimOO_0000313 rdf:type owl:Class ;
+                rdfs:subClassOf <https://www.w3id.org/sco#SCO_0000012> ,
+                                [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000110> ;
+                                                         owl:someValuesFrom :ClimOO_0000312
+                                                       ]
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://purl.obolibrary.org/obo/RO_0002163> ;
+                                                         owl:someValuesFrom :ClimOO_0000298
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] ;
+                rdfs:label "climate system environment"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A complex system environment that surrounds and is distinct and disjoint from an climate system."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000314
+:ClimOO_0000314 rdf:type owl:Class ;
+                owl:equivalentClass [ owl:intersectionOf ( :ClimOO_0000312
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <https://www.w3id.org/sco#SCO_0000038> ;
+                                                             owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                  owl:unionOf ( :ClimOO_0000317
+                                                                                                :ClimOO_0000318
+                                                                                              )
+                                                                                ]
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                rdfs:subClassOf :ClimOO_0000312 ;
+                rdfs:label "climate system environment agent"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An climate system environment component that is an agent in an interaction among climate system environment components or in an interaction between climate system components and climate system environment components."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000315
+:ClimOO_0000315 rdf:type owl:Class ;
+                owl:equivalentClass [ owl:intersectionOf ( <https://www.w3id.org/sco#SCO_0000023>
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000184> ;
+                                                             owl:someValuesFrom :ClimOO_0000298
+                                                           ]
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000184> ;
+                                                             owl:allValuesFrom :ClimOO_0000298
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                rdfs:subClassOf <https://www.w3id.org/sco#SCO_0000023> ;
+                rdfs:label "climate system history"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> " The complex system history of a climate system."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000316
+:ClimOO_0000316 rdf:type owl:Class ;
+                rdfs:subClassOf <https://www.w3id.org/sco#SCO_0000022> ,
+                                [ owl:intersectionOf ( <https://www.w3id.org/sco#SCO_0000022>
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://www.w3id.org/sco#SCO_0000037> ;
+                                                         owl:someValuesFrom :ClimOO_0000309
+                                                       ]
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://www.w3id.org/sco#SCO_0000037> ;
+                                                         owl:allValuesFrom :ClimOO_0000309
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] ;
+                owl:disjointWith :ClimOO_0000317 ,
+                                 :ClimOO_0000318 ;
+                rdfs:label "interaction among climate system components"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An interaction among complex system components that occurs among at least two climatel system components of an climate system."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000317
+:ClimOO_0000317 rdf:type owl:Class ;
+                rdfs:subClassOf <https://www.w3id.org/sco#SCO_0000021> ,
+                                [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://www.w3id.org/sco#SCO_0000037> ;
+                                                         owl:someValuesFrom :ClimOO_0000314
+                                                       ]
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://www.w3id.org/sco#SCO_0000037> ;
+                                                         owl:allValuesFrom :ClimOO_0000314
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] ;
+                owl:disjointWith :ClimOO_0000318 ;
+                rdfs:label "interaction among climate system environment components"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An interaction among complex system environment components that occurs among at least two climate system environment components of an climate system."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000318
+:ClimOO_0000318 rdf:type owl:Class ;
+                rdfs:subClassOf <https://www.w3id.org/sco#SCO_0000020> ,
+                                [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000167> ;
+                                                         owl:someValuesFrom :ClimOO_0000302
+                                                       ]
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000167> ;
+                                                         owl:someValuesFrom :ClimOO_0000312
+                                                       ]
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://www.w3id.org/sco#SCO_0000037> ;
+                                                         owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                              owl:unionOf ( :ClimOO_0000309
+                                                                                            :ClimOO_0000314
+                                                                                          )
+                                                                            ]
+                                                       ]
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <https://www.w3id.org/sco#SCO_0000037> ;
+                                                         owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                             owl:unionOf ( :ClimOO_0000309
+                                                                                           :ClimOO_0000314
+                                                                                         )
+                                                                           ]
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] ;
+                rdfs:label "interaction between climate system components and climate system environment components"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An interaction between complex system components and complex system environment components that occurs between at least one climte system component and one climate system environment component where the latter belongs to the system environment of the climate system to which the environmental system component belongs."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000319
+:ClimOO_0000319 rdf:type owl:Class ;
+                rdfs:subClassOf <https://www.w3id.org/sco#SCO_0000010> ,
+                                [ owl:intersectionOf ( <https://www.w3id.org/sco#SCO_0000002>
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000167> ;
+                                                         owl:someValuesFrom :ClimOO_0000298
+                                                       ]
+                                                     ) ;
+                                  rdf:type owl:Class
+                                ] ;
+                rdfs:label "climate system development"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> " The complex system development of a climate system."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000320
+:ClimOO_0000320 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000305 ;
+                rdfs:label "physical atmospheric process"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An atmospheric process that involves the transfer of energy and mass related to a portion of the atmosphere."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom> "https://www.eionet.europa.eu/gemet/en/concept/639" ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000321
+:ClimOO_0000321 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000305 ;
+                rdfs:label "chemical atmospheric process"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "An atmospheric process that alters the chemical composition of a portion of the atmosphere."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom> "https://www.eionet.europa.eu/gemet/en/concept/639" ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000322
+:ClimOO_0000322 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000324 ;
+                rdfs:label "coastal flooding"@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000323
+:ClimOO_0000323 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000324 ;
+                rdfs:label "flash flooding"@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000324
+:ClimOO_0000324 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000304 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000057> ;
+                                  owl:someValuesFrom :body_of_water
+                                ] ;
+                rdfs:label "flooding"@en ;
+                rdfs:seeAlso "http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Flood and subclasses."@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A process that leads to a partial or complete inundation of normally dry land areas, temporary or for a long period of time, due to the overflow of inland and/or tidal waters, and/or the unusual and rapid accumulation or runoff of surface waters from a water source."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/adaptedFrom> "http://purl.obolibrary.org/obo/ENVO_02500002"@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000325
+:ClimOO_0000325 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000324 ;
+                rdfs:label "river flooding"@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000326
+:ClimOO_0000326 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000324 ;
+                rdfs:label "riverine flooding"@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000327
+:ClimOO_0000327 rdf:type owl:Class ;
+                rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> ;
+                rdfs:label "sink-role"@en ;
+                rdfs:seeAlso """See for instance:
+https://doi.org/10.1086/284280 
+https://doi.org/10.1086/284880"""@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A role that inheres in a material entity in virtue of its ability to absorb and possibly accumulate certain material entities of interest as a proper part by participating in some flowing dynamical process."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :ClimOO_0000327 ;
+   owl:annotatedProperty <http://www.w3.org/2004/02/skos/core#definition> ;
+   owl:annotatedTarget "A role that inheres in a material entity in virtue of its ability to absorb and possibly accumulate certain material entities of interest as a proper part by participating in some flowing dynamical process."@en ;
+   <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional>
+ ] .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000328
+:ClimOO_0000328 rdf:type owl:Class ;
+                rdfs:subClassOf :ClimOO_0000304 ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000057> ;
+                                  owl:someValuesFrom :Water
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty <http://purl.obolibrary.org/obo/RO_0002234> ;
+                                  owl:someValuesFrom :ClimOO_0000329
+                                ] ;
+                rdfs:label "water supplying process"@en ;
+                rdfs:seeAlso """http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Supply_Role
+http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Water_Supply and subclasses."""@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A process that results in provisioning water to an entity of reference. Usually, this terminology is used with respect to provisioning water to populations, communities, and individuals, or alternatively, to geographical areas and sites."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000329
+:ClimOO_0000329 rdf:type owl:Class ;
+                rdfs:subClassOf :Water ;
+                rdfs:label "portion of supplied water"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A portion of water that is an output of a water supplying process."@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000330
+:ClimOO_0000330 rdf:type owl:Class ;
+                rdfs:subClassOf <http://purl.obolibrary.org/obo/PATO_0000125> ;
+                rdfs:comment """This is a working-in-progress class to update the SDC Onto quality variation representation. Implementations will provide corresponding classes for related continuants.
+For definitions, see for instance here: https://archive.ipcc.ch/ipccreports/tar/wg1/413.htm; https://archive.ipcc.ch/publications_and_data/ar4/wg1/en/ch4s4-5-2.html."""@en ;
+                rdfs:label "glacial mass quality"@en ;
+                rdfs:seeAlso "http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Decreased_Glacial_Mass" ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000331
+:ClimOO_0000331 rdf:type owl:Class ;
+                rdfs:subClassOf <http://purl.obolibrary.org/obo/PATO_0001018> ;
+                rdfs:comment """This is a working-in-progress class to update the SDC Onto quality variation representation. Implementations will provide corresponding classes for related continuants.
+For definitions, see,  for instance, here: https://unterm.un.org/unterm2/en/view/334052e4-0a3b-4235-add8-06cd7e4f320b; https://unterm.un.org/unterm2/en/view/cde1dabb-3ac8-465c-9d97-f530cc146b71.
+(also, direcltty search in https://unterm.un.org/unterm2/en)"""@en ;
+                rdfs:label "snowpack quality"@en ;
+                rdfs:seeAlso "http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Reduced_Snowpack"@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000332
+:ClimOO_0000332 rdf:type owl:Class ;
+                rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000016> ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty <http://purl.obolibrary.org/obo/RO_0000092> ;
+                                  owl:allValuesFrom :Water_Storage
+                                ] ;
+                rdfs:comment """This is a working-in-progress class to update the SDC Onto quality variation representation.
+For definitions, see,  for instance, here: https://unterm.un.org/unterm2/en/view/c8eb1deb-c068-4c5c-8f8d-ca2b7469b67c.
+(also, direcltty search in https://unterm.un.org/unterm2/en)"""@en ;
+                rdfs:label "disposition to store water"@en ;
+                rdfs:seeAlso "http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Decreased_Water_Storage"@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000333
+:ClimOO_0000333 rdf:type owl:Class ;
+                rdfs:subClassOf :Water_Availability ;
+                rdfs:label "water availability over subtropics"@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000334
+:ClimOO_0000334 rdf:type owl:Class ;
+                rdfs:subClassOf :Water_Availability ;
+                rdfs:label "water availability over amazon"@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000335
+:ClimOO_0000335 rdf:type owl:Class ;
+                rdfs:subClassOf :Water_Availability ;
+                rdfs:label "groundwater availability"@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Climate-related_Catastrophe_Role
+:Climate-related_Catastrophe_Role rdf:type owl:Class ;
+                                  rdfs:subClassOf :Disaster_Role ;
+                                  rdfs:label "climate-related catastrophe role"@en ;
+                                  <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Climate-related_Disaster_Role
+:Climate-related_Disaster_Role rdf:type owl:Class ;
+                               rdfs:subClassOf :Disaster_Role ;
+                               rdfs:label "climate-related disaster role"@en ;
+                               <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Climate-related_Hazard
+:Climate-related_Hazard rdf:type owl:Class ;
+                        rdfs:subClassOf :Hazard ;
+                        rdfs:label "climate-related hazard"@en ;
+                        <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Climate-related_Hazardous_Role
+:Climate-related_Hazardous_Role rdf:type owl:Class ;
+                                rdfs:subClassOf :Hazard_Role ;
+                                rdfs:label "climate-related hazardous role"@en ;
+                                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Climate-related_Risk
+:Climate-related_Risk rdf:type owl:Class ;
+                      rdfs:subClassOf :Risk ;
+                      rdfs:label "climate-related risk"@en ;
+                      <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Cloud
+:Cloud rdf:type owl:Class ;
+       rdfs:subClassOf :Short-lived_Gas ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000176> ;
+                         owl:someValuesFrom :atmosphere
+                       ] ;
+       rdfs:label "cloud"@en ;
+       <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Content
+:Content rdf:type owl:Class ;
+         rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019> ;
+         rdfs:comment """ClimOO Ontology comment:
+The labels of these classes may require revisions as possibly referring to both qualities, material entities, and ICEs."""@en ;
+         rdfs:label "content"@en ;
+         <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Cryosphere
+:Cryosphere rdf:type owl:Class ;
+            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000024> ,
+                            [ rdf:type owl:Class ;
+                              owl:unionOf ( [ rdf:type owl:Class ;
+                                              owl:unionOf ( <http://purl.obolibrary.org/obo/RO_0002577>
+                                                            <https://www.w3id.org/sco#SCO_0000006>
+                                                          )
+                                            ]
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000176> ;
+                                              owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                   owl:unionOf ( <http://purl.obolibrary.org/obo/RO_0002577>
+                                                                                 <https://www.w3id.org/sco#SCO_0000006>
+                                                                               )
+                                                                 ]
+                                            ]
+                                          )
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000176> ;
+                              owl:someValuesFrom :ClimOO_0000298
+                            ] ;
+            rdfs:label "portion of cryosphere"@en ;
+            rdfs:seeAlso """http://www.ontologyrepository.com/CommonCoreOntologies/PortionOfCryosphere 
+http://purl.obolibrary.org/obo/ENVO_03000143""" ;
+            <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Cryospheric_Material_Entity
+:Cryospheric_Material_Entity rdf:type owl:Class ;
+                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> ,
+                                             [ rdf:type owl:Class ;
+                                               owl:unionOf ( [ rdf:type owl:Class ;
+                                                               owl:unionOf ( <http://purl.obolibrary.org/obo/RO_0002577>
+                                                                             <https://www.w3id.org/sco#SCO_0000006>
+                                                                           )
+                                                             ]
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000176> ;
+                                                               owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                    owl:unionOf ( <http://purl.obolibrary.org/obo/RO_0002577>
+                                                                                                  <https://www.w3id.org/sco#SCO_0000006>
+                                                                                                )
+                                                                                  ]
+                                                             ]
+                                                           )
+                                             ] ;
+                             rdfs:comment """ClimOO Ontology comment:
+We delete reference to the resource role, as not all cryospheric material entities necessarily bear this role. Same for the subclass with respect to the freshwater resource role."""@en ,
+                                          """ClimOO Ontology comment:
+we revese subclass labels to comply with BFO and OBO-Foundry best practices."""@en ;
+                             rdfs:label "cryospheric material entity"@en ;
+                             <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Dangerous_Heat_Threshold
+:Dangerous_Heat_Threshold rdf:type owl:Class ;
+                          rdfs:subClassOf <http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Data_Item> ;
+                          rdfs:label "dangerous heat threshold" ;
+                          <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Deficit
+:Deficit rdf:type owl:Class ;
+         rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019> ;
+         rdfs:comment """ClimOO Ontology comment:
+We envision discussions with subject matter experts and implementations concerning this class as related subclasses."""@en ;
+         rdfs:label "deficit"@en ;
+         <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Deficit_in_Water_Storage
+:Deficit_in_Water_Storage rdf:type owl:Class ;
+                          rdfs:subClassOf :Deficit ;
+                          rdfs:label "deficit in water storage"@en ;
+                          <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Demand
+:Demand rdf:type owl:Class ;
+        rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019> ;
+        rdfs:comment """ClimOO Ontology comment:
+We envision discussions with subject matter experts and implementations concerning this class as related subclasses."""@en ;
+        rdfs:label "demand"@en ;
+        <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Desalinated_Sea_Water
+:Desalinated_Sea_Water rdf:type owl:Class ;
+                       rdfs:subClassOf :Water ;
+                       rdfs:label "portion of desalinated sea water"@en ;
+                       <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Disaster_Risk
+:Disaster_Risk rdf:type owl:Class ;
+               rdfs:subClassOf :Risk ;
+               rdfs:label "disaster risk"@en ;
+               <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Disaster_Role
+:Disaster_Role rdf:type owl:Class ;
+               rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> ;
+               rdfs:comment """ClimOO Ontology comment:
+We currently included these classes as relevant for climate change. However, we envision discussions with subject matter experts and implementations."""@en ;
+               rdfs:label "disaster role"@en ;
+               <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Distribution
+:Distribution rdf:type owl:Class ;
+              rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019> ;
+              rdfs:label "distribution"@en ;
+              <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Diversity
+:Diversity rdf:type owl:Class ;
+           rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019> ;
+           rdfs:comment """ClimOO Ontology comment:
+We envision discussions with subject matter experts and implementations concerning thi class as related subclasses."""@en ,
+                        "diversity"@en ;
+           <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Drinking_Water
+:Drinking_Water rdf:type owl:Class ;
+                rdfs:subClassOf :Water ;
+                rdfs:label "portion of drinking water"@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Ecosystem_Function
+:Ecosystem_Function rdf:type owl:Class ;
+                    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000034> ;
+                    rdfs:comment """ClimOO Ontology comment:
+We envision discussions with subject matter experts and implementations."""@en ;
+                    rdfs:label "ecosystem function"@en ;
+                    <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Environmental_Risk
+:Environmental_Risk rdf:type owl:Class ;
+                    rdfs:subClassOf :Risk ;
+                    rdfs:label "environmental risk"@en ;
+                    <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Evapotranspiration_Function
+:Evapotranspiration_Function rdf:type owl:Class ;
+                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000034> ;
+                             rdfs:label "evapotranspiration function"@en ;
+                             <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Extra-tropical_Troposphere
+:Extra-tropical_Troposphere rdf:type owl:Class ;
+                            rdfs:subClassOf :Troposphere ;
+                            rdfs:label "extra-tropical troposphere"@en ;
+                            <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Extratropical_Northern_Hemisphere
+:Extratropical_Northern_Hemisphere rdf:type owl:Class ;
+                                   rdfs:subClassOf :Northern_Hemisphere ;
+                                   rdfs:label "extratropical northern hemisphere"@en ;
+                                   <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Freshwater
+:Freshwater rdf:type owl:Class ;
+            rdfs:subClassOf :Water ;
+            rdfs:label "portion of freshwater"@en ;
+            <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Freshwater_Availability
+:Freshwater_Availability rdf:type owl:Class ;
+                         rdfs:subClassOf :Water_Availability ;
+                         rdfs:label "freshwater availability"@en ;
+                         <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Freshwater_Lake
+:Freshwater_Lake rdf:type owl:Class ;
+                 rdfs:subClassOf :Lake ;
+                 rdfs:label "freshwater lake"@en ;
+                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Freshwater_Storage
+:Freshwater_Storage rdf:type owl:Class ;
+                    rdfs:subClassOf :Water_Storage ;
+                    rdfs:label "freshwater storage material entity"@en ;
+                    <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Gas
+:Gas rdf:type owl:Class ;
+     owl:equivalentClass [ owl:intersectionOf ( <http://www.semanticweb.org/bionik/portion_of_material>
+                                                [ rdf:type owl:Restriction ;
+                                                  owl:onProperty <http://purl.obolibrary.org/obo/RO_0000086> ;
+                                                  owl:someValuesFrom <http://purl.obolibrary.org/obo/PATO_0001547>
+                                                ]
+                                              ) ;
+                           rdf:type owl:Class
+                         ] ;
+     rdfs:subClassOf <http://www.semanticweb.org/bionik/portion_of_material> ;
+     rdfs:comment """ClimOO Ontology comment:
+The following subclasses are meant to refer to materials at room temperature. Implementations will follow to expand ontology coverage."""@en ;
+     rdfs:label "portion of gaseous material"@en ;
+     <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Genetic_Diversity_of_Cultivated_Plants
+:Genetic_Diversity_of_Cultivated_Plants rdf:type owl:Class ;
+                                        rdfs:subClassOf :Diversity ;
+                                        rdfs:label "genetic diversity of cultivated plants"@en ;
+                                        <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Genetic_Diversity_of_Farmed_and_Domesticated_Animals_and_Their_Related_Wild_Species
+:Genetic_Diversity_of_Farmed_and_Domesticated_Animals_and_Their_Related_Wild_Species rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf :Diversity ;
+                                                                                     rdfs:label "genetic diversity of farmed and domesticated animals and their related wild species"@en ;
+                                                                                     <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Genetic_Diversity_of_Seeds
+:Genetic_Diversity_of_Seeds rdf:type owl:Class ;
+                            rdfs:subClassOf :Diversity ;
+                            rdfs:label "genetic diversity of seeds"@en ;
+                            <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Geosphere
+:Geosphere rdf:type owl:Class ;
+           rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000024> ,
+                           [ rdf:type owl:Class ;
+                             owl:unionOf ( [ rdf:type owl:Class ;
+                                             owl:unionOf ( <http://purl.obolibrary.org/obo/RO_0002577>
+                                                           <https://www.w3id.org/sco#SCO_0000006>
+                                                         )
+                                           ]
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000176> ;
+                                             owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                  owl:unionOf ( <http://purl.obolibrary.org/obo/RO_0002577>
+                                                                                <https://www.w3id.org/sco#SCO_0000006>
+                                                                              )
+                                                                ]
+                                           ]
+                                         )
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000176> ;
+                             owl:someValuesFrom :ClimOO_0000298
+                           ] ;
+           rdfs:label "portion of geosphere"@en ;
+           rdfs:seeAlso """http://www.ontologyrepository.com/CommonCoreOntologies/PortionOfGeosphere 
+http://www.ontologyrepository.com/CommonCoreOntologies/PortionOfLithosphere""" ;
+           <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Glacier
+:Glacier rdf:type owl:Class ;
+         rdfs:subClassOf :Solid_Terrestrial_Water ;
+         rdfs:label "glacier"@en ;
+         <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Global_Water_Storage_Contained_in_Glaciers_and_Ice_Sheets
+:Global_Water_Storage_Contained_in_Glaciers_and_Ice_Sheets rdf:type owl:Class ;
+                                                           rdfs:subClassOf :Terrestrial_Water_Storage ;
+                                                           rdfs:label "global glacier and ice sheet water storage material entity"@en ;
+                                                           <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Greenhouse_Gas
+:Greenhouse_Gas rdf:type owl:Class ;
+                rdfs:subClassOf :Trace_Gas ;
+                <http://www.geneontology.org/formats/oboInOwl#hasExactSynonym> "greenhouse gas"@en ;
+                rdfs:label "portion of greenhouse gas"@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Groundwater
+:Groundwater rdf:type owl:Class ;
+             rdfs:subClassOf :Water ;
+             rdfs:label "portion of groundwater"@en ;
+             <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Groundwater_Storage
+:Groundwater_Storage rdf:type owl:Class ;
+                     rdfs:subClassOf :Subsurface_Water_Storage ;
+                     rdfs:label "groundwater storage material entity"@en ;
+                     <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Halocarbon
+:Halocarbon rdf:type owl:Class ;
+            rdfs:subClassOf :Well-mixed_Greenhouse_Gas ;
+            rdfs:label "portion of halocarbon"@en ;
+            <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Hazard
+:Hazard rdf:type owl:Class ;
+        rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000016> ;
+        rdfs:comment """ClimOO Ontology comment:
+We currently include these classes as relevant for climate change. However, we envision discussions with subject matter experts and implementations. The relationship between dispositions and roles must be clarified."""@en ;
+        rdfs:label "hazard"@en ;
+        <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Hazard_Role
+:Hazard_Role rdf:type owl:Class ;
+             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> ;
+             rdfs:comment """ClimOO Ontology comment:
+We currently include these classes as relevant for climate change. However, we envision discussions with subject matter experts and implementations. The relationship between dispositions and roles must be clarified."""@en ;
+             rdfs:label "hazard role"@en ;
+             <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#High_Water-use_Efficiency
+:High_Water-use_Efficiency rdf:type owl:Class ;
+                           rdfs:subClassOf :Water-use_Efficiency ;
+                           rdfs:label "high water-use efficiency - process profile" ;
+                           <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Hydrologic_Material_Entity
+:Hydrologic_Material_Entity rdf:type owl:Class ;
+                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> ,
+                                            [ rdf:type owl:Class ;
+                                              owl:unionOf ( [ rdf:type owl:Class ;
+                                                              owl:unionOf ( <http://purl.obolibrary.org/obo/RO_0002577>
+                                                                            <https://www.w3id.org/sco#SCO_0000006>
+                                                                          )
+                                                            ]
+                                                            [ rdf:type owl:Restriction ;
+                                                              owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000176> ;
+                                                              owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                   owl:unionOf ( <http://purl.obolibrary.org/obo/RO_0002577>
+                                                                                                 <https://www.w3id.org/sco#SCO_0000006>
+                                                                                               )
+                                                                                 ]
+                                                            ]
+                                                          )
+                                            ] ;
+                            rdfs:comment """ClimOO Ontology comment:
+The relation between hydrological material entities and cryospheric material entities should be further clarified."""@en ;
+                            rdfs:label "hydrologic material entity"@en ;
+                            <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Hydrosphere
+:Hydrosphere rdf:type owl:Class ;
+             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000024> ,
+                             [ rdf:type owl:Class ;
+                               owl:unionOf ( [ rdf:type owl:Class ;
+                                               owl:unionOf ( <http://purl.obolibrary.org/obo/RO_0002577>
+                                                             <https://www.w3id.org/sco#SCO_0000006>
+                                                           )
+                                             ]
+                                             [ rdf:type owl:Restriction ;
+                                               owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000176> ;
+                                               owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                    owl:unionOf ( <http://purl.obolibrary.org/obo/RO_0002577>
+                                                                                  <https://www.w3id.org/sco#SCO_0000006>
+                                                                                )
+                                                                  ]
+                                             ]
+                                           )
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000176> ;
+                               owl:someValuesFrom :ClimOO_0000298
+                             ] ;
+             rdfs:label "portion of hydrosphere"@en ;
+             rdfs:seeAlso """http://www.ontologyrepository.com/CommonCoreOntologies/PortionOfHydrosphere 
+http://purl.obolibrary.org/obo/ENVO_01000819""" ;
+             <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Ice
+:Ice rdf:type owl:Class ;
+     rdfs:subClassOf :Solid_Terrestrial_Water ;
+     rdfs:label "portion of ice"@en ;
+     <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Ice_Sheet
+:Ice_Sheet rdf:type owl:Class ;
+           rdfs:subClassOf :Solid_Terrestrial_Water ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000110> ;
+                             owl:someValuesFrom :Ice
+                           ] ;
+           rdfs:label "portion of ice sheet"@en ;
+           <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Lake
+:Lake rdf:type owl:Class ;
+      rdfs:subClassOf :body_of_water ;
+      rdfs:label "lake"@en ;
+      <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Land_Carbon_Storage
+:Land_Carbon_Storage rdf:type owl:Class ;
+                     rdfs:subClassOf :Carbon_Storage ;
+                     rdfs:label "land carbon storage material entity"@en ;
+                     <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Land_Freshwater_Availability
+:Land_Freshwater_Availability rdf:type owl:Class ;
+                              rdfs:subClassOf :Freshwater_Availability ;
+                              rdfs:label "land freshwater availability"@en ;
+                              <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Land_Water_Storage
+:Land_Water_Storage rdf:type owl:Class ;
+                    rdfs:subClassOf :Water_Storage ;
+                    rdfs:label "land water storage material entity"@en ;
+                    <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Local_Precipitation_Intensity
+:Local_Precipitation_Intensity rdf:type owl:Class ;
+                               rdfs:subClassOf :Precipitation_Intensity ;
+                               rdfs:label "local precipitation intensity - process profile"@en ;
+                               <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Local_Runoff_Intensity
+:Local_Runoff_Intensity rdf:type owl:Class ;
+                        rdfs:subClassOf :Runoff_Intensity ;
+                        rdfs:label "local runoff intensity - process profile"@en ;
+                        <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Methane
+:Methane rdf:type owl:Class ;
+         rdfs:subClassOf :Well-mixed_Greenhouse_Gas ;
+         rdfs:label "portion of methane"@en ;
+         <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Moisture
+:Moisture rdf:type owl:Class ;
+          rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019> ;
+          rdfs:label "moisture"@en ;
+          <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Net_Water_Availability
+:Net_Water_Availability rdf:type owl:Class ;
+                        rdfs:subClassOf :Water_Availability ;
+                        rdfs:label "net water availability"@en ;
+                        <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Nitrogen
+:Nitrogen rdf:type owl:Class ;
+          rdfs:subClassOf :Gas ;
+          rdfs:label "portion of nitrogen"@en ;
+          <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Nitrous_Oxide
+:Nitrous_Oxide rdf:type owl:Class ;
+               rdfs:subClassOf :Well-mixed_Greenhouse_Gas ;
+               rdfs:label "portion of nitrous oxide"@en ;
+               <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Northern_Hemisphere
+:Northern_Hemisphere rdf:type owl:Class ;
+                     rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000024> ,
+                                     [ rdf:type owl:Class ;
+                                       owl:unionOf ( [ rdf:type owl:Class ;
+                                                       owl:unionOf ( <http://purl.obolibrary.org/obo/RO_0002577>
+                                                                     <https://www.w3id.org/sco#SCO_0000006>
+                                                                   )
+                                                     ]
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000176> ;
+                                                       owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                            owl:unionOf ( <http://purl.obolibrary.org/obo/RO_0002577>
+                                                                                          <https://www.w3id.org/sco#SCO_0000006>
+                                                                                        )
+                                                                          ]
+                                                     ]
+                                                   )
+                                     ] ;
+                     owl:disjointWith :Southern_Hemisphere ;
+                     rdfs:label "northern hemisphere"@en ;
+                     <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Oxygen
+:Oxygen rdf:type owl:Class ;
+        rdfs:subClassOf :Gas ;
+        rdfs:label "portion of oxygen"@en ;
+        <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Ozone
+:Ozone rdf:type owl:Class ;
+       rdfs:subClassOf :Greenhouse_Gas ;
+       rdfs:label "portion of ozone"@en ;
+       <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Permafrost
+:Permafrost rdf:type owl:Class ;
+            rdfs:subClassOf :Solid_Terrestrial_Water ;
+            rdfs:comment """ClimOO Ontology comment:
+We envision discussions with subject matter experts on whether this class is correctly hierarchically positioned."""@en ;
+            rdfs:label "portion of permafrost"@en ;
+            <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Precipitation_Amount
+:Precipitation_Amount rdf:type owl:Class ;
+                      rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/Amount> ;
+                      rdfs:label "precipitation amount"@en ;
+                      <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Precipitation_Deficit
+:Precipitation_Deficit rdf:type owl:Class ;
+                       rdfs:subClassOf :Deficit ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty <http://purl.obolibrary.org/obo/RO_0002566> ;
+                                         owl:someValuesFrom :Net_Water_Availability
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty <http://purl.obolibrary.org/obo/RO_0002566> ;
+                                         owl:someValuesFrom :Soil_Moisture_Deficit
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty <http://purl.obolibrary.org/obo/RO_0002566> ;
+                                         owl:someValuesFrom :Streamflow_Deficit
+                                       ] ;
+                       rdfs:label "precipitation deficit"@en ;
+                       <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Precipitation_Intensity
+:Precipitation_Intensity rdf:type owl:Class ;
+                         rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000144> ;
+                         rdfs:label "precipitation intensity - process profile"@en ;
+                         <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Productive_Capacity
+:Productive_Capacity rdf:type owl:Class ;
+                     rdfs:subClassOf :Capacity ;
+                     rdfs:label "productive capacity"@en ;
+                     <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Reserve
+:Reserve rdf:type owl:Class ;
+         rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty <http://purl.obolibrary.org/obo/RO_0000087> ;
+                           owl:someValuesFrom :Reserve_Role
+                         ] ;
+         rdfs:comment """ClimOO Ontology comment:
+These classes required further implementations, especially to clarify the relationship between reserve, sinks, and sources."""@en ;
+         rdfs:label "reserve material entity"@en ;
+         <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Reserve_Role
+:Reserve_Role rdf:type owl:Class ;
+              rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> ;
+              rdfs:comment """ClimOO Ontology comment:
+These classes required further implementations, especially to clarify the relationship between reserve, sinks, and sources."""@en ;
+              rdfs:label "reserve role"@en ;
+              <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Resilience
+:Resilience rdf:type owl:Class ;
+            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000016> ,
+                            [ owl:intersectionOf ( <https://www.w3id.org/sco#SCO_0000041>
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <http://purl.obolibrary.org/obo/RO_0000092> ;
+                                                     owl:someValuesFrom <https://www.w3id.org/sco#SCO_0000015>
+                                                   ]
+                                                 ) ;
+                              rdf:type owl:Class
+                            ] ;
+            <http://purl.org/dc/elements/1.1/source> "sdgio" ;
+            <http://www.ontologyrepository.com/CommonCoreOntologies/definition> "A disposition of an entity to recover its previous composition, qualities, and functionality following some perturbation." ;
+            rdfs:comment """ClimOO Ontology comment:
+Implementations are needed to align this representation with additional existing models, such as those proposed by ResiliOnt and SuMSO.
+See:
+https://github.com/pedropaulofb/resiliont/tree/main"""@en ;
+            rdfs:label "resilience"@en ;
+            <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Risk
+:Risk rdf:type owl:Class ;
+      rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000016> ;
+      rdfs:comment """ClimOO Ontology comment:
+Implementations are needed to align this representation with additional existing models, such as those proposed by COVER, ResiliOnt, and SuMSO.
+See:
+https://github.com/unibz-core/value-and-risk-ontology 
+https://github.com/pedropaulofb/resiliont/tree/main 
+https://w3id.org/sumso/repo"""@en ;
+      rdfs:label "risk"@en ;
+      <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#River
+:River rdf:type owl:Class ;
+       rdfs:subClassOf :body_of_water ;
+       rdfs:label "river"@en ;
+       <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Runoff_Intensity
+:Runoff_Intensity rdf:type owl:Class ;
+                  rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000144> ;
+                  rdfs:label "runoff intensity - process profile"@en ;
+                  <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Safe_and_Affordable_Drinking_Water
+:Safe_and_Affordable_Drinking_Water rdf:type owl:Class ;
+                                    rdfs:subClassOf :Drinking_Water ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/RO_0000091> ;
+                                                      owl:someValuesFrom :Affordability
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.obolibrary.org/obo/RO_0000091> ;
+                                                      owl:someValuesFrom :Safety
+                                                    ] ;
+                                    rdfs:label "portion of safe and affordable drinking water"@en ;
+                                    <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Safety
+:Safety rdf:type owl:Class ;
+        rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000016> ;
+        rdfs:comment """ClimOO Ontology comment:
+These classes required further implementations."""@en ;
+        rdfs:label "safety"@en ;
+        <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Scarcity
+:Scarcity rdf:type owl:Class ;
+          rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000016> ;
+          rdfs:comment "scarcity"@en ;
+          <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Security
+:Security rdf:type owl:Class ;
+          rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000016> ;
+          rdfs:label "security"@en ;
+          <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Short-lived_Gas
+:Short-lived_Gas rdf:type owl:Class ;
+                 rdfs:subClassOf :Gas ;
+                 rdfs:label "portion of short-lived gaseous material"@en ;
+                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Sink
+:Sink rdf:type owl:Class ;
+      owl:equivalentClass [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000040>
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty <http://purl.obolibrary.org/obo/RO_0000087> ;
+                                                   owl:someValuesFrom :ClimOO_0000327
+                                                 ]
+                                               ) ;
+                            rdf:type owl:Class
+                          ] ;
+      rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> ;
+      rdfs:comment """ClimOO Ontology comment:
+These classes required further implementations, especially to clarify the relationship between reserve, sinks, and sources."""@en ;
+      rdfs:label "sink material entity"@en ;
+      <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Snow
+:Snow rdf:type owl:Class ;
+      rdfs:subClassOf :Solid_Terrestrial_Water ;
+      rdfs:label "portion of snow"@en ;
+      <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Snow_Pack
+:Snow_Pack rdf:type owl:Class ;
+           rdfs:subClassOf :Solid_Terrestrial_Water ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000110> ;
+                             owl:someValuesFrom :Snow
+                           ] ;
+           rdfs:label "portion of snow pack"@en ;
+           <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Societal_Risk
+:Societal_Risk rdf:type owl:Class ;
+               rdfs:subClassOf :Risk ;
+               rdfs:label "societal risk"@en ;
+               <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Soil_Carbon_Content
+:Soil_Carbon_Content rdf:type owl:Class ;
+                     rdfs:subClassOf :Content ;
+                     rdfs:label "soil carbon content"@en ;
+                     <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Soil_Moisture_Deficit
+:Soil_Moisture_Deficit rdf:type owl:Class ;
+                       rdfs:subClassOf :Deficit ;
+                       rdfs:label "soil moisture deficit"@en ;
+                       <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Soil_Security
+:Soil_Security rdf:type owl:Class ;
+               rdfs:subClassOf :Security ;
+               rdfs:label "soil security"@en ;
+               <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Soil_Water_Availability
+:Soil_Water_Availability rdf:type owl:Class ;
+                         rdfs:subClassOf :Water_Availability ;
+                         rdfs:label "soil water availability"@en ;
+                         <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Solid_Terrestrial_Water
+:Solid_Terrestrial_Water rdf:type owl:Class ;
+                         rdfs:subClassOf :Cryospheric_Material_Entity ,
+                                         [ owl:intersectionOf ( :Water
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://purl.obolibrary.org/obo/RO_0000086> ;
+                                                                  owl:someValuesFrom <http://purl.obolibrary.org/obo/PATO_0001546>
+                                                                ]
+                                                              ) ;
+                                           rdf:type owl:Class
+                                         ] ;
+                         rdfs:comment """ClimOO Ontology comment:
+we include axiomatization over the PATO solid quality class and implement axiomatizations of some subclasses."""@en ;
+                         rdfs:label "portion of solid terrestrial water"@en ;
+                         <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Southern_Hemisphere
+:Southern_Hemisphere rdf:type owl:Class ;
+                     rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000024> ,
+                                     [ rdf:type owl:Class ;
+                                       owl:unionOf ( [ rdf:type owl:Class ;
+                                                       owl:unionOf ( <http://purl.obolibrary.org/obo/RO_0002577>
+                                                                     <https://www.w3id.org/sco#SCO_0000006>
+                                                                   )
+                                                     ]
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000176> ;
+                                                       owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                            owl:unionOf ( <http://purl.obolibrary.org/obo/RO_0002577>
+                                                                                          <https://www.w3id.org/sco#SCO_0000006>
+                                                                                        )
+                                                                          ]
+                                                     ]
+                                                   )
+                                     ] ;
+                     rdfs:label "southern hemisphere"@en ;
+                     <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Species_Distribution
+:Species_Distribution rdf:type owl:Class ;
+                      rdfs:subClassOf :Distribution ;
+                      rdfs:label "species distribution"@en ;
+                      <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Storage
+:Storage rdf:type owl:Class ;
+         rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> ,
+                         [ rdf:type owl:Class ;
+                           owl:unionOf ( [ rdf:type owl:Class ;
+                                           owl:unionOf ( <http://purl.obolibrary.org/obo/RO_0002577>
+                                                         <https://www.w3id.org/sco#SCO_0000006>
+                                                       )
+                                         ]
+                                         [ rdf:type owl:Restriction ;
+                                           owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000176> ;
+                                           owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                owl:unionOf ( <http://purl.obolibrary.org/obo/RO_0002577>
+                                                                              <https://www.w3id.org/sco#SCO_0000006>
+                                                                            )
+                                                              ]
+                                         ]
+                                       )
+                         ] ;
+         rdfs:comment """ClimOO Ontology comment:
+These classes require implementations to precisely characterize them. Reference to storing disposition should be included. The relation with reserve classes should be elucidated."""@en ;
+         rdfs:label "storage material entity"@en ;
+         <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Stratosphere
+:Stratosphere rdf:type owl:Class ;
+              rdfs:subClassOf :Atmospheric_Component ;
+              rdfs:label "stratosphere"@en ;
+              rdfs:seeAlso "http://purl.obolibrary.org/obo/ENVO_01000538" ;
+              <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Streamflow_Deficit
+:Streamflow_Deficit rdf:type owl:Class ;
+                    rdfs:subClassOf :Deficit ;
+                    rdfs:label "streamflow deficit"@en ;
+                    <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Subsurface_Water_Storage
+:Subsurface_Water_Storage rdf:type owl:Class ;
+                          rdfs:subClassOf :Water_Storage ;
+                          rdfs:label "subsurface water storage material entity"@en ;
+                          <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Surface_Water_Availability
+:Surface_Water_Availability rdf:type owl:Class ;
+                            rdfs:subClassOf :Water_Availability ;
+                            rdfs:label "surface water availability"@en ;
+                            <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Terrestrial_Water_Storage
+:Terrestrial_Water_Storage rdf:type owl:Class ;
+                           rdfs:subClassOf :Water_Storage ;
+                           rdfs:label "terrestrial water storage material entity"@en ;
+                           <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Trace_Gas
+:Trace_Gas rdf:type owl:Class ;
+           rdfs:subClassOf :Gas ;
+           rdfs:label "portion of trace gaseous material"@en ;
+           <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Troposphere
+:Troposphere rdf:type owl:Class ;
+             rdfs:subClassOf :Atmospheric_Component ;
+             rdfs:label "troposphere"@en ;
+             rdfs:seeAlso "http://purl.obolibrary.org/obo/ENVO_01000540" ;
+             <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Untreated_Wastewater
+:Untreated_Wastewater rdf:type owl:Class ;
+                      rdfs:subClassOf :Wastewater ;
+                      rdfs:label "portion of untreated wastewater"@en ;
+                      <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Upper_Ocean_Water
+:Upper_Ocean_Water rdf:type owl:Class ;
+                   rdfs:subClassOf :Water ;
+                   rdfs:label "portion of upper ocean layer water"@en ;
+                   <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Vulnerability_to_Climate-related_Extreme_Event
+:Vulnerability_to_Climate-related_Extreme_Event rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/Vulnerability> ,
+                                                                [ owl:intersectionOf ( <https://www.w3id.org/sco#SCO_0000041>
+                                                                                       [ rdf:type owl:Restriction ;
+                                                                                         owl:onProperty <http://purl.obolibrary.org/obo/RO_0000092> ;
+                                                                                         owl:someValuesFrom <https://www.w3id.org/sco#SCO_0000015>
+                                                                                       ]
+                                                                                     ) ;
+                                                                  rdf:type owl:Class
+                                                                ] ;
+                                                rdfs:label "vulnerability to climate-related extreme event"@en ;
+                                                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Wastewater
+:Wastewater rdf:type owl:Class ;
+            rdfs:subClassOf :Water ;
+            rdfs:label "portion of wastewater"@en ;
+            <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Water
+:Water rdf:type owl:Class ;
+       owl:equivalentClass [ owl:intersectionOf ( :Water
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <http://purl.obolibrary.org/obo/RO_0002353> ;
+                                                    owl:someValuesFrom :ClimOO_0000328
+                                                  ]
+                                                ) ;
+                             rdf:type owl:Class
+                           ] ;
+       rdfs:subClassOf :Hydrologic_Material_Entity ;
+       rdfs:comment """ClimOO Ontology comment:
+Subclasses should primarily refer to liquid water. However, we currently do not classify them as such to keep the model as general as possible."""@en ;
+       rdfs:label "portion of water"@en ;
+       <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Water-use_Efficiency
+:Water-use_Efficiency rdf:type owl:Class ;
+                      rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000144> ;
+                      rdfs:label "water-use efficiency - process profile" ;
+                      rdfs:seeAlso "http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Water_Efficiency" ;
+                      <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Water_Acidity
+:Water_Acidity rdf:type owl:Class ;
+               rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019> ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty <http://purl.obolibrary.org/obo/RO_0000080> ;
+                                 owl:allValuesFrom :Hydrologic_Material_Entity
+                               ] ;
+               rdfs:label "water acidity" ;
+               <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Water_Affordability
+:Water_Affordability rdf:type owl:Class ;
+                     rdfs:subClassOf :Affordability ;
+                     rdfs:label "water affordability"@en ;
+                     <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Water_Availability
+:Water_Availability rdf:type owl:Class ;
+                    rdfs:subClassOf :Availability ;
+                    rdfs:label "water availability"@en ;
+                    <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Water_Quantity
+:Water_Quantity rdf:type owl:Class ;
+                rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/Amount> ;
+                rdfs:label "water quantity"@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Water_Safety
+:Water_Safety rdf:type owl:Class ;
+              rdfs:subClassOf :Safety ;
+              rdfs:label "water safety"@en ;
+              <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Water_Scarcity
+:Water_Scarcity rdf:type owl:Class ;
+                rdfs:subClassOf :Scarcity ;
+                rdfs:label "water scarcity"@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Water_Security
+:Water_Security rdf:type owl:Class ;
+                rdfs:subClassOf :Security ;
+                rdfs:label "water security"@en ;
+                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Water_Storage
+:Water_Storage rdf:type owl:Class ;
+               rdfs:subClassOf :Storage ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000178> ;
+                                 owl:someValuesFrom :Water
+                               ] ;
+               rdfs:label "water storage material entity"@en ;
+               <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Water_Storage_in_Soil_Moisture
+:Water_Storage_in_Soil_Moisture rdf:type owl:Class ;
+                                rdfs:subClassOf :Subsurface_Water_Storage ;
+                                rdfs:label "soil moisture water storage material entity"@en ;
+                                <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Water_Vapor
+:Water_Vapor rdf:type owl:Class ;
+             rdfs:subClassOf :Greenhouse_Gas ;
+             rdfs:label "portion of water vapor"@en ;
+             <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Well-mixed_Greenhouse_Gas
+:Well-mixed_Greenhouse_Gas rdf:type owl:Class ;
+                           rdfs:subClassOf :Greenhouse_Gas ;
+                           rdfs:label "portion of well-mixed greenhouse gas"@en ;
+                           <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#atmosphere
+:atmosphere rdf:type owl:Class ;
+            rdfs:subClassOf [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000024>
+                                                   [ rdf:type owl:Restriction ;
+                                                     owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000196> ;
+                                                     owl:someValuesFrom :ClimOO_0000303
+                                                   ]
+                                                 ) ;
+                              rdf:type owl:Class
+                            ] ,
+                            [ rdf:type owl:Class ;
+                              owl:unionOf ( [ rdf:type owl:Class ;
+                                              owl:unionOf ( <http://purl.obolibrary.org/obo/RO_0002577>
+                                                            <https://www.w3id.org/sco#SCO_0000006>
+                                                          )
+                                            ]
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000176> ;
+                                              owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                   owl:unionOf ( <http://purl.obolibrary.org/obo/RO_0002577>
+                                                                                 <https://www.w3id.org/sco#SCO_0000006>
+                                                                               )
+                                                                 ]
+                                            ]
+                                          )
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000110> ;
+                              owl:someValuesFrom :Gas
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000176> ;
+                              owl:someValuesFrom :ClimOO_0000298
+                            ] ;
+            rdfs:label "portion of atmosphere"@en ;
+            rdfs:seeAlso """http://www.ontologyrepository.com/CommonCoreOntologies/PortionOfAtmosphere 
+http://purl.obolibrary.org/obo/ENVO_01000267""" ;
+            <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#body_of_water
+:body_of_water rdf:type owl:Class ;
+               rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/HydrographicFeature> ,
+                               [ owl:intersectionOf ( :Hydrologic_Material_Entity
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000178> ;
+                                                        owl:someValuesFrom :Water
+                                                      ]
+                                                    ) ;
+                                 rdf:type owl:Class
+                               ] ,
+                               [ rdf:type owl:Class ;
+                                 owl:unionOf ( [ rdf:type owl:Class ;
+                                                 owl:unionOf ( <http://purl.obolibrary.org/obo/RO_0002577>
+                                                               <https://www.w3id.org/sco#SCO_0000006>
+                                                             )
+                                               ]
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000176> ;
+                                                 owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                      owl:unionOf ( <http://purl.obolibrary.org/obo/RO_0002577>
+                                                                                    <https://www.w3id.org/sco#SCO_0000006>
+                                                                                  )
+                                                                    ]
+                                               ]
+                                             )
+                               ] ;
+               <http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym> "portion of water"@en ;
+               rdfs:comment """ClimOO Ontology comment:
+We refer to this class primarily to liquid portions of water, such as rivers, lakes, and oceans. Revisions may be required, especially wth respect to cryospheric material entity classes."""@en ;
+               rdfs:label "body of water" ;
+               rdfs:seeAlso "http://purl.obolibrary.org/obo/ENVO_00000063" ;
+               <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#portion_of_ocean
+:portion_of_ocean rdf:type owl:Class ;
+                  rdfs:subClassOf :body_of_water ;
+                  rdfs:comment """ClimOO Ontology comment:
+revised label from \"ocean part\"."""@en ;
+                  rdfs:label "portion of ocean"@en ;
+                  <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#upper_portion_of_ocean
+:upper_portion_of_ocean rdf:type owl:Class ;
+                        rdfs:subClassOf :portion_of_ocean ;
+                        rdfs:comment """ClimOO Ontology comment:
+revised label from \"upper ocean\"."""@en ;
+                        rdfs:label "upper portion of ocean" ;
+                        <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Variability_of_Precipitation
+:Variability_of_Precipitation rdf:type owl:Class ;
+                        rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000144> ;
+                        rdfs:label "variability of precipitation" ;
+                        <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Interannual_Variability_of_Precipitationn
+:Interannual_Variability_of_Precipitationn rdf:type owl:Class ;
+                        rdfs:subClassOf :Variability_of_Precipitation ;
+                        rdfs:label "interannual variability of precipitation" ;
+                        <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Rainfall_Variability
+:Rainfall_Variability rdf:type owl:Class ;
+                        rdfs:subClassOf :Variability_of_Precipitation ;
+                        rdfs:label "rainfall variability" ;
+                        <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/sco#SCO_0000041
+<https://www.w3id.org/sco#SCO_0000041> rdfs:comment """ClimOO Ontology comment:
+We classified resilience and vulnerability as properties of complex systems as widely recognized as such (see for instance Gunderson & Holling (2002), Holling (1973), and Van Meerbeek et al. (2021)). Implementation will deal with other ClimOO-SDC2 realizable entity/quality classes as needed.
+
+Gunderson, L. H., & Holling, C. S. (2002). Panarchy: Understanding Transformations in Human and Natural Systems. Island Press.
+Holling, C. S. (1973). Resilience and Stability of Ecological Systems. Annu. Rev. Ecol. Syst., 4, 1–23.
+Van Meerbeek, K., Jucker, T., & Svenning, J.-C. (2021). Unifying the concepts of stability and resilience in ecology. J. Ecol., 109(9), 3114–3132."""@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000306
+:ClimOO_0000306 rdf:type owl:NamedIndividual ,
+                         <https://www.w3id.org/sco#SCO_0000016> ;
+                <http://purl.org/dc/terms/description> "This owl:NamedIndividual tracks the perspectives of the Intergovernmental Panel on Climate Change (IPCC) on weather, climate, and climate change according to which this ontology has been built."@en ;
+                <http://purl.org/dc/terms/source> "https://www.ipcc.ch/report/ar6/syr/downloads/report/IPCC_AR6_SYR_FullVolume.pdf"@en ;
+                rdfs:label "IPCC perspective on weather, climate, and climate change"@en ;
+                rdfs:seeAlso "https://www.ipcc.ch/" ;
+                owl:versionInfo "2026-05-15"@en .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000307
+:ClimOO_0000307 rdf:type owl:NamedIndividual ,
+                         <https://www.w3id.org/sco#SCO_0000016> ;
+                <http://purl.org/dc/terms/description> "This owl:NamedIndividual tracks the perspectives of the World Metereological Organization (WMO) on weather, climat, and climate change according to which this ontology has been built."@en ;
+                rdfs:label "WMO perspective on weather, climate, and climate change"@en ;
+                rdfs:seeAlso "https://wmo.int" ;
+                owl:versionInfo "2026-05-15"@en .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000308
+:ClimOO_0000308 rdf:type owl:NamedIndividual ,
+                         <https://www.w3id.org/sco#SCO_0000016> ;
+                <http://purl.org/dc/terms/description> "This owl:NamedIndividual tracks the perspectives of ClimOO project participants according to which this ontology has been built."@en ;
+                <http://www.ontologyrepository.com/CommonCoreOntologies/definition> "The perspective of the ClimOO project participants."@en ;
+                rdfs:label "ClimOO project perspective on weather, climate, and climate change"@en ;
+                rdfs:seeAlso "https://pthsta.it/climoo" ;
+                owl:versionInfo "2026-05-18" ;
+                <https://www.w3id.org/sco#SCO_0000039> :ClimOO_0000306 ,
+                                                       :ClimOO_0000307 .
+
+
+[ owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
+] .
+
+[ owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger
+ ] .
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
