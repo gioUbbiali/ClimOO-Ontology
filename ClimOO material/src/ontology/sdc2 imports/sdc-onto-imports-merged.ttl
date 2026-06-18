@@ -1,18 +1,21 @@
-@prefix : <http://ClimOO/climoo/imports/sdc-ontology-imports/sdc-ontology-gdc-imports#> .
+@prefix : <http://www.semanticweb.org/f.u./ontologies/2026/4/untitled-ontology-375/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://ClimOO/climoo/imports/sdc-ontology-imports/sdc-ontology-gdc-imports#> .
+@base <http://www.semanticweb.org/f.u./ontologies/2026/4/untitled-ontology-375/> .
 
-<http://ClimOO/climoo/climoo-sdc2/imports/sdc-ontology-imports/sdc-ontology-gdc-imports> rdf:type owl:Ontology ;
-                                                                                          owl:versionIRI <http://ClimOO/climoo/climoo-sdc2/imports/sdc-ontology-imports/sdc-ontology-gdc-imports#2026-04-08> ;
-                                                                                          rdfs:comment """This file contains ClimOO Ontology imports from the Sustainable Development and Climate ontology (SDC ontology) (generically dependent continuant hierarchy of BFO). It also contains some imports reused by SDC ontology from the Common Core Ontologies (CCO). Imports were manually collected and revised.
+<http://ClimOO/climoo/climoo-sdc2/imports/sdc-onto-imports> rdf:type owl:Ontology ;
+                                                             owl:versionIRI <http://ClimOO/climoo/climoo-sdc2/imports/sdc-onto-imports#2026-05-19> ;
+                                                             rdfs:comment """This file contains ClimOO Ontology imports fletched from the Sustainable Development nd Climate (SDC) Ontology and merged into a unique file. 
 
-Ontology source: https://raw.githubusercontent.com/hbabaie1/Sustainable-Development-and-Climate-SDC-ontology/refs/heads/main/SDC_v1.owl"""@en ;
-                                                                                          rdfs:seeAlso "https://github.com/hbabaie1/Sustainable-Development-and-Climate-SDC-ontology/tree/main" ;
-                                                                                          owl:versionInfo "2026-04-08" .
+Ontology source: https://github.com/hbabaie1/Sustainable-Development-and-Climate-SDC-ontology"""@en ;
+                                                             rdfs:seeAlso """The related imports files:
+https://github.com/ClimOO/ClimOO-Ontology/tree/main/ClimOO%20material/src/ontology/imports/sdc2%20imports/sdc-onto-regulations-imports.ttl
+https://github.com/ClimOO/ClimOO-Ontology/tree/main/ClimOO%20material/src/ontology/imports/sdc2%20imports/sdc-onto-ind-continuant-imports.ttl"""@en ,
+                                                                          "https://github.com/hbabaie1/Sustainable-Development-and-Climate-SDC-ontology/tree/main" ;
+                                                             owl:versionInfo "2026-05-19" .
 
 #################################################################
 #    Annotation properties
@@ -130,6 +133,10 @@ Ontology source: https://raw.githubusercontent.com/hbabaie1/Sustainable-Developm
 <http://purl.obolibrary.org/obo/BFO_0000015> rdf:type owl:Class .
 
 
+###  http://purl.obolibrary.org/obo/BFO_0000024
+<http://purl.obolibrary.org/obo/BFO_0000024> rdf:type owl:Class .
+
+
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/ActionRegulation
 <http://www.ontologyrepository.com/CommonCoreOntologies/ActionRegulation> rdf:type owl:Class ;
                                                                           rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/DirectiveInformationContentEntity> ;
@@ -169,8 +176,31 @@ Ontology source: https://raw.githubusercontent.com/hbabaie1/Sustainable-Developm
 <http://www.ontologyrepository.com/CommonCoreOntologies/InformationContentEntity> rdf:type owl:Class .
 
 
-###  http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity
-<http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity> rdf:type owl:Class .
+###  http://www.ontologyrepository.com/CommonCoreOntologies/PortionOfCryosphere
+<http://www.ontologyrepository.com/CommonCoreOntologies/PortionOfCryosphere> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000024> ;
+                                                                             <http://www.ontologyrepository.com/CommonCoreOntologies/definition_source> "https://oceanservice.noaa.gov/facts/cryosphere.html (accessed 03/06/2023)"^^xsd:anyURI ;
+                                                                             <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/GeospatialOntology"^^xsd:anyURI ;
+                                                                             rdfs:label "Portion of Cryosphere"@en ;
+                                                                             <http://www.w3.org/2004/02/skos/core#definition> "A fiat object part of the frozen part of a natural satellite's hydosphere"@en .
+
+
+###  http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Atmosphere
+<http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Atmosphere> rdf:type owl:Class ;
+                                                                                             rdfs:subClassOf <http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Climate_System_Component> ;
+                                                                                             rdfs:label "Atmosphere" .
+
+
+###  http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Atmospheric_Component
+<http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Atmospheric_Component> rdf:type owl:Class ;
+                                                                                                        rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000024> ;
+                                                                                                        rdfs:label "Atmospheric Component" .
+
+
+###  http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Biosphere
+<http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Biosphere> rdf:type owl:Class ;
+                                                                                            rdfs:subClassOf <http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Climate_System_Component> ;
+                                                                                            rdfs:label "Biosphere" .
 
 
 ###  http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Climate_Change_Measure
@@ -191,15 +221,27 @@ Ontology source: https://raw.githubusercontent.com/hbabaie1/Sustainable-Developm
                                                                                                                                              rdfs:label "Climate Change Measure Integrated with National Strategies" .
 
 
+###  http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Climate_System_Component
+<http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Climate_System_Component> rdf:type owl:Class ;
+                                                                                                           rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000024> ;
+                                                                                                           rdfs:label "Climate System Component" .
+
+
 ###  http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Convention
 <http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Convention> rdf:type owl:Class ;
                                                                                              rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/DirectiveInformationContentEntity> ;
                                                                                              rdfs:label "Convention" .
 
 
+###  http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Cryosphere
+<http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Cryosphere> rdf:type owl:Class ;
+                                                                                             rdfs:subClassOf <http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Climate_System_Component> ;
+                                                                                             rdfs:label "Cryosphere" .
+
+
 ###  http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Data_Item
 <http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Data_Item> rdf:type owl:Class ;
-                                                                                            rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/MeasurementInformationContentEntity> ;
+                                                                                            rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity> ;
                                                                                             <http://www.ontologyrepository.com/CommonCoreOntologies/definition> """The data item class holds singular entities or collections of entities that specifically record inputs or outputs (measurement / prediction / transformation datums) of processes / equipment / human interaction. 
 
 Source:
@@ -207,10 +249,28 @@ https://github.com/obi-ontology/obi/wiki/Data-and-Values""" ;
                                                                                             rdfs:label "Data Item" .
 
 
+###  http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Extra-tropical_Troposphere
+<http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Extra-tropical_Troposphere> rdf:type owl:Class ;
+                                                                                                             rdfs:subClassOf <http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Troposphere> ;
+                                                                                                             rdfs:label "Extra-tropical Troposphere" .
+
+
 ###  http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Footprint
 <http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Footprint> rdf:type owl:Class ;
                                                                                             rdfs:subClassOf <http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Data_Item> ;
                                                                                             <http://purl.org/dc/elements/1.1/source> "Footprint" .
+
+
+###  http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Geosphere
+<http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Geosphere> rdf:type owl:Class ;
+                                                                                            rdfs:subClassOf <http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Climate_System_Component> ;
+                                                                                            rdfs:label "Geosphere" .
+
+
+###  http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Hydrosphere
+<http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Hydrosphere> rdf:type owl:Class ;
+                                                                                              rdfs:subClassOf <http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Climate_System_Component> ;
+                                                                                              rdfs:label "Hydrosphere" .
 
 
 ###  http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Material_Footprint
@@ -259,6 +319,18 @@ https://github.com/obi-ontology/obi/wiki/Data-and-Values""" ;
 <http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Strategy> rdf:type owl:Class ;
                                                                                            rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/ActionRequirement> ;
                                                                                            rdfs:label "Strategy" .
+
+
+###  http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Stratosphere
+<http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Stratosphere> rdf:type owl:Class ;
+                                                                                               rdfs:subClassOf <http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Atmospheric_Component> ;
+                                                                                               rdfs:label "Stratosphere" .
+
+
+###  http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Troposphere
+<http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Troposphere> rdf:type owl:Class ;
+                                                                                              rdfs:subClassOf <http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Atmospheric_Component> ;
+                                                                                              rdfs:label "Troposphere" .
 
 
 ###  http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#United_Nations_Framework_Convention_on_Climate_Change

@@ -7,7 +7,7 @@
 @base <http://ClimOO/climoo/climoo-sdc2/imports/cco-imports#> .
 
 <http://ClimOO/climoo/climoo-sdc2/imports/cco-imports> rdf:type owl:Ontology ;
-                                                        owl:versionIRI <http://ClimOO/climoo/climoo-sdc2/imports/cco-imports#2026-04-09> ;
+                                                        owl:versionIRI <http://ClimOO/climoo/climoo-sdc2/imports/cco-imports#2026-05-29> ;
                                                         <http://purl.org/dc/terms/description> """This file contains ClimOO Ontology imports from the Common Core Ontology suite (CCO). Imports were manually collected and revised.
 
 Ontology source: CCO 1.7.
@@ -17,7 +17,7 @@ https://github.com/CommonCoreOntology/CommonCoreOntologies/releases/tag/v1.7-202
 https://github.com/CommonCoreOntology/CommonCoreOntologies/releases
 https://w3id.org/sco/repo"""@en ;
                                                         rdfs:seeAlso "https://github.com/CommonCoreOntology/CommonCoreOntologies" ;
-                                                        owl:versionInfo "2026-05-19" .
+                                                        owl:versionInfo "2026-05-29" .
 
 #################################################################
 #    Annotation properties
@@ -25,6 +25,18 @@ https://w3id.org/sco/repo"""@en ;
 
 ###  http://purl.org/dc/elements/1.1/identifier
 <http://purl.org/dc/elements/1.1/identifier> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/description
@@ -59,8 +71,16 @@ https://w3id.org/sco/repo"""@en ;
 <http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/2004/02/skos/core#editorialNote
+<http://www.w3.org/2004/02/skos/core#editorialNote> rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/2004/02/skos/core#example
 <http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#scopeNote
@@ -157,6 +177,18 @@ https://w3id.org/sco/repo"""@en ;
 <http://purl.obolibrary.org/obo/BFO_0000003> rdf:type owl:Class .
 
 
+###  http://purl.obolibrary.org/obo/BFO_0000016
+<http://purl.obolibrary.org/obo/BFO_0000016> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000019
+<http://purl.obolibrary.org/obo/BFO_0000019> rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000040
+<http://purl.obolibrary.org/obo/BFO_0000040> rdf:type owl:Class .
+
+
 ###  http://purl.obolibrary.org/obo/BFO_0000144
 <http://purl.obolibrary.org/obo/BFO_0000144> rdf:type owl:Class ;
                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000003> ;
@@ -165,6 +197,15 @@ https://w3id.org/sco/repo"""@en ;
                                              <http://www.w3.org/2004/02/skos/core#definition> "An occurrent that is an occurrent part of some process by virtue of the rate, or pattern, or amplitude of change in an attribute of one or more participants of said process."@en ;
                                              <http://www.w3.org/2004/02/skos/core#example> "On a somewhat higher level of complexity are what we shall call rate process profiles, which are the targets of selective abstraction focused not on determinate quality magnitudes plotted over time, but rather on certain ratios between these magnitudes and elapsed times. A speed process profile, for example, is represented by a graph plotting against time the ratio of distance covered per unit of time. Since rates may change, and since such changes, too, may have rates of change, we have to deal here with a hierarchy of process profile universals at successive levels; One important sub-family of rate process profiles is illustrated by the beat or frequency profiles of cyclical processes, illustrated by the 60 beats per minute beating process of John’s heart, or the 120 beats per minute drumming process involved in one of John’s performances in a rock band, and so on. Each such process includes what we shall call a beat process profile instance as part, a subtype of rate process profile in which the salient ratio is not distance covered but rather number of beat cycles per unit of time. Each beat process profile instance instantiates the determinable universal beat process profile. But it also instantiates multiple more specialized universals at lower levels of generality, selected from rate process profilebeat process profileregular beat process profile3 bpm beat process profile4 bpm beat process profileirregular beat process profileincreasing beat process profileand so on.In the case of a regular beat process profile, a rate can be assigned in the simplest possible fashion by dividing the number of cycles by the length of the temporal region occupied by the beating process profile as a whole. Irregular process profiles of this sort, for example as identified in the clinic, or in the readings on an aircraft instrument panel, are often of diagnostic significance.; The simplest type of process profiles are what we shall call ‘quality process profiles’, which are the process profiles which serve as the foci of the sort of selective abstraction that is involved when measurements are made of changes in single qualities, as illustrated, for example, by process profiles of mass, temperature, aortic pressure, and so on."@en ;
                                              <http://www.w3.org/2004/02/skos/core#scopeNote> "b process_profile_of c holds when b proper_occurrent_part_of c& there is some proper_occurrent_part d of c which has no parts in common with b & is mutually dependent on b& is such that b, c and d occupy the same temporal region (axiom label in BFO2 Reference: [094-005])"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Amount
+<http://www.ontologyrepository.com/CommonCoreOntologies/Amount> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019> ;
+                                                                <http://www.ontologyrepository.com/CommonCoreOntologies/definition> "A Quality that inheres in a bearer in virtue of the total, aggregate or sum of a number of discrete items or material the entity contains as parts."@en ;
+                                                                <http://www.ontologyrepository.com/CommonCoreOntologies/definition_source> "http://en.wiktionary.org/wiki/amount" ;
+                                                                <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/QualityOntology"^^xsd:anyURI ;
+                                                                rdfs:label "Amount"@en .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/DescriptiveInformationContentEntity
@@ -192,6 +233,42 @@ https://w3id.org/sco/repo"""@en ;
                                                                                            <http://www.ontologyrepository.com/CommonCoreOntologies/definition> "An Information Content Entity that consists of a set of propositions or images (as in the case of a blueprint) that prescribe some Entity."@en ;
                                                                                            <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/InformationEntityOntology"^^xsd:anyURI ;
                                                                                            rdfs:label "Directive Information Content Entity"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/DisruptingDisposition
+<http://www.ontologyrepository.com/CommonCoreOntologies/DisruptingDisposition> rdf:type owl:Class ;
+                                                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000016> ;
+                                                                               <http://purl.org/dc/terms/created> "2022-12-30T21:32:27-05:00"^^xsd:dateTime ;
+                                                                               <http://purl.org/dc/terms/creator> "https://cubrc.org"^^xsd:anyURI ;
+                                                                               <http://www.ontologyrepository.com/CommonCoreOntologies/definition> "A disposition the realization of which would disrupt a process some entity has an interest in."@en ;
+                                                                               <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/QualityOntology"^^xsd:anyURI ;
+                                                                               rdfs:label "Disrupting Disposition"@en ;
+                                                                               <http://www.w3.org/2004/02/skos/core#editorialNote> "This is a defined class. A Disrupting Disposition is indexed by the interest_in object property. A disposition can be a Disrupting Disposition according to one index and not a Disrupting Disposition according to another index." ;
+                                                                               <http://www.w3.org/2004/02/skos/core#prefLabel> "Threat"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/EnvironmentalFeature
+<http://www.ontologyrepository.com/CommonCoreOntologies/EnvironmentalFeature> rdf:type owl:Class ;
+                                                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> ;
+                                                                              <http://www.ontologyrepository.com/CommonCoreOntologies/definition> "A Material Entity that is either a natural or man-made feature of the environment."@en ;
+                                                                              <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/GeospatialOntology"^^xsd:anyURI ;
+                                                                              rdfs:label "Environmental Feature"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/GeographicFeature
+<http://www.ontologyrepository.com/CommonCoreOntologies/GeographicFeature> rdf:type owl:Class ;
+                                                                           rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/EnvironmentalFeature> ;
+                                                                           <http://www.ontologyrepository.com/CommonCoreOntologies/definition> "An Environmental Feature that is a natural (i.e. not human made) topographical feature having a (relatively) stable location in some Geospatial Region which can be designated by location-specific data."@en ;
+                                                                           <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/GeospatialOntology"^^xsd:anyURI ;
+                                                                           rdfs:label "Geographic Feature"@en .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/HydrographicFeature
+<http://www.ontologyrepository.com/CommonCoreOntologies/HydrographicFeature> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/GeographicFeature> ;
+                                                                             <http://www.ontologyrepository.com/CommonCoreOntologies/definition> "A Geographic Feature associated with water."@en ;
+                                                                             <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/GeospatialOntology"^^xsd:anyURI ;
+                                                                             rdfs:label "Hydrographic Feature"@en .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/InformationContentEntity
@@ -227,6 +304,18 @@ https://w3id.org/sco/repo"""@en ;
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/RepresentationalInformationContentEntity
 <http://www.ontologyrepository.com/CommonCoreOntologies/RepresentationalInformationContentEntity> rdf:type owl:Class .
+
+
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Vulnerability
+<http://www.ontologyrepository.com/CommonCoreOntologies/Vulnerability> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/DisruptingDisposition> ;
+                                                                       <http://purl.org/dc/terms/bibliographicCitation> "Vulnerability | Definition of Vulnerability by Oxford Dictionary on Lexico.Com Also Meaning of Vulnerability. https://web.archive.org/web/20210118111731/https://www.lexico.com/en/definition/vulnerability. Accessed 19 Dec. 2022. " ;
+                                                                       <http://purl.org/dc/terms/creator> "https://cubrc.org"^^xsd:anyURI ;
+                                                                       <http://www.ontologyrepository.com/CommonCoreOntologies/definition> "A Disrupting Disposition the realization of which would disrupt a process that the bearer of the Disrupting Disposition has an interest in."@en ;
+                                                                       <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/QualityOntology"^^xsd:anyURI ;
+                                                                       rdfs:label "Vulnerability"@en ;
+                                                                       <http://www.w3.org/2004/02/skos/core#editorialNote> "This is defined class. A Vulnerability is indexed by the interest_in object property. A disposition can be a Vulnerability according to one index and not a Vulnerability according to another index." ;
+                                                                       <http://www.w3.org/2004/02/skos/core#prefLabel> "Vulnerability"@en .
 
 
 ###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
