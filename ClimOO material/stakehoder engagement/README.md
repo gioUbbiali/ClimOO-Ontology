@@ -1,4 +1,4 @@
-# ClimOO Ontology -  Stakehoder Engagement
+# ClimOO Ontology suite -  Stakehoder Engagement
 
 
 ## Description
