@@ -255,6 +255,16 @@ https://w3id.org/sco/repo"""@en ;
                                                                               rdfs:label "Environmental Feature"@en .
 
 
+###  http://www.ontologyrepository.com/CommonCoreOntologies/Frequency
+<http://www.ontologyrepository.com/CommonCoreOntologies/Frequency> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000144> ;
+                                                                   <http://www.ontologyrepository.com/CommonCoreOntologies/alternative_label> "Temporal Frequency"@en ;
+                                                                   <http://www.ontologyrepository.com/CommonCoreOntologies/definition> "A Process Profile that is characterized by the number of repetitive processes during a particular time period."@en ;
+                                                                   <http://www.ontologyrepository.com/CommonCoreOntologies/definition_source> "https://en.wikipedia.org/w/index.php?title=Frequency&oldid=1062800545"^^xsd:anyURI ;
+                                                                   <http://www.ontologyrepository.com/CommonCoreOntologies/is_curated_in_ontology> "http://www.ontologyrepository.com/CommonCoreOntologies/Mid/EventOntology"^^xsd:anyURI ;
+                                                                   rdfs:label "Frequency"@en .
+
+
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/GeographicFeature
 <http://www.ontologyrepository.com/CommonCoreOntologies/GeographicFeature> rdf:type owl:Class ;
                                                                            rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/EnvironmentalFeature> ;

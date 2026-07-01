@@ -959,7 +959,7 @@ For definitions, see,  for instance, here: https://unterm.un.org/unterm2/en/view
 
 ###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000342
 :ClimOO_0000342 rdf:type owl:Class ;
-                rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000144> ,
+                rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/Frequency> ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000138> ;
                                   owl:someValuesFrom :ClimOO_0000322
@@ -970,43 +970,45 @@ For definitions, see,  for instance, here: https://unterm.un.org/unterm2/en/view
 
 ###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000343
 :ClimOO_0000343 rdf:type owl:Class ;
-                rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000144> ;
+                rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/Frequency> ;
                 rdfs:label "frequency or flooding event - process profile"@en ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
 
 
 ###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000344
 :ClimOO_0000344 rdf:type owl:Class ;
-                rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000144> ;
+                rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/Frequency> ;
                 rdfs:label "frequency of concurrent heatwaves and drought processes - process profile"@en ;
+                rdfs:seeAlso "http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Frequency_of_Concurrent_Heatwaves_and_Drought"@en ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
 
 
 ###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000345
 :ClimOO_0000345 rdf:type owl:Class ;
-                rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000144> ;
+                rdfs:subClassOf :Frequency_of_Drought ;
                 rdfs:label "frequency of severe agricultural drought - process profile"@en ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
 
 
 ###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000346
 :ClimOO_0000346 rdf:type owl:Class ;
-                rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000144> ;
+                rdfs:subClassOf :Frequency_of_Drought ;
                 rdfs:label "frequency of severe ecological drought - process profile"@en ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
 
 
 ###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000347
 :ClimOO_0000347 rdf:type owl:Class ;
-                rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000144> ;
+                rdfs:subClassOf :Frequency_of_Drought ;
                 rdfs:label "frequency of severe meteorological drought - process profile"@en ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
 
 
 ###  https://www.w3id.org/climoo/climoo-sdc2#ClimOO_0000348
 :ClimOO_0000348 rdf:type owl:Class ;
-                rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000144> ;
+                rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/Frequency> ;
                 rdfs:label "precipitation frequency - process profile"@en ;
+                rdfs:seeAlso "http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#Precipitation_Frequency" ;
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
 
 
@@ -1256,6 +1258,13 @@ We envision discussions with subject matter experts and implementations concerni
                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
+###  https://www.w3id.org/climoo/climoo-sdc2#Duration
+:Duration rdf:type owl:Class ;
+          rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000038> ;
+          rdfs:label "duration"@en ;
+          <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
 ###  https://www.w3id.org/climoo/climoo-sdc2#Ecosystem_Function
 :Ecosystem_Function rdf:type owl:Class ;
                     rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000034> ;
@@ -1291,6 +1300,34 @@ We envision discussions with subject matter experts and implementations."""@en ;
                                    rdfs:subClassOf :Northern_Hemisphere ;
                                    rdfs:label "extratropical northern hemisphere"@en ;
                                    <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Extreme_Precipitation_Frequency
+:Extreme_Precipitation_Frequency rdf:type owl:Class ;
+                                 rdfs:subClassOf :ClimOO_0000348 ;
+                                 rdfs:label "extreme precipitation frequency"@en ;
+                                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Extreme_Precipitation_Frequency_in_Most_Regions
+:Extreme_Precipitation_Frequency_in_Most_Regions rdf:type owl:Class ;
+                                                 rdfs:subClassOf :Extreme_Precipitation_Frequency ;
+                                                 rdfs:label "extreme precipitation frequency in most regions"@en ;
+                                                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Frequency_of_Drought
+:Frequency_of_Drought rdf:type owl:Class ;
+                      rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/Frequency> ;
+                      rdfs:label "frequency of drought"@en ;
+                      <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Frequency_of_Heatwave
+:Frequency_of_Heatwave rdf:type owl:Class ;
+                       rdfs:subClassOf <http://www.ontologyrepository.com/CommonCoreOntologies/Frequency> ;
+                       rdfs:label "frequency of heatwave"@en ;
+                       <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
 
 
 ###  https://www.w3id.org/climoo/climoo-sdc2#Freshwater
@@ -1577,6 +1614,13 @@ http://purl.obolibrary.org/obo/ENVO_01000819""" ;
                         <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
 
 
+###  https://www.w3id.org/climoo/climoo-sdc2#Long_Dry_Season
+:Long_Dry_Season rdf:type owl:Class ;
+                 rdfs:subClassOf :Season ;
+                 rdfs:label "long dry season"@en ;
+                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
 ###  https://www.w3id.org/climoo/climoo-sdc2#Methane
 :Methane rdf:type owl:Class ;
          rdfs:subClassOf :Well-mixed_Greenhouse_Gas ;
@@ -1807,6 +1851,21 @@ These classes required further implementations."""@en ;
           <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
+###  https://www.w3id.org/climoo/climoo-sdc2#Season
+:Season rdf:type owl:Class ;
+        rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000038> ;
+        rdfs:label "Season"@en ;
+        rdfs:seeAlso "http://purl.obolibrary.org/obo/ENVO_03000096 and subclasses"@en ;
+        <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Seasonal_Snow_Cover_Duration
+:Seasonal_Snow_Cover_Duration rdf:type owl:Class ;
+                              rdfs:subClassOf :Duration ;
+                              rdfs:label "seasonal snow cover duration"@en ;
+                              <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
 ###  https://www.w3id.org/climoo/climoo-sdc2#Seasonality
 :Seasonality rdf:type owl:Class ;
              rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000144> ;
@@ -2035,6 +2094,13 @@ These classes require implementations to precisely characterize them. Reference 
                           <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
+###  https://www.w3id.org/climoo/climoo-sdc2#Summer
+:Summer rdf:type owl:Class ;
+        rdfs:subClassOf :Season ;
+        rdfs:label "summer"@en ;
+        <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
+
+
 ###  https://www.w3id.org/climoo/climoo-sdc2#Surface_Water_Availability
 :Surface_Water_Availability rdf:type owl:Class ;
                             rdfs:subClassOf :Water_Availability ;
@@ -2109,6 +2175,13 @@ These classes require implementations to precisely characterize them. Reference 
                                                                 ] ;
                                                 rdfs:label "vulnerability to climate-related extreme event"@en ;
                                                 <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Provisional> .
+
+
+###  https://www.w3id.org/climoo/climoo-sdc2#Warm_Season
+:Warm_Season rdf:type owl:Class ;
+             rdfs:subClassOf :Season ;
+             rdfs:label "warm season"@en ;
+             <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
 
 ###  https://www.w3id.org/climoo/climoo-sdc2#Wastewater
