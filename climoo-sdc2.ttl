@@ -76,7 +76,7 @@ owl:minQualifiedCardinality rdf:type owl:AnnotationProperty .
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/Amount
 <http://www.ontologyrepository.com/CommonCoreOntologies/Amount> rdfs:comment """ClimOO Ontology comment:
-We envision discussions with subject matter experts and implementations concerning this class as related subclasses."""@en .
+We envision discussions with subject matter experts and implementations concerning this class as related subclasses, as the term \"amount\" is quite ambiguous; for instance, it is not clear whether this class may refer to portions or the size of portions."""@en .
 
 
 ###  http://www.ontologyrepository.com/CommonCoreOntologies/NaturalProcess
@@ -4011,8 +4011,6 @@ http://www.semanticweb.org/Davarpanah-Babaie/ontologies/2021/9/ClimateOnSDG1267#
 ###  https://www.w3id.org/climoo/climoo-sdc2#Water
 :Water rdf:type owl:Class ;
        rdfs:subClassOf :Hydrologic_Material_Entity ;
-       rdfs:comment """ClimOO Ontology comment:
-Subclasses should primarily refer to liquid water. However, we currently do not classify them as such to keep the model as general as possible."""@en ;
        rdfs:label "portion of water"@en ;
        <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/maturity> <https://spec.industrialontologies.org/ontology/core/meta/AnnotationVocabulary/Released> .
 
