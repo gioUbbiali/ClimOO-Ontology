@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://ClimOO/climoo/climoo-sdc2/imports/pmdco-imports#2026-07-20" uri="ClimOO%20material/src/ontology/sdc2%20imports/pmdco-imports.ttl"/>
     <uri id="User Entered Import Resolution" name="http://ClimOO/climoo/climoo-sdc2/imports/cco-imports#2026-05-29" uri="ClimOO%20material/src/ontology/sdc2%20imports/cco-imports.ttl"/>
     <uri id="Imports Wizard Entry" name="http://ClimOO/climoo/climoo-sdc2/imports/ro-imports#2026-05-29" uri="ClimOO%20material/src/ontology/sdc2%20imports/ro-imports.ttl"/>
     <uri id="Imports Wizard Entry" name="http://ClimOO/climoo/climoo-sdc2/imports/pato-imports#2026-05-27" uri="ClimOO%20material/src/ontology/sdc2%20imports/pato-imports.ttl"/>
